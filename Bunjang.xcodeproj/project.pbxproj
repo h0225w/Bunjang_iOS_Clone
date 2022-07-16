@@ -24,6 +24,9 @@
 		B7CC867E2882BE7B000F46F1 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC867D2882BE7B000F46F1 /* TabBarView.swift */; };
 		B7CC86812882EFA6000F46F1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC86802882EFA6000F46F1 /* HomeView.swift */; };
 		B7CC86832882EFAC000F46F1 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC86822882EFAC000F46F1 /* MyView.swift */; };
+		B7CC8686288300BB000F46F1 /* Tabman in Frameworks */ = {isa = PBXBuildFile; productRef = B7CC8685288300BB000F46F1 /* Tabman */; };
+		B7CC86882883033B000F46F1 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC86872883033B000F46F1 /* ProductListView.swift */; };
+		B7CC868A28830803000F46F1 /* TabManView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC868928830803000F46F1 /* TabManView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,8 @@
 		B7CC867D2882BE7B000F46F1 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		B7CC86802882EFA6000F46F1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B7CC86822882EFAC000F46F1 /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
+		B7CC86872883033B000F46F1 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
+		B7CC868928830803000F46F1 /* TabManView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabManView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7CC8686288300BB000F46F1 /* Tabman in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +233,8 @@
 			isa = PBXGroup;
 			children = (
 				B7CC86822882EFAC000F46F1 /* MyView.swift */,
+				B7CC86872883033B000F46F1 /* ProductListView.swift */,
+				B7CC868928830803000F46F1 /* TabManView.swift */,
 			);
 			path = My;
 			sourceTree = "<group>";
@@ -247,6 +255,9 @@
 			dependencies = (
 			);
 			name = Bunjang;
+			packageProductDependencies = (
+				B7CC8685288300BB000F46F1 /* Tabman */,
+			);
 			productName = Bunjang;
 			productReference = B7CC863128828EAC000F46F1 /* Bunjang.app */;
 			productType = "com.apple.product-type.application";
@@ -319,6 +330,9 @@
 				Base,
 			);
 			mainGroup = B7CC862828828EAC000F46F1;
+			packageReferences = (
+				B7CC8684288300BB000F46F1 /* XCRemoteSwiftPackageReference "Tabman" */,
+			);
 			productRefGroup = B7CC863228828EAC000F46F1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -363,6 +377,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7CC86882883033B000F46F1 /* ProductListView.swift in Sources */,
 				B7CC86812882EFA6000F46F1 /* HomeView.swift in Sources */,
 				B7CC86782882B5C9000F46F1 /* InputShopNameView.swift in Sources */,
 				B7CC86832882EFAC000F46F1 /* MyView.swift in Sources */,
@@ -371,6 +386,7 @@
 				B7CC866E28829E78000F46F1 /* FirstView.swift in Sources */,
 				B7CC86702882A70E000F46F1 /* LoginView.swift in Sources */,
 				B7CC86742882A914000F46F1 /* UITextField+Extension.swift in Sources */,
+				B7CC868A28830803000F46F1 /* TabManView.swift in Sources */,
 				B7CC863528828EAC000F46F1 /* AppDelegate.swift in Sources */,
 				B7CC863728828EAC000F46F1 /* SceneDelegate.swift in Sources */,
 			);
@@ -702,6 +718,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B7CC8684288300BB000F46F1 /* XCRemoteSwiftPackageReference "Tabman" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uias/Tabman";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B7CC8685288300BB000F46F1 /* Tabman */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7CC8684288300BB000F46F1 /* XCRemoteSwiftPackageReference "Tabman" */;
+			productName = Tabman;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B7CC862928828EAC000F46F1 /* Project object */;
 }
