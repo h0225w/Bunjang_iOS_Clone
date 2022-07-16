@@ -9,14 +9,17 @@
 /* Begin PBXBuildFile section */
 		B7CC863528828EAC000F46F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC863428828EAC000F46F1 /* AppDelegate.swift */; };
 		B7CC863728828EAC000F46F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC863628828EAC000F46F1 /* SceneDelegate.swift */; };
-		B7CC863928828EAC000F46F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC863828828EAC000F46F1 /* ViewController.swift */; };
-		B7CC863C28828EAC000F46F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7CC863A28828EAC000F46F1 /* Main.storyboard */; };
 		B7CC863E28828EAC000F46F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7CC863D28828EAC000F46F1 /* Assets.xcassets */; };
 		B7CC864128828EAC000F46F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7CC863F28828EAC000F46F1 /* LaunchScreen.storyboard */; };
 		B7CC864C28828EAD000F46F1 /* BunjangTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC864B28828EAD000F46F1 /* BunjangTests.swift */; };
 		B7CC865628828EAD000F46F1 /* BunjangUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC865528828EAD000F46F1 /* BunjangUITests.swift */; };
 		B7CC865828828EAD000F46F1 /* BunjangUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC865728828EAD000F46F1 /* BunjangUITestsLaunchTests.swift */; };
 		B7CC866A28829191000F46F1 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7CC866928829191000F46F1 /* Authentication.storyboard */; };
+		B7CC866E28829E78000F46F1 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC866D28829E78000F46F1 /* FirstView.swift */; };
+		B7CC86702882A70E000F46F1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC866F2882A70E000F46F1 /* LoginView.swift */; };
+		B7CC86742882A914000F46F1 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC86732882A914000F46F1 /* UITextField+Extension.swift */; };
+		B7CC86762882B2C0000F46F1 /* CertNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC86752882B2C0000F46F1 /* CertNumberView.swift */; };
+		B7CC86782882B5C9000F46F1 /* InputShopNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC86772882B5C9000F46F1 /* InputShopNameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +43,6 @@
 		B7CC863128828EAC000F46F1 /* Bunjang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bunjang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7CC863428828EAC000F46F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7CC863628828EAC000F46F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B7CC863828828EAC000F46F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B7CC863B28828EAC000F46F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7CC863D28828EAC000F46F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7CC864028828EAC000F46F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7CC864228828EAC000F46F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +52,11 @@
 		B7CC865528828EAD000F46F1 /* BunjangUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BunjangUITests.swift; sourceTree = "<group>"; };
 		B7CC865728828EAD000F46F1 /* BunjangUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BunjangUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B7CC866928829191000F46F1 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		B7CC866D28829E78000F46F1 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
+		B7CC866F2882A70E000F46F1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B7CC86732882A914000F46F1 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		B7CC86752882B2C0000F46F1 /* CertNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertNumberView.swift; sourceTree = "<group>"; };
+		B7CC86772882B5C9000F46F1 /* InputShopNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputShopNameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				B7CC866428828F3C000F46F1 /* App */,
+				B7CC86712882A8EA000F46F1 /* Helpers */,
 				B7CC866528828F48000F46F1 /* UserInterfaces */,
 				B7CC863D28828EAC000F46F1 /* Assets.xcassets */,
 				B7CC863F28828EAC000F46F1 /* LaunchScreen.storyboard */,
@@ -140,8 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				B7CC86662882902C000F46F1 /* Authentication */,
-				B7CC863828828EAC000F46F1 /* ViewController.swift */,
-				B7CC863A28828EAC000F46F1 /* Main.storyboard */,
+				B7CC86792882B900000F46F1 /* Home */,
 			);
 			path = UserInterfaces;
 			sourceTree = "<group>";
@@ -159,6 +165,7 @@
 		B7CC866728829035000F46F1 /* First */ = {
 			isa = PBXGroup;
 			children = (
+				B7CC866D28829E78000F46F1 /* FirstView.swift */,
 			);
 			path = First;
 			sourceTree = "<group>";
@@ -166,8 +173,34 @@
 		B7CC866828829163000F46F1 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				B7CC866F2882A70E000F46F1 /* LoginView.swift */,
+				B7CC86752882B2C0000F46F1 /* CertNumberView.swift */,
+				B7CC86772882B5C9000F46F1 /* InputShopNameView.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		B7CC86712882A8EA000F46F1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B7CC86722882A8FE000F46F1 /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B7CC86722882A8FE000F46F1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B7CC86732882A914000F46F1 /* UITextField+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B7CC86792882B900000F46F1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,7 +310,6 @@
 				B7CC866A28829191000F46F1 /* Authentication.storyboard in Resources */,
 				B7CC864128828EAC000F46F1 /* LaunchScreen.storyboard in Resources */,
 				B7CC863E28828EAC000F46F1 /* Assets.xcassets in Resources */,
-				B7CC863C28828EAC000F46F1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +334,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7CC863928828EAC000F46F1 /* ViewController.swift in Sources */,
+				B7CC86782882B5C9000F46F1 /* InputShopNameView.swift in Sources */,
+				B7CC86762882B2C0000F46F1 /* CertNumberView.swift in Sources */,
+				B7CC866E28829E78000F46F1 /* FirstView.swift in Sources */,
+				B7CC86702882A70E000F46F1 /* LoginView.swift in Sources */,
+				B7CC86742882A914000F46F1 /* UITextField+Extension.swift in Sources */,
 				B7CC863528828EAC000F46F1 /* AppDelegate.swift in Sources */,
 				B7CC863728828EAC000F46F1 /* SceneDelegate.swift in Sources */,
 			);
@@ -341,14 +377,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B7CC863A28828EAC000F46F1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B7CC863B28828EAC000F46F1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B7CC863F28828EAC000F46F1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -487,7 +515,7 @@
 				INFOPLIST_FILE = Bunjang/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Authentication;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -514,7 +542,7 @@
 				INFOPLIST_FILE = Bunjang/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Authentication;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
