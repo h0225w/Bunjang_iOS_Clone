@@ -16,6 +16,7 @@
 		B7CC864C28828EAD000F46F1 /* BunjangTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC864B28828EAD000F46F1 /* BunjangTests.swift */; };
 		B7CC865628828EAD000F46F1 /* BunjangUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC865528828EAD000F46F1 /* BunjangUITests.swift */; };
 		B7CC865828828EAD000F46F1 /* BunjangUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC865728828EAD000F46F1 /* BunjangUITestsLaunchTests.swift */; };
+		B7CC866A28829191000F46F1 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7CC866928829191000F46F1 /* Authentication.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		B7CC865128828EAD000F46F1 /* BunjangUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BunjangUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7CC865528828EAD000F46F1 /* BunjangUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BunjangUITests.swift; sourceTree = "<group>"; };
 		B7CC865728828EAD000F46F1 /* BunjangUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BunjangUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B7CC866928829191000F46F1 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +101,8 @@
 		B7CC863328828EAC000F46F1 /* Bunjang */ = {
 			isa = PBXGroup;
 			children = (
-				B7CC863428828EAC000F46F1 /* AppDelegate.swift */,
-				B7CC863628828EAC000F46F1 /* SceneDelegate.swift */,
-				B7CC863828828EAC000F46F1 /* ViewController.swift */,
-				B7CC863A28828EAC000F46F1 /* Main.storyboard */,
+				B7CC866428828F3C000F46F1 /* App */,
+				B7CC866528828F48000F46F1 /* UserInterfaces */,
 				B7CC863D28828EAC000F46F1 /* Assets.xcassets */,
 				B7CC863F28828EAC000F46F1 /* LaunchScreen.storyboard */,
 				B7CC864228828EAC000F46F1 /* Info.plist */,
@@ -125,6 +125,49 @@
 				B7CC865728828EAD000F46F1 /* BunjangUITestsLaunchTests.swift */,
 			);
 			path = BunjangUITests;
+			sourceTree = "<group>";
+		};
+		B7CC866428828F3C000F46F1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B7CC863428828EAC000F46F1 /* AppDelegate.swift */,
+				B7CC863628828EAC000F46F1 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B7CC866528828F48000F46F1 /* UserInterfaces */ = {
+			isa = PBXGroup;
+			children = (
+				B7CC86662882902C000F46F1 /* Authentication */,
+				B7CC863828828EAC000F46F1 /* ViewController.swift */,
+				B7CC863A28828EAC000F46F1 /* Main.storyboard */,
+			);
+			path = UserInterfaces;
+			sourceTree = "<group>";
+		};
+		B7CC86662882902C000F46F1 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				B7CC866728829035000F46F1 /* First */,
+				B7CC866828829163000F46F1 /* Login */,
+				B7CC866928829191000F46F1 /* Authentication.storyboard */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		B7CC866728829035000F46F1 /* First */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = First;
+			sourceTree = "<group>";
+		};
+		B7CC866828829163000F46F1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7CC866A28829191000F46F1 /* Authentication.storyboard in Resources */,
 				B7CC864128828EAC000F46F1 /* LaunchScreen.storyboard in Resources */,
 				B7CC863E28828EAC000F46F1 /* Assets.xcassets in Resources */,
 				B7CC863C28828EAC000F46F1 /* Main.storyboard in Resources */,
