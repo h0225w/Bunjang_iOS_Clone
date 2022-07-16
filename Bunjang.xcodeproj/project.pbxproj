@@ -20,6 +20,10 @@
 		B7CC86742882A914000F46F1 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC86732882A914000F46F1 /* UITextField+Extension.swift */; };
 		B7CC86762882B2C0000F46F1 /* CertNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC86752882B2C0000F46F1 /* CertNumberView.swift */; };
 		B7CC86782882B5C9000F46F1 /* InputShopNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC86772882B5C9000F46F1 /* InputShopNameView.swift */; };
+		B7CC867B2882BB02000F46F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7CC867A2882BB02000F46F1 /* Main.storyboard */; };
+		B7CC867E2882BE7B000F46F1 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC867D2882BE7B000F46F1 /* TabBarView.swift */; };
+		B7CC86812882EFA6000F46F1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC86802882EFA6000F46F1 /* HomeView.swift */; };
+		B7CC86832882EFAC000F46F1 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC86822882EFAC000F46F1 /* MyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		B7CC86732882A914000F46F1 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		B7CC86752882B2C0000F46F1 /* CertNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertNumberView.swift; sourceTree = "<group>"; };
 		B7CC86772882B5C9000F46F1 /* InputShopNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputShopNameView.swift; sourceTree = "<group>"; };
+		B7CC867A2882BB02000F46F1 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B7CC867D2882BE7B000F46F1 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		B7CC86802882EFA6000F46F1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B7CC86822882EFAC000F46F1 /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,8 +154,11 @@
 		B7CC866528828F48000F46F1 /* UserInterfaces */ = {
 			isa = PBXGroup;
 			children = (
+				B7CC867C2882BE70000F46F1 /* Layout */,
 				B7CC86662882902C000F46F1 /* Authentication */,
 				B7CC86792882B900000F46F1 /* Home */,
+				B7CC867F2882EF91000F46F1 /* My */,
+				B7CC867A2882BB02000F46F1 /* Main.storyboard */,
 			);
 			path = UserInterfaces;
 			sourceTree = "<group>";
@@ -199,8 +210,25 @@
 		B7CC86792882B900000F46F1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B7CC86802882EFA6000F46F1 /* HomeView.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		B7CC867C2882BE70000F46F1 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				B7CC867D2882BE7B000F46F1 /* TabBarView.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		B7CC867F2882EF91000F46F1 /* My */ = {
+			isa = PBXGroup;
+			children = (
+				B7CC86822882EFAC000F46F1 /* MyView.swift */,
+			);
+			path = My;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +338,7 @@
 				B7CC866A28829191000F46F1 /* Authentication.storyboard in Resources */,
 				B7CC864128828EAC000F46F1 /* LaunchScreen.storyboard in Resources */,
 				B7CC863E28828EAC000F46F1 /* Assets.xcassets in Resources */,
+				B7CC867B2882BB02000F46F1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,8 +363,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7CC86812882EFA6000F46F1 /* HomeView.swift in Sources */,
 				B7CC86782882B5C9000F46F1 /* InputShopNameView.swift in Sources */,
+				B7CC86832882EFAC000F46F1 /* MyView.swift in Sources */,
 				B7CC86762882B2C0000F46F1 /* CertNumberView.swift in Sources */,
+				B7CC867E2882BE7B000F46F1 /* TabBarView.swift in Sources */,
 				B7CC866E28829E78000F46F1 /* FirstView.swift in Sources */,
 				B7CC86702882A70E000F46F1 /* LoginView.swift in Sources */,
 				B7CC86742882A914000F46F1 /* UITextField+Extension.swift in Sources */,

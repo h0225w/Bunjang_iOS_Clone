@@ -17,6 +17,7 @@ class LoginView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
         setupViews()
     }
     
@@ -31,6 +32,11 @@ class LoginView: UIViewController {
 
 // MARK: - Extension
 private extension LoginView {
+    // MARK: 네비게이션 바 설정
+    func setupNavigationBar() {
+        navigationItem.backButtonTitle = ""
+    }
+    
     // MARK: 뷰 설정
     func setupViews() {
         [phoneTextField, agencyTextField, birthFrontTextField, birthBackTextField, nameTextField].forEach {

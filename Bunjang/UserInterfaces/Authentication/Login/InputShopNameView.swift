@@ -20,7 +20,9 @@ class InputShopNameView: UIViewController {
     
     // MARK: 확인 버튼 눌렀을 때
     @IBAction func didTapConfirmButton(_ sender: Any) {
-        
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "TabBarView") as! TabBarView
+        self.view.window?.windowScene?.keyWindow?.rootViewController = vc
     }
 }
 
