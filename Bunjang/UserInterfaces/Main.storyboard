@@ -12,7 +12,7 @@
         <scene sceneID="q5m-tb-XVw">
             <objects>
                 <tabBarController storyboardIdentifier="TabBarView" id="xps-Eg-Z6Z" customClass="TabBarView" customModule="Bunjang" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lzt-uu-0et">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="lzt-uu-0et">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -29,7 +29,6 @@
         <!--홈-->
         <scene sceneID="Jm0-3r-5nC">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="X0m-2m-hKe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="EMK-7T-csa" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="홈" image="house" catalog="system" id="DaS-jV-sFM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ut1-vy-u1b">
@@ -40,6 +39,7 @@
                         <segue destination="Qm7-I9-IBg" kind="relationship" relationship="rootViewController" id="ReT-79-lU1"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X0m-2m-hKe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1597" y="930"/>
         </scene>
@@ -48,23 +48,67 @@
             <objects>
                 <viewController storyboardIdentifier="HomeView" id="Qm7-I9-IBg" customClass="HomeView" customModule="Bunjang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a21-Wt-fmN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="ugg-q5-27L">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gD4-Uw-G96">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="3000"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="3000" id="Vtp-aD-DXh"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="gD4-Uw-G96" firstAttribute="bottom" secondItem="xsn-bq-C3w" secondAttribute="bottom" id="FCu-7c-mJX"/>
+                                    <constraint firstItem="gD4-Uw-G96" firstAttribute="top" secondItem="xsn-bq-C3w" secondAttribute="top" id="Oqt-KT-91f"/>
+                                    <constraint firstItem="gD4-Uw-G96" firstAttribute="trailing" secondItem="xsn-bq-C3w" secondAttribute="trailing" id="SHz-Wv-rl3"/>
+                                    <constraint firstItem="gD4-Uw-G96" firstAttribute="leading" secondItem="xsn-bq-C3w" secondAttribute="leading" id="T8q-9h-8ef"/>
+                                    <constraint firstItem="gD4-Uw-G96" firstAttribute="width" secondItem="oCj-gU-rrU" secondAttribute="width" id="sWm-85-cw8"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="xsn-bq-C3w"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="oCj-gU-rrU"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="5RX-ZH-pFb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5RX-ZH-pFb" firstAttribute="trailing" secondItem="ugg-q5-27L" secondAttribute="trailing" id="Ct3-Bd-6ez"/>
+                            <constraint firstItem="ugg-q5-27L" firstAttribute="leading" secondItem="5RX-ZH-pFb" secondAttribute="leading" id="GgY-dN-S7W"/>
+                            <constraint firstItem="ugg-q5-27L" firstAttribute="top" secondItem="a21-Wt-fmN" secondAttribute="top" id="YJU-1o-bbO"/>
+                            <constraint firstAttribute="bottom" secondItem="ugg-q5-27L" secondAttribute="bottom" id="hVp-i4-3rt"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="6ug-Pc-aAu"/>
+                    <navigationItem key="navigationItem" id="6ug-Pc-aAu">
+                        <barButtonItem key="leftBarButtonItem" image="line.horizontal.3" catalog="system" id="vek-oK-DXj">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="bell" catalog="system" id="cwt-RO-4iZ">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                            <barButtonItem systemItem="search" id="Eo3-j0-p1B">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="scrollView" destination="ugg-q5-27L" id="g2S-4f-xsz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhU-Wv-Ofw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1580" y="1602"/>
+            <point key="canvasLocation" x="-1581.1594202898552" y="1601.7857142857142"/>
         </scene>
         <!--My View-->
         <scene sceneID="DQ0-kZ-nTe">
             <objects>
                 <viewController storyboardIdentifier="MyView" id="Kbf-O9-hBv" customClass="MyView" customModule="Bunjang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UoP-ay-1GM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zbg-iy-kek">
@@ -420,6 +464,7 @@
                     <view key="view" contentMode="scaleToFill" id="SNG-d7-Fea">
                         <rect key="frame" x="0.0" y="0.0" width="404" height="435"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="huh-XS-Kqj"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </viewController>
@@ -508,6 +553,7 @@
         <image name="doc" catalog="system" width="115" height="128"/>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="house" catalog="system" width="128" height="106"/>
+        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="slider.horizontal.3" catalog="system" width="128" height="100"/>
@@ -519,6 +565,9 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
