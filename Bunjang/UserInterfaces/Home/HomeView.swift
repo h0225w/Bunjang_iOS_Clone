@@ -9,11 +9,33 @@ import UIKit
 
 class HomeView: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var imageBannerCollectionView: UICollectionView!
+    
+    // MARK: 이미지 배너 관련 변수
+    var timer: DispatchSourceTimer?
+    var currentCellIndex = 0
+    
+    var images = [
+        "",
+        "",
+        ""
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
         setupViews()
+        setupImageBanner()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        startImageBannerTimer()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        stopImageBannerTimer()
     }
 }
 
@@ -37,8 +59,48 @@ private extension HomeView {
     func setupViews() {
         scrollView.delegate = self
     }
+    
+    // MARK: 이미지 배너 설정
+    func setupImageBanner() {
+        imageBannerCollectionView.delegate = self
+        imageBannerCollectionView.dataSource = self
+        
+        imageBannerCollectionView.register(UINib(nibName: ImageBannerCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: ImageBannerCollectionViewCell.identifier)
+    }
+    
+    // MARK: 이미지 배너 타이머 동작
+    func startImageBannerTimer() {
+        self.timer = DispatchSource.makeTimerSource(flags: [], queue: .main)
+        self.timer?.schedule(deadline: .now(), repeating: .seconds(5))
+        
+        self.timer?.setEventHandler { [weak self] in
+            guard let self = self else { return }
+            if self.currentCellIndex < self.images.count - 1 {
+                self.currentCellIndex += 1
+            } else {
+                self.currentCellIndex = 0
+            }
+            
+            self.imageBannerCollectionView.scrollToItem(at: IndexPath(item: self.currentCellIndex, section: 0), at: .centeredHorizontally, animated: true)
+        }
+        
+        self.timer?.resume()
+//        timer = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(moveToNextIndex), userInfo: nil, repeats: true)
+    }
+    
+    // MARK: 이미지 배너 타이머 중지
+    func stopImageBannerTimer() {
+        self.timer?.cancel()
+        self.timer = nil
+    }
+    
+    // MARK: 이미지 배너 다음 슬라이드로 이동
+    @objc func moveToNextIndex() {
+        
+    }
 }
 
+// MARK: - UIScrollViewDelegate
 extension HomeView: UIScrollViewDelegate {
     // TODO: 스크롤 했을 때 NavigationBar tint color 바꾸는 방법
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -47,5 +109,30 @@ extension HomeView: UIScrollViewDelegate {
         } else {
             navigationController?.navigationBar.tintColor = .white
         }
+    }
+}
+
+// MARK: - UICollectionViewDelegate, UICollectionViewDataSource
+extension HomeView: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return images.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageBannerCollectionViewCell.identifier, for: indexPath) as! ImageBannerCollectionViewCell
+        cell.updateUI(images[indexPath.row])
+        
+        return cell
+    }
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+extension HomeView: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
 }
