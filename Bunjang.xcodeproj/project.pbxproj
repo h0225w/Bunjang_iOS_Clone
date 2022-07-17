@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		B7AE4B832883DE6A003D1D7A /* ImageBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AE4B812883DE6A003D1D7A /* ImageBannerCollectionViewCell.swift */; };
 		B7AE4B842883DE6A003D1D7A /* ImageBannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7AE4B822883DE6A003D1D7A /* ImageBannerCollectionViewCell.xib */; };
+		B7AE4B872883F97D003D1D7A /* RecommendProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AE4B862883F97D003D1D7A /* RecommendProductListView.swift */; };
+		B7AE4B892883F98D003D1D7A /* BrandListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AE4B882883F98D003D1D7A /* BrandListView.swift */; };
+		B7AE4B8C2883F99D003D1D7A /* HomeTabManView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AE4B8B2883F99D003D1D7A /* HomeTabManView.swift */; };
+		B7AE4B9028840026003D1D7A /* RecommendProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AE4B8E28840026003D1D7A /* RecommendProductCollectionViewCell.swift */; };
+		B7AE4B9128840026003D1D7A /* RecommendProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7AE4B8F28840026003D1D7A /* RecommendProductCollectionViewCell.xib */; };
 		B7CC863528828EAC000F46F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC863428828EAC000F46F1 /* AppDelegate.swift */; };
 		B7CC863728828EAC000F46F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC863628828EAC000F46F1 /* SceneDelegate.swift */; };
 		B7CC863E28828EAC000F46F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7CC863D28828EAC000F46F1 /* Assets.xcassets */; };
@@ -51,6 +56,11 @@
 /* Begin PBXFileReference section */
 		B7AE4B812883DE6A003D1D7A /* ImageBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageBannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		B7AE4B822883DE6A003D1D7A /* ImageBannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageBannerCollectionViewCell.xib; sourceTree = "<group>"; };
+		B7AE4B862883F97D003D1D7A /* RecommendProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendProductListView.swift; sourceTree = "<group>"; };
+		B7AE4B882883F98D003D1D7A /* BrandListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandListView.swift; sourceTree = "<group>"; };
+		B7AE4B8B2883F99D003D1D7A /* HomeTabManView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabManView.swift; sourceTree = "<group>"; };
+		B7AE4B8E28840026003D1D7A /* RecommendProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		B7AE4B8F28840026003D1D7A /* RecommendProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		B7CC863128828EAC000F46F1 /* Bunjang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bunjang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7CC863428828EAC000F46F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7CC863628828EAC000F46F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +119,26 @@
 				B7AE4B822883DE6A003D1D7A /* ImageBannerCollectionViewCell.xib */,
 			);
 			path = ImageBanner;
+			sourceTree = "<group>";
+		};
+		B7AE4B852883F943003D1D7A /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				B7AE4B8D2883FFFD003D1D7A /* Cells */,
+				B7AE4B862883F97D003D1D7A /* RecommendProductListView.swift */,
+				B7AE4B882883F98D003D1D7A /* BrandListView.swift */,
+				B7AE4B8B2883F99D003D1D7A /* HomeTabManView.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		B7AE4B8D2883FFFD003D1D7A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B7AE4B8E28840026003D1D7A /* RecommendProductCollectionViewCell.swift */,
+				B7AE4B8F28840026003D1D7A /* RecommendProductCollectionViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		B7CC862828828EAC000F46F1 = {
@@ -229,6 +259,7 @@
 		B7CC86792882B900000F46F1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B7AE4B852883F943003D1D7A /* Tab */,
 				B7AE4B802883DE47003D1D7A /* ImageBanner */,
 				B7CC86802882EFA6000F46F1 /* HomeView.swift */,
 			);
@@ -364,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7CC866A28829191000F46F1 /* Authentication.storyboard in Resources */,
+				B7AE4B9128840026003D1D7A /* RecommendProductCollectionViewCell.xib in Resources */,
 				B7AE4B842883DE6A003D1D7A /* ImageBannerCollectionViewCell.xib in Resources */,
 				B7CC864128828EAC000F46F1 /* LaunchScreen.storyboard in Resources */,
 				B7CC863E28828EAC000F46F1 /* Assets.xcassets in Resources */,
@@ -395,15 +427,19 @@
 				B7CC86882883033B000F46F1 /* ProductListView.swift in Sources */,
 				B7CC86812882EFA6000F46F1 /* HomeView.swift in Sources */,
 				B7CC86782882B5C9000F46F1 /* InputShopNameView.swift in Sources */,
+				B7AE4B872883F97D003D1D7A /* RecommendProductListView.swift in Sources */,
 				B7CC86832882EFAC000F46F1 /* MyView.swift in Sources */,
 				B7CC86762882B2C0000F46F1 /* CertNumberView.swift in Sources */,
+				B7AE4B8C2883F99D003D1D7A /* HomeTabManView.swift in Sources */,
 				B7CC867E2882BE7B000F46F1 /* TabBarView.swift in Sources */,
+				B7AE4B9028840026003D1D7A /* RecommendProductCollectionViewCell.swift in Sources */,
 				B7CC866E28829E78000F46F1 /* FirstView.swift in Sources */,
 				B7AE4B832883DE6A003D1D7A /* ImageBannerCollectionViewCell.swift in Sources */,
 				B7CC86702882A70E000F46F1 /* LoginView.swift in Sources */,
 				B7CC86742882A914000F46F1 /* UITextField+Extension.swift in Sources */,
 				B7CC868A28830803000F46F1 /* TabManView.swift in Sources */,
 				B7CC863528828EAC000F46F1 /* AppDelegate.swift in Sources */,
+				B7AE4B892883F98D003D1D7A /* BrandListView.swift in Sources */,
 				B7CC863728828EAC000F46F1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

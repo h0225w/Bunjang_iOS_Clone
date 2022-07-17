@@ -18,6 +18,8 @@ class HomeView: UIViewController {
     var images = [
         "",
         "",
+        "",
+        "",
         ""
     ]
     
