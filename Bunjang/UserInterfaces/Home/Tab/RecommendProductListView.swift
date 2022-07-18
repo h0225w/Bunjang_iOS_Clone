@@ -18,6 +18,7 @@ class RecommendProductListView: UIViewController {
 
 // MARK: - Extension
 private extension RecommendProductListView {
+    // MARK: 추천 상품 목록 설정
     func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -51,5 +52,11 @@ extension RecommendProductListView: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: ProductDetailView.identifier) as! ProductDetailView
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

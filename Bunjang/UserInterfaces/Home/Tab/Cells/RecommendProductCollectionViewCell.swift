@@ -12,6 +12,5 @@ class RecommendProductCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
 }

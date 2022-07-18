@@ -45,6 +45,8 @@ class HomeView: UIViewController {
 private extension HomeView {
     // MARK: 네비게이션 바 설정
     func setupNavigationBar() {
+        navigationItem.backButtonTitle = ""
+        
         let standardAppearance = UINavigationBarAppearance()
         standardAppearance.configureWithOpaqueBackground()
         standardAppearance.backgroundColor = .white

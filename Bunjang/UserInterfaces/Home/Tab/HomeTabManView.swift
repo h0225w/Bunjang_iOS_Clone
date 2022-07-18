@@ -9,6 +9,8 @@ import UIKit
 import Tabman
 import Pageboy
 
+// TODO: - 스크롤 시 탭 바 (추천상품, 브랜드)가 상단 고정되도록 해야 함
+
 class HomeTabManView: TabmanViewController {
     
     // 추천상품, 브랜드 vc
