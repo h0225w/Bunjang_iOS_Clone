@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class FirstView: UIViewController {
     @IBOutlet weak var kakaoLoginButton: UIButton!
@@ -24,13 +25,18 @@ class FirstView: UIViewController {
     
     @IBAction func didTapKakaoLoginButton(_ sender: Any) {
         LoginService.kakaoLogin() {
-            let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "TabBarView") as! TabBarView
-            self.view.window?.windowScene?.keyWindow?.rootViewController = vc
+            self.setRootViewController()
         }
     }
     
     @IBAction func didTapGoogleLoginButton(_ sender: Any) {
+        let config = GIDConfiguration(clientID: "57949764592-5kb2dr7obokq5f4rdpc4ongj6jb2p1jd.apps.googleusercontent.com")
+        
+        GIDSignIn.sharedInstance.signIn(with: config, presenting: self) { user, error in
+            guard let user = user else { return }
+            
+            self.setRootViewController()
+        }
     }
     
     // MARK: 다른 방법으로 로그인 눌렀을 때
@@ -61,5 +67,12 @@ private extension FirstView {
         
         googleLoginButton.layer.borderColor = UIColor.black.cgColor
         googleLoginButton.layer.borderWidth = 1
+    }
+    
+    // MARK: rootViewController
+    func setRootViewController() {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "TabBarView") as! TabBarView
+        self.view.window?.windowScene?.keyWindow?.rootViewController = vc
     }
 }

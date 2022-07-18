@@ -56,6 +56,8 @@
 		B7E20DF128855B4700C5949F /* KakaoSDKTalk in Frameworks */ = {isa = PBXBuildFile; productRef = B7E20DF028855B4700C5949F /* KakaoSDKTalk */; };
 		B7E20DF328855B4700C5949F /* KakaoSDKTemplate in Frameworks */ = {isa = PBXBuildFile; productRef = B7E20DF228855B4700C5949F /* KakaoSDKTemplate */; };
 		B7E20DF528855B4700C5949F /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = B7E20DF428855B4700C5949F /* KakaoSDKUser */; };
+		B7E20DF828856CC000C5949F /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = B7E20DF728856CC000C5949F /* GoogleSignIn */; };
+		B7E20DFA28856CC000C5949F /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B7E20DF928856CC000C5949F /* GoogleSignInSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,11 +129,13 @@
 				B7CC8686288300BB000F46F1 /* Tabman in Frameworks */,
 				B7E20DED28855B4700C5949F /* KakaoSDKShare in Frameworks */,
 				B7E20DEF28855B4700C5949F /* KakaoSDKStory in Frameworks */,
+				B7E20DF828856CC000C5949F /* GoogleSignIn in Frameworks */,
 				B7E20DF328855B4700C5949F /* KakaoSDKTemplate in Frameworks */,
 				B7E20DD72885335000C5949F /* Alamofire in Frameworks */,
 				B7E20DE328855B4700C5949F /* KakaoSDK in Frameworks */,
 				B7E20DE728855B4700C5949F /* KakaoSDKCommon in Frameworks */,
 				B7E20DEB28855B4700C5949F /* KakaoSDKNavi in Frameworks */,
+				B7E20DFA28856CC000C5949F /* GoogleSignInSwift in Frameworks */,
 				B7E20DF528855B4700C5949F /* KakaoSDKUser in Frameworks */,
 				B7E20DF128855B4700C5949F /* KakaoSDKTalk in Frameworks */,
 				B7E20DE528855B4700C5949F /* KakaoSDKAuth in Frameworks */,
@@ -408,6 +412,8 @@
 				B7E20DF028855B4700C5949F /* KakaoSDKTalk */,
 				B7E20DF228855B4700C5949F /* KakaoSDKTemplate */,
 				B7E20DF428855B4700C5949F /* KakaoSDKUser */,
+				B7E20DF728856CC000C5949F /* GoogleSignIn */,
+				B7E20DF928856CC000C5949F /* GoogleSignInSwift */,
 			);
 			productName = Bunjang;
 			productReference = B7CC863128828EAC000F46F1 /* Bunjang.app */;
@@ -485,6 +491,7 @@
 				B7CC8684288300BB000F46F1 /* XCRemoteSwiftPackageReference "Tabman" */,
 				B7E20DD52885335000C5949F /* XCRemoteSwiftPackageReference "Alamofire" */,
 				B7E20DE128855B4700C5949F /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				B7E20DF628856CC000C5949F /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = B7CC863228828EAC000F46F1 /* Products */;
 			projectDirPath = "";
@@ -917,6 +924,14 @@
 				kind = branch;
 			};
 		};
+		B7E20DF628856CC000C5949F /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -979,6 +994,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B7E20DE128855B4700C5949F /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
 			productName = KakaoSDKUser;
+		};
+		B7E20DF728856CC000C5949F /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7E20DF628856CC000C5949F /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		B7E20DF928856CC000C5949F /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7E20DF628856CC000C5949F /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

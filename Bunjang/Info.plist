@@ -20,6 +20,14 @@
 				<string>kakao40f9201d67f27cda11d56e5588edfdb8</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.57949764592-5kb2dr7obokq5f4rdpc4ongj6jb2p1jd</string>
+			</array>
+		</dict>
 	</array>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
