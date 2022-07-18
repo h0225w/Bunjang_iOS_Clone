@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "KakaoOpenSDK",
+        "repositoryURL": "https://github.com/kakao/kakao-ios-sdk",
+        "state": {
+          "branch": "master",
+          "revision": "4aee2605de323bdb54d42fb5108a414838efac08",
+          "version": null
+        }
+      },
+      {
         "package": "Pageboy",
         "repositoryURL": "https://github.com/uias/Pageboy",
         "state": {

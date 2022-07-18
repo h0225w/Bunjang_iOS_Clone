@@ -22,6 +22,17 @@ class FirstView: UIViewController {
     
     // MARK: - Actions
     
+    @IBAction func didTapKakaoLoginButton(_ sender: Any) {
+        LoginService.kakaoLogin() {
+            let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "TabBarView") as! TabBarView
+            self.view.window?.windowScene?.keyWindow?.rootViewController = vc
+        }
+    }
+    
+    @IBAction func didTapGoogleLoginButton(_ sender: Any) {
+    }
+    
     // MARK: 다른 방법으로 로그인 눌렀을 때
     @IBAction func didTapLoginButton(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "LoginView") as! LoginView

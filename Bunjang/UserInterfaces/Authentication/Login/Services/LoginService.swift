@@ -7,9 +7,14 @@
 
 import Foundation
 import Alamofire
+import KakaoSDKUser
+import KakaoSDKAuth
+import KakaoSDKCommon
 
 // MARK: - 로그인 관련 API
 class LoginService {
+    // MARK: - 일반 로그인
+    
     // MARK: 회원가입 / 로그인
     static func login(name: String, phone: String, birthDate: String, completion: @escaping (LoginResultData) -> Void) {
         let url = URL(string: "https://dev.idha-etu.shop/api/stores")!
@@ -78,5 +83,45 @@ class LoginService {
                     print(error)
                 }
             }
+    }
+    
+    // MARK: - 카카오 로그인
+    static func kakaoLogin(completion: @escaping () -> Void) {
+        // 카카오톡이 설치되어 있는 경우
+        if (UserApi.isKakaoTalkLoginAvailable()) {
+            // 카카오 로그인
+            UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
+                if let error = error {
+                    print(error)
+                } else {
+                    self.getKakaoUserInfo(completion: completion)
+                }
+            }
+        } else {
+            // 카카오 계정으로 로그인
+            UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+                    if let error = error {
+                        print(error)
+                    } else {
+                        self.getKakaoUserInfo(completion: completion)
+                    }
+                }
+        }
+    }
+    
+    // MARK: 카카오 로그인 > 사용자 정보
+    static func getKakaoUserInfo(completion: @escaping () -> Void) {
+        UserApi.shared.me { (user, error) in
+            if let error = error {
+                print(error)
+            } else {
+                print("me() success.")
+                
+                let nickname = user?.kakaoAccount?.profile?.nickname ?? ""
+                let gender = user?.kakaoAccount?.gender?.rawValue ?? ""
+                let birthDay = user?.kakaoAccount?.birthday ?? ""
+                completion()
+            }
+        }
     }
 }
