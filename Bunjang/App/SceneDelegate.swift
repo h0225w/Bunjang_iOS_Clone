@@ -18,6 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
+        // MARK: 로그인 되어있을 때 앱 실행 시 바로 홈 화면으로 이동되도록 설정
         let isLogined = UserDefaults.standard.bool(forKey: "isLogined")
         
         if isLogined {
