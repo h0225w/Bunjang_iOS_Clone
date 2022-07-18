@@ -9,7 +9,7 @@ import UIKit
 
 class FirstView: UIViewController {
     @IBOutlet weak var kakaoLoginButton: UIButton!
-    @IBOutlet weak var appleLoginButton: UIButton!
+    @IBOutlet weak var googleLoginButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
@@ -44,11 +44,11 @@ private extension FirstView {
     
     // MARK: 뷰 설정
     func setupViews() {
-        [kakaoLoginButton, appleLoginButton].forEach {
+        [kakaoLoginButton, googleLoginButton].forEach {
             $0?.layer.cornerRadius = 25
         }
         
-        appleLoginButton.layer.borderColor = UIColor.black.cgColor
-        appleLoginButton.layer.borderWidth = 1
+        googleLoginButton.layer.borderColor = UIColor.black.cgColor
+        googleLoginButton.layer.borderWidth = 1
     }
 }

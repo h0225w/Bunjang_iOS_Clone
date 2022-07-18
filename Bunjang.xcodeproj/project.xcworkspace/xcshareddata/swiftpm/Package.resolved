@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire",
+        "state": {
+          "branch": "master",
+          "revision": "8dd85aee02e39dd280c75eef88ffdb86eed4b07b",
+          "version": null
+        }
+      },
+      {
         "package": "Pageboy",
         "repositoryURL": "https://github.com/uias/Pageboy",
         "state": {

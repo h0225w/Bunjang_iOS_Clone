@@ -50,7 +50,7 @@
                                     <constraint firstAttribute="height" constant="50" id="Wln-le-7GO"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Apple로 로그인">
+                                <buttonConfiguration key="configuration" style="plain" title="Google로 로그인">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
@@ -90,7 +90,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="flE-YF-xfn"/>
                     <connections>
-                        <outlet property="appleLoginButton" destination="sqR-4V-kmW" id="U2i-pO-sou"/>
+                        <outlet property="googleLoginButton" destination="sqR-4V-kmW" id="PrS-10-TYP"/>
                         <outlet property="kakaoLoginButton" destination="NqS-Db-icf" id="Sqw-KD-MJT"/>
                         <outlet property="loginButton" destination="l9X-8Z-han" id="YWy-Dw-uDw"/>
                     </connections>
@@ -119,7 +119,7 @@
                                     <constraint firstAttribute="height" constant="50" id="3uN-7I-muL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aLn-Fg-POV">
                                 <rect key="frame" x="30" y="284" width="354" height="50"/>
@@ -147,7 +147,7 @@
                                     <constraint firstAttribute="height" constant="50" id="6ol-32-L9u"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eEM-Ii-IzL">
                                 <rect key="frame" x="30" y="482" width="354" height="50"/>
@@ -190,7 +190,7 @@
                                     <constraint firstAttribute="height" constant="50" id="uyE-ge-Da4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CR6-ME-oni">
                                 <rect key="frame" x="30" y="782" width="354" height="50"/>
@@ -284,7 +284,7 @@
                                     <constraint firstAttribute="height" constant="50" id="vMg-IE-8yV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인증번호 입력" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBz-qr-4Ws">
                                 <rect key="frame" x="30" y="192" width="66" height="15"/>

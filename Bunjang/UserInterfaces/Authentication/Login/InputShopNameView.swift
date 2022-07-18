@@ -20,9 +20,22 @@ class InputShopNameView: UIViewController {
     
     // MARK: 확인 버튼 눌렀을 때
     @IBAction func didTapConfirmButton(_ sender: Any) {
-        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "TabBarView") as! TabBarView
-        self.view.window?.windowScene?.keyWindow?.rootViewController = vc
+        let shopName = shopNameTextField.text ?? ""
+        
+        if shopName != "" {
+            LoginService.setShopName(storeName: shopName) { [weak self] data in
+                if data.isSuccess {
+                    UserDefaults.standard.set(true, forKey: "isLogined")
+                    
+                    let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+                    let vc = storyboard.instantiateViewController(withIdentifier: "TabBarView") as! TabBarView
+                    self?.view.window?.windowScene?.keyWindow?.rootViewController = vc
+                } else {
+                    let alert = Helper().alert(title: "상점명 설정 오류", msg: data.message)
+                    self?.present(alert, animated: true)
+                }
+            }
+        }
     }
 }
 

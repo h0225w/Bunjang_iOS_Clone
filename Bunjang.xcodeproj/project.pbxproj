@@ -40,6 +40,12 @@
 		B7DFA54928844FD200E5BB51 /* CollectionViewLeftAlignFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DFA54828844FD200E5BB51 /* CollectionViewLeftAlignFlowLayout.swift */; };
 		B7E20DCC2885124600C5949F /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E20DCA2885124600C5949F /* ProductCollectionViewCell.swift */; };
 		B7E20DCD2885124600C5949F /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E20DCB2885124600C5949F /* ProductCollectionViewCell.xib */; };
+		B7E20DD22885329000C5949F /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E20DD12885329000C5949F /* LoginService.swift */; };
+		B7E20DD42885329900C5949F /* LoginResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E20DD32885329900C5949F /* LoginResultData.swift */; };
+		B7E20DD72885335000C5949F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B7E20DD62885335000C5949F /* Alamofire */; };
+		B7E20DDC28853D1500C5949F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E20DDB28853D1500C5949F /* Helper.swift */; };
+		B7E20DDE2885441600C5949F /* CertNumberResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E20DDD2885441600C5949F /* CertNumberResultData.swift */; };
+		B7E20DE0288549C300C5949F /* ShopNameResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E20DDF288549C300C5949F /* ShopNameResultData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +102,11 @@
 		B7DFA54828844FD200E5BB51 /* CollectionViewLeftAlignFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLeftAlignFlowLayout.swift; sourceTree = "<group>"; };
 		B7E20DCA2885124600C5949F /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		B7E20DCB2885124600C5949F /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		B7E20DD12885329000C5949F /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		B7E20DD32885329900C5949F /* LoginResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResultData.swift; sourceTree = "<group>"; };
+		B7E20DDB28853D1500C5949F /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		B7E20DDD2885441600C5949F /* CertNumberResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertNumberResultData.swift; sourceTree = "<group>"; };
+		B7E20DDF288549C300C5949F /* ShopNameResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopNameResultData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +115,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7CC8686288300BB000F46F1 /* Tabman in Frameworks */,
+				B7E20DD72885335000C5949F /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +277,8 @@
 		B7CC866828829163000F46F1 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				B7E20DD828853A3900C5949F /* VO */,
+				B7E20DD02885326400C5949F /* Services */,
 				B7CC866F2882A70E000F46F1 /* LoginView.swift */,
 				B7CC86752882B2C0000F46F1 /* CertNumberView.swift */,
 				B7CC86772882B5C9000F46F1 /* InputShopNameView.swift */,
@@ -277,6 +291,7 @@
 			children = (
 				B7CC86722882A8FE000F46F1 /* Extensions */,
 				B7DFA54828844FD200E5BB51 /* CollectionViewLeftAlignFlowLayout.swift */,
+				B7E20DDB28853D1500C5949F /* Helper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -326,6 +341,24 @@
 			path = Products;
 			sourceTree = "<group>";
 		};
+		B7E20DD02885326400C5949F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B7E20DD12885329000C5949F /* LoginService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B7E20DD828853A3900C5949F /* VO */ = {
+			isa = PBXGroup;
+			children = (
+				B7E20DD32885329900C5949F /* LoginResultData.swift */,
+				B7E20DDD2885441600C5949F /* CertNumberResultData.swift */,
+				B7E20DDF288549C300C5949F /* ShopNameResultData.swift */,
+			);
+			path = VO;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -344,6 +377,7 @@
 			name = Bunjang;
 			packageProductDependencies = (
 				B7CC8685288300BB000F46F1 /* Tabman */,
+				B7E20DD62885335000C5949F /* Alamofire */,
 			);
 			productName = Bunjang;
 			productReference = B7CC863128828EAC000F46F1 /* Bunjang.app */;
@@ -419,6 +453,7 @@
 			mainGroup = B7CC862828828EAC000F46F1;
 			packageReferences = (
 				B7CC8684288300BB000F46F1 /* XCRemoteSwiftPackageReference "Tabman" */,
+				B7E20DD52885335000C5949F /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = B7CC863228828EAC000F46F1 /* Products */;
 			projectDirPath = "";
@@ -473,6 +508,7 @@
 				B7CC86782882B5C9000F46F1 /* InputShopNameView.swift in Sources */,
 				B7AE4B872883F97D003D1D7A /* RecommendProductListView.swift in Sources */,
 				B7CC86832882EFAC000F46F1 /* MyView.swift in Sources */,
+				B7E20DDE2885441600C5949F /* CertNumberResultData.swift in Sources */,
 				B7CC86762882B2C0000F46F1 /* CertNumberView.swift in Sources */,
 				B7AE4B8C2883F99D003D1D7A /* HomeTabManView.swift in Sources */,
 				B7CC867E2882BE7B000F46F1 /* TabBarView.swift in Sources */,
@@ -482,13 +518,17 @@
 				B7AE4B832883DE6A003D1D7A /* ImageBannerCollectionViewCell.swift in Sources */,
 				B7CC86702882A70E000F46F1 /* LoginView.swift in Sources */,
 				B7AE4B9828844B29003D1D7A /* TagCollectionViewCell.swift in Sources */,
+				B7E20DD42885329900C5949F /* LoginResultData.swift in Sources */,
 				B7CC86742882A914000F46F1 /* UITextField+Extension.swift in Sources */,
 				B7CC868A28830803000F46F1 /* TabManView.swift in Sources */,
 				B7E20DCC2885124600C5949F /* ProductCollectionViewCell.swift in Sources */,
+				B7E20DD22885329000C5949F /* LoginService.swift in Sources */,
 				B7CC863528828EAC000F46F1 /* AppDelegate.swift in Sources */,
+				B7E20DE0288549C300C5949F /* ShopNameResultData.swift in Sources */,
 				B7AE4B892883F98D003D1D7A /* BrandListView.swift in Sources */,
 				B7CC863728828EAC000F46F1 /* SceneDelegate.swift in Sources */,
 				B7AE4B9428840F25003D1D7A /* ProductDetailView.swift in Sources */,
+				B7E20DDC28853D1500C5949F /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -830,6 +870,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		B7E20DD52885335000C5949F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -837,6 +885,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B7CC8684288300BB000F46F1 /* XCRemoteSwiftPackageReference "Tabman" */;
 			productName = Tabman;
+		};
+		B7E20DD62885335000C5949F /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7E20DD52885335000C5949F /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

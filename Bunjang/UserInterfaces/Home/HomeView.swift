@@ -25,6 +25,7 @@ class HomeView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupNavigationBar()
         setupViews()
         setupImageBanner()
