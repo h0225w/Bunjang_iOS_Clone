@@ -14,6 +14,8 @@ class ProductDetailView: UIViewController {
     @IBOutlet weak var tagCollectionView: UICollectionView!
     @IBOutlet weak var productCollectionView: UICollectionView!
     
+    @IBOutlet weak var profileImageView: UIImageView!
+    
     // MARK: 이미지 배너 관련 변수
     var timer: DispatchSourceTimer?
     var currentCellIndex = 0
@@ -34,6 +36,7 @@ class ProductDetailView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
+        setupViews()
         setupImageBanner()
         setupTags()
         setupProducts()
@@ -50,6 +53,14 @@ private extension ProductDetailView {
         let actionButton = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(didTapActionButton))
         
         navigationItem.rightBarButtonItems = [searchButton, actionButton]
+    }
+    
+    // MARK: View 설정
+    func setupViews() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapProfileImage(_:)))
+        
+        profileImageView.isUserInteractionEnabled = true
+        profileImageView.addGestureRecognizer(tapGestureRecognizer)
     }
     
     // MARK: 이미지 배너 설정
@@ -90,6 +101,12 @@ private extension ProductDetailView {
     // MARK: 공유 버튼 눌렀을 때
     @objc func didTapActionButton() {
         
+    }
+    
+    // MARK: 프로필 이미지 눌렀을 때
+    @objc func didTapProfileImage(_ sender: AnyObject) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: ShopInfoView.identifier) as! ShopInfoView
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

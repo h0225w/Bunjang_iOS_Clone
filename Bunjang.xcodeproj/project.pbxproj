@@ -37,6 +37,7 @@
 		B7CC8686288300BB000F46F1 /* Tabman in Frameworks */ = {isa = PBXBuildFile; productRef = B7CC8685288300BB000F46F1 /* Tabman */; };
 		B7CC86882883033B000F46F1 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC86872883033B000F46F1 /* ProductListView.swift */; };
 		B7CC868A28830803000F46F1 /* TabManView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC868928830803000F46F1 /* TabManView.swift */; };
+		B7D581BE28865BBE00F3AFAB /* ShopInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D581BD28865BBE00F3AFAB /* ShopInfoView.swift */; };
 		B7DFA54928844FD200E5BB51 /* CollectionViewLeftAlignFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DFA54828844FD200E5BB51 /* CollectionViewLeftAlignFlowLayout.swift */; };
 		B7E20DCC2885124600C5949F /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E20DCA2885124600C5949F /* ProductCollectionViewCell.swift */; };
 		B7E20DCD2885124600C5949F /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E20DCB2885124600C5949F /* ProductCollectionViewCell.xib */; };
@@ -58,6 +59,8 @@
 		B7E20DF528855B4700C5949F /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = B7E20DF428855B4700C5949F /* KakaoSDKUser */; };
 		B7E20DF828856CC000C5949F /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = B7E20DF728856CC000C5949F /* GoogleSignIn */; };
 		B7E20DFA28856CC000C5949F /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B7E20DF928856CC000C5949F /* GoogleSignInSwift */; };
+		B7FEFE8028866719004AEA1A /* ShopProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FEFE7E28866719004AEA1A /* ShopProductCollectionViewCell.swift */; };
+		B7FEFE8128866719004AEA1A /* ShopProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7FEFE7F28866719004AEA1A /* ShopProductCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +114,7 @@
 		B7CC86822882EFAC000F46F1 /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
 		B7CC86872883033B000F46F1 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		B7CC868928830803000F46F1 /* TabManView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabManView.swift; sourceTree = "<group>"; };
+		B7D581BD28865BBE00F3AFAB /* ShopInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopInfoView.swift; sourceTree = "<group>"; };
 		B7DFA54828844FD200E5BB51 /* CollectionViewLeftAlignFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLeftAlignFlowLayout.swift; sourceTree = "<group>"; };
 		B7E20DCA2885124600C5949F /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		B7E20DCB2885124600C5949F /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 		B7E20DDB28853D1500C5949F /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		B7E20DDD2885441600C5949F /* CertNumberResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertNumberResultData.swift; sourceTree = "<group>"; };
 		B7E20DDF288549C300C5949F /* ShopNameResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopNameResultData.swift; sourceTree = "<group>"; };
+		B7FEFE7E28866719004AEA1A /* ShopProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		B7FEFE7F28866719004AEA1A /* ShopProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopProductCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,8 +279,9 @@
 				B7CC867C2882BE70000F46F1 /* Layout */,
 				B7CC86662882902C000F46F1 /* Authentication */,
 				B7CC86792882B900000F46F1 /* Home */,
-				B7CC867F2882EF91000F46F1 /* My */,
 				B7AE4B9228840EFB003D1D7A /* Product */,
+				B7CC867F2882EF91000F46F1 /* My */,
+				B7D581BC288657B500F3AFAB /* ShopInfo */,
 				B7CC867A2882BB02000F46F1 /* Main.storyboard */,
 			);
 			path = UserInterfaces;
@@ -356,6 +363,17 @@
 			path = My;
 			sourceTree = "<group>";
 		};
+		B7D581BC288657B500F3AFAB /* ShopInfo */ = {
+			isa = PBXGroup;
+			children = (
+				B7FEFE83288680EC004AEA1A /* VO */,
+				B7FEFE82288680E7004AEA1A /* Services */,
+				B7FEFE7B288666E1004AEA1A /* ShopProduct */,
+				B7D581BD28865BBE00F3AFAB /* ShopInfoView.swift */,
+			);
+			path = ShopInfo;
+			sourceTree = "<group>";
+		};
 		B7E20DC92885122C00C5949F /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -379,6 +397,29 @@
 				B7E20DD32885329900C5949F /* LoginResultData.swift */,
 				B7E20DDD2885441600C5949F /* CertNumberResultData.swift */,
 				B7E20DDF288549C300C5949F /* ShopNameResultData.swift */,
+			);
+			path = VO;
+			sourceTree = "<group>";
+		};
+		B7FEFE7B288666E1004AEA1A /* ShopProduct */ = {
+			isa = PBXGroup;
+			children = (
+				B7FEFE7E28866719004AEA1A /* ShopProductCollectionViewCell.swift */,
+				B7FEFE7F28866719004AEA1A /* ShopProductCollectionViewCell.xib */,
+			);
+			path = ShopProduct;
+			sourceTree = "<group>";
+		};
+		B7FEFE82288680E7004AEA1A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B7FEFE83288680EC004AEA1A /* VO */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = VO;
 			sourceTree = "<group>";
@@ -512,6 +553,7 @@
 				B7CC866A28829191000F46F1 /* Authentication.storyboard in Resources */,
 				B7AE4B9928844B29003D1D7A /* TagCollectionViewCell.xib in Resources */,
 				B7AE4B9128840026003D1D7A /* RecommendProductCollectionViewCell.xib in Resources */,
+				B7FEFE8128866719004AEA1A /* ShopProductCollectionViewCell.xib in Resources */,
 				B7AE4B842883DE6A003D1D7A /* ImageBannerCollectionViewCell.xib in Resources */,
 				B7CC864128828EAC000F46F1 /* LaunchScreen.storyboard in Resources */,
 				B7CC863E28828EAC000F46F1 /* Assets.xcassets in Resources */,
@@ -557,6 +599,7 @@
 				B7CC86702882A70E000F46F1 /* LoginView.swift in Sources */,
 				B7AE4B9828844B29003D1D7A /* TagCollectionViewCell.swift in Sources */,
 				B7E20DD42885329900C5949F /* LoginResultData.swift in Sources */,
+				B7D581BE28865BBE00F3AFAB /* ShopInfoView.swift in Sources */,
 				B7CC86742882A914000F46F1 /* UITextField+Extension.swift in Sources */,
 				B7CC868A28830803000F46F1 /* TabManView.swift in Sources */,
 				B7E20DCC2885124600C5949F /* ProductCollectionViewCell.swift in Sources */,
@@ -564,6 +607,7 @@
 				B7CC863528828EAC000F46F1 /* AppDelegate.swift in Sources */,
 				B7E20DE0288549C300C5949F /* ShopNameResultData.swift in Sources */,
 				B7AE4B892883F98D003D1D7A /* BrandListView.swift in Sources */,
+				B7FEFE8028866719004AEA1A /* ShopProductCollectionViewCell.swift in Sources */,
 				B7CC863728828EAC000F46F1 /* SceneDelegate.swift in Sources */,
 				B7AE4B9428840F25003D1D7A /* ProductDetailView.swift in Sources */,
 				B7E20DDC28853D1500C5949F /* Helper.swift in Sources */,
