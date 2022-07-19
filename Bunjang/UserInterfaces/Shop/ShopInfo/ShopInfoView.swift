@@ -10,11 +10,28 @@ import UIKit
 class ShopInfoView: UIViewController {
     static let identifier = "ShopInfoView"
     
+    // MARK: 프로필
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var profileNameLabel: UILabel!
+    @IBOutlet weak var profileReviewLabel: UILabel!
+    @IBOutlet weak var profileInfoLabel: UILabel!
+    
+    // MARK: 상점 정보
+    @IBOutlet weak var productCountLabel: UILabel!
+    @IBOutlet weak var reviewCountLabel: UILabel!
+    @IBOutlet weak var followingCountLabel: UILabel!
+    @IBOutlet weak var followerCountLabel: UILabel!
+    @IBOutlet weak var saleCountLabel: UILabel!
+    
+    // MARK: 상점 소개
+    @IBOutlet weak var introduceLabel: UILabel!
+    
     @IBOutlet weak var productCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
+        setupData()
         setupShopProducts()
     }
     
@@ -25,10 +42,27 @@ class ShopInfoView: UIViewController {
 
 // MARK: - Extension
 private extension ShopInfoView {
+    // MARK: 네비게이션 바 설정
     func setupNavigationBar() {
         navigationController?.isNavigationBarHidden = true
     }
     
+    // MARK: 상점 정보 데이터 가져오기
+    func setupData() {
+        ShopService.getShopInfo { [weak self] data in
+            guard let self = self else { return }
+            self.profileNameLabel.text = data.result.storeName
+            self.profileReviewLabel.text = "★ \(data.result.rating) (\(data.result.ratingCount))"
+            self.profileInfoLabel.text = "오픈일 +\(data.result.openDate) 방문수 \(data.result.visitCount)"
+            self.productCountLabel.text = "\(data.result.productCount)"
+            self.reviewCountLabel.text = "\(data.result.reviewCount)"
+            self.followingCountLabel.text = "\(data.result.followingCount)"
+            self.followerCountLabel.text = "\(data.result.followerCount)"
+            self.saleCountLabel.text = "\(data.result.saleCount)회"
+        }
+    }
+    
+    // MARK: 상점 상품 목록 설정
     func setupShopProducts() {
         productCollectionView.delegate = self
         productCollectionView.dataSource = self
@@ -45,6 +79,7 @@ extension ShopInfoView: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShopProductCollectionViewCell.identifier, for: indexPath) as! ShopProductCollectionViewCell
+        cell.updateUI("")
         
         return cell
     }

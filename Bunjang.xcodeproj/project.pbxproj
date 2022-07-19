@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B754075E2886DCC30038F58C /* OptionSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B754075D2886DCC30038F58C /* OptionSelectView.swift */; };
 		B7AE4B832883DE6A003D1D7A /* ImageBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AE4B812883DE6A003D1D7A /* ImageBannerCollectionViewCell.swift */; };
 		B7AE4B842883DE6A003D1D7A /* ImageBannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7AE4B822883DE6A003D1D7A /* ImageBannerCollectionViewCell.xib */; };
 		B7AE4B872883F97D003D1D7A /* RecommendProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AE4B862883F97D003D1D7A /* RecommendProductListView.swift */; };
@@ -61,6 +62,10 @@
 		B7E20DFA28856CC000C5949F /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B7E20DF928856CC000C5949F /* GoogleSignInSwift */; };
 		B7FEFE8028866719004AEA1A /* ShopProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FEFE7E28866719004AEA1A /* ShopProductCollectionViewCell.swift */; };
 		B7FEFE8128866719004AEA1A /* ShopProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7FEFE7F28866719004AEA1A /* ShopProductCollectionViewCell.xib */; };
+		B7FEFE852886824F004AEA1A /* ShopInfoResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FEFE842886824F004AEA1A /* ShopInfoResultData.swift */; };
+		B7FEFE8728868276004AEA1A /* ShopService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FEFE8628868276004AEA1A /* ShopService.swift */; };
+		B7FEFE8B28868515004AEA1A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B7FEFE8A28868515004AEA1A /* Kingfisher */; };
+		B7FEFE8F2886C342004AEA1A /* ProductRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FEFE8E2886C342004AEA1A /* ProductRegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +86,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B754075D2886DCC30038F58C /* OptionSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSelectView.swift; sourceTree = "<group>"; };
 		B7AE4B812883DE6A003D1D7A /* ImageBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageBannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		B7AE4B822883DE6A003D1D7A /* ImageBannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageBannerCollectionViewCell.xib; sourceTree = "<group>"; };
 		B7AE4B862883F97D003D1D7A /* RecommendProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendProductListView.swift; sourceTree = "<group>"; };
@@ -125,6 +131,9 @@
 		B7E20DDF288549C300C5949F /* ShopNameResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopNameResultData.swift; sourceTree = "<group>"; };
 		B7FEFE7E28866719004AEA1A /* ShopProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		B7FEFE7F28866719004AEA1A /* ShopProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		B7FEFE842886824F004AEA1A /* ShopInfoResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopInfoResultData.swift; sourceTree = "<group>"; };
+		B7FEFE8628868276004AEA1A /* ShopService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopService.swift; sourceTree = "<group>"; };
+		B7FEFE8E2886C342004AEA1A /* ProductRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +150,7 @@
 				B7E20DE328855B4700C5949F /* KakaoSDK in Frameworks */,
 				B7E20DE728855B4700C5949F /* KakaoSDKCommon in Frameworks */,
 				B7E20DEB28855B4700C5949F /* KakaoSDKNavi in Frameworks */,
+				B7FEFE8B28868515004AEA1A /* Kingfisher in Frameworks */,
 				B7E20DFA28856CC000C5949F /* GoogleSignInSwift in Frameworks */,
 				B7E20DF528855B4700C5949F /* KakaoSDKUser in Frameworks */,
 				B7E20DF128855B4700C5949F /* KakaoSDKTalk in Frameworks */,
@@ -166,6 +176,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B71FE9022886F8330019E382 /* VO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VO;
+			sourceTree = "<group>";
+		};
+		B71FE9032886F8380019E382 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B754075C2886DCB20038F58C /* OptionSelect */ = {
+			isa = PBXGroup;
+			children = (
+				B754075D2886DCC30038F58C /* OptionSelectView.swift */,
+			);
+			path = OptionSelect;
+			sourceTree = "<group>";
+		};
 		B7AE4B802883DE47003D1D7A /* ImageBanner */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,9 +230,10 @@
 		B7AE4B9228840EFB003D1D7A /* Product */ = {
 			isa = PBXGroup;
 			children = (
-				B7E20DC92885122C00C5949F /* Products */,
-				B7AE4B9528844B10003D1D7A /* Tag */,
-				B7AE4B9328840F25003D1D7A /* ProductDetailView.swift */,
+				B71FE9022886F8330019E382 /* VO */,
+				B71FE9032886F8380019E382 /* Services */,
+				B7FEFE8D2886C329004AEA1A /* Detail */,
+				B7FEFE8C2886C319004AEA1A /* Register */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -281,7 +314,7 @@
 				B7CC86792882B900000F46F1 /* Home */,
 				B7AE4B9228840EFB003D1D7A /* Product */,
 				B7CC867F2882EF91000F46F1 /* My */,
-				B7D581BC288657B500F3AFAB /* ShopInfo */,
+				B7D581BC288657B500F3AFAB /* Shop */,
 				B7CC867A2882BB02000F46F1 /* Main.storyboard */,
 			);
 			path = UserInterfaces;
@@ -363,15 +396,14 @@
 			path = My;
 			sourceTree = "<group>";
 		};
-		B7D581BC288657B500F3AFAB /* ShopInfo */ = {
+		B7D581BC288657B500F3AFAB /* Shop */ = {
 			isa = PBXGroup;
 			children = (
 				B7FEFE83288680EC004AEA1A /* VO */,
 				B7FEFE82288680E7004AEA1A /* Services */,
-				B7FEFE7B288666E1004AEA1A /* ShopProduct */,
-				B7D581BD28865BBE00F3AFAB /* ShopInfoView.swift */,
+				B7FEFE88288682CB004AEA1A /* ShopInfo */,
 			);
-			path = ShopInfo;
+			path = Shop;
 			sourceTree = "<group>";
 		};
 		B7E20DC92885122C00C5949F /* Products */ = {
@@ -413,6 +445,7 @@
 		B7FEFE82288680E7004AEA1A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				B7FEFE8628868276004AEA1A /* ShopService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -420,8 +453,37 @@
 		B7FEFE83288680EC004AEA1A /* VO */ = {
 			isa = PBXGroup;
 			children = (
+				B7FEFE842886824F004AEA1A /* ShopInfoResultData.swift */,
 			);
 			path = VO;
+			sourceTree = "<group>";
+		};
+		B7FEFE88288682CB004AEA1A /* ShopInfo */ = {
+			isa = PBXGroup;
+			children = (
+				B7FEFE7B288666E1004AEA1A /* ShopProduct */,
+				B7D581BD28865BBE00F3AFAB /* ShopInfoView.swift */,
+			);
+			path = ShopInfo;
+			sourceTree = "<group>";
+		};
+		B7FEFE8C2886C319004AEA1A /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				B754075C2886DCB20038F58C /* OptionSelect */,
+				B7FEFE8E2886C342004AEA1A /* ProductRegisterView.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		B7FEFE8D2886C329004AEA1A /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				B7E20DC92885122C00C5949F /* Products */,
+				B7AE4B9528844B10003D1D7A /* Tag */,
+				B7AE4B9328840F25003D1D7A /* ProductDetailView.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,6 +517,7 @@
 				B7E20DF428855B4700C5949F /* KakaoSDKUser */,
 				B7E20DF728856CC000C5949F /* GoogleSignIn */,
 				B7E20DF928856CC000C5949F /* GoogleSignInSwift */,
+				B7FEFE8A28868515004AEA1A /* Kingfisher */,
 			);
 			productName = Bunjang;
 			productReference = B7CC863128828EAC000F46F1 /* Bunjang.app */;
@@ -533,6 +596,7 @@
 				B7E20DD52885335000C5949F /* XCRemoteSwiftPackageReference "Alamofire" */,
 				B7E20DE128855B4700C5949F /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 				B7E20DF628856CC000C5949F /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				B7FEFE8928868515004AEA1A /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = B7CC863228828EAC000F46F1 /* Products */;
 			projectDirPath = "";
@@ -588,16 +652,19 @@
 				B7CC86782882B5C9000F46F1 /* InputShopNameView.swift in Sources */,
 				B7AE4B872883F97D003D1D7A /* RecommendProductListView.swift in Sources */,
 				B7CC86832882EFAC000F46F1 /* MyView.swift in Sources */,
+				B754075E2886DCC30038F58C /* OptionSelectView.swift in Sources */,
 				B7E20DDE2885441600C5949F /* CertNumberResultData.swift in Sources */,
 				B7CC86762882B2C0000F46F1 /* CertNumberView.swift in Sources */,
 				B7AE4B8C2883F99D003D1D7A /* HomeTabManView.swift in Sources */,
 				B7CC867E2882BE7B000F46F1 /* TabBarView.swift in Sources */,
 				B7AE4B9028840026003D1D7A /* RecommendProductCollectionViewCell.swift in Sources */,
+				B7FEFE852886824F004AEA1A /* ShopInfoResultData.swift in Sources */,
 				B7DFA54928844FD200E5BB51 /* CollectionViewLeftAlignFlowLayout.swift in Sources */,
 				B7CC866E28829E78000F46F1 /* FirstView.swift in Sources */,
 				B7AE4B832883DE6A003D1D7A /* ImageBannerCollectionViewCell.swift in Sources */,
 				B7CC86702882A70E000F46F1 /* LoginView.swift in Sources */,
 				B7AE4B9828844B29003D1D7A /* TagCollectionViewCell.swift in Sources */,
+				B7FEFE8F2886C342004AEA1A /* ProductRegisterView.swift in Sources */,
 				B7E20DD42885329900C5949F /* LoginResultData.swift in Sources */,
 				B7D581BE28865BBE00F3AFAB /* ShopInfoView.swift in Sources */,
 				B7CC86742882A914000F46F1 /* UITextField+Extension.swift in Sources */,
@@ -607,6 +674,7 @@
 				B7CC863528828EAC000F46F1 /* AppDelegate.swift in Sources */,
 				B7E20DE0288549C300C5949F /* ShopNameResultData.swift in Sources */,
 				B7AE4B892883F98D003D1D7A /* BrandListView.swift in Sources */,
+				B7FEFE8728868276004AEA1A /* ShopService.swift in Sources */,
 				B7FEFE8028866719004AEA1A /* ShopProductCollectionViewCell.swift in Sources */,
 				B7CC863728828EAC000F46F1 /* SceneDelegate.swift in Sources */,
 				B7AE4B9428840F25003D1D7A /* ProductDetailView.swift in Sources */,
@@ -976,6 +1044,14 @@
 				minimumVersion = 6.0.0;
 			};
 		};
+		B7FEFE8928868515004AEA1A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1048,6 +1124,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B7E20DF628856CC000C5949F /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
+		};
+		B7FEFE8A28868515004AEA1A /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7FEFE8928868515004AEA1A /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

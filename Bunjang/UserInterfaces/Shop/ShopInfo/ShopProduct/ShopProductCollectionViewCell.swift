@@ -15,4 +15,7 @@ class ShopProductCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
 
+    func updateUI(_ data: String) {
+        
+    }
 }
