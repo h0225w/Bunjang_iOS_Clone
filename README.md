@@ -31,3 +31,13 @@
 - 소셜 (카카오 / 구글) 로그인 API 연동
   
 </details>
+
+<details>
+<summary>07 / 19 (화)</summary>
+
+- 상점 정보 화면 구현
+- 상점 정보 API 연동
+- 프로필 API 연동
+- 상품 등록 화면 구현
+  
+</details>
