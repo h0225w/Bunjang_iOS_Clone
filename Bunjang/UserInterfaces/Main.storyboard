@@ -84,6 +84,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" image="camera.fill" catalog="system">
                                                     <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTapImagePickerButton:" destination="wZJ-wU-dlr" eventType="touchUpInside" id="WVc-nX-in7"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="상품명" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vaL-mX-45C">
                                                 <rect key="frame" x="20" y="110" width="374" height="50"/>
@@ -129,8 +132,8 @@
                                                     <action selector="didTapOptionSelectButton:" destination="wZJ-wU-dlr" eventType="touchUpInside" id="y6A-qX-Yyn"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1개 ﹒중고상품 ﹒ 교환불가 ﹒배송비포함" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ore-DC-CX3">
-                                                <rect key="frame" x="102.5" y="388" width="201.5" height="15"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1개 ﹒중고상품 ﹒ 교환불가 ﹒배송비별도" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ore-DC-CX3">
+                                                <rect key="frame" x="102.5" y="388" width="202" height="15"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -180,6 +183,13 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="atg-Qi-PWg">
+                                                <rect key="frame" x="100" y="20" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="PXp-2H-Ehr"/>
+                                                    <constraint firstAttribute="width" constant="70" id="xfW-eB-Gfr"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -199,9 +209,11 @@
                                             <constraint firstItem="vaL-mX-45C" firstAttribute="leading" secondItem="97K-uq-l22" secondAttribute="leading" constant="20" id="dhQ-er-xrM"/>
                                             <constraint firstAttribute="trailing" secondItem="Ntp-O4-b1K" secondAttribute="trailing" constant="20" id="dqd-gs-apY"/>
                                             <constraint firstItem="Qhk-TX-yvz" firstAttribute="top" secondItem="97K-uq-l22" secondAttribute="top" constant="20" id="dtl-HZ-Jdn"/>
+                                            <constraint firstItem="atg-Qi-PWg" firstAttribute="leading" secondItem="Qhk-TX-yvz" secondAttribute="trailing" constant="10" id="gho-UR-zmg"/>
                                             <constraint firstAttribute="height" constant="1000" id="mIF-g6-2NA"/>
                                             <constraint firstAttribute="trailing" secondItem="lfg-F8-R9P" secondAttribute="trailing" constant="20" id="mdC-ay-sds"/>
                                             <constraint firstItem="CfB-eX-zbG" firstAttribute="leading" secondItem="97K-uq-l22" secondAttribute="leading" constant="20" id="myp-jQ-shf"/>
+                                            <constraint firstItem="atg-Qi-PWg" firstAttribute="centerY" secondItem="Qhk-TX-yvz" secondAttribute="centerY" id="qCh-9X-0yi"/>
                                             <constraint firstItem="ore-DC-CX3" firstAttribute="leading" secondItem="CfB-eX-zbG" secondAttribute="trailing" constant="10" id="r3F-k1-jYj"/>
                                             <constraint firstItem="Ntp-O4-b1K" firstAttribute="leading" secondItem="97K-uq-l22" secondAttribute="leading" constant="20" id="sne-q9-E9v"/>
                                             <constraint firstItem="Qhk-TX-yvz" firstAttribute="leading" secondItem="97K-uq-l22" secondAttribute="leading" constant="20" id="v0Y-Mf-k4s"/>
@@ -239,10 +251,12 @@
                     <connections>
                         <outlet property="categoryTextField" destination="Ntp-O4-b1K" id="Hta-9L-zcc"/>
                         <outlet property="contentTextView" destination="OAh-o0-dHe" id="Avs-TD-mcp"/>
+                        <outlet property="imagePickerButton" destination="Qhk-TX-yvz" id="QmR-G4-lU8"/>
                         <outlet property="nameTextField" destination="vaL-mX-45C" id="wJh-SY-xfg"/>
                         <outlet property="optionLabel" destination="ore-DC-CX3" id="AT5-3W-JAK"/>
                         <outlet property="optionSelectButton" destination="CfB-eX-zbG" id="gza-6Z-4bu"/>
                         <outlet property="priceTextField" destination="lfg-F8-R9P" id="r7B-Rp-hV6"/>
+                        <outlet property="productImageView" destination="atg-Qi-PWg" id="br0-qQ-fdK"/>
                         <outlet property="safePaymentButton" destination="KTY-Py-CaJ" id="fb0-sn-YTh"/>
                         <outlet property="tagTextField" destination="mX4-vT-lL0" id="PVl-TE-dBn"/>
                     </connections>
@@ -343,7 +357,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKS-BD-mNA">
                                 <rect key="frame" x="98" y="315" width="155.5" height="29"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="포함">
+                                <buttonConfiguration key="configuration" style="plain" title="별도">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="12"/>
                                     <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
@@ -351,7 +365,7 @@
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UvE-AB-IRq">
                                 <rect key="frame" x="263.5" y="315" width="130.5" height="29"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="별도">
+                                <buttonConfiguration key="configuration" style="plain" title="포함">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="12"/>
                                     <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>

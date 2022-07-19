@@ -18,6 +18,7 @@ class TabBarView: UITabBarController {
 extension TabBarView: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         let tabBarIndex = tabBarController.selectedIndex
+        // TODO: 탭 바 > 등록 버튼 클릭 시 탭 이동 대신 등록 버튼 창만 띄울 수 있도록 하고 싶음
         if tabBarIndex == 1 {
             let vc = storyboard?.instantiateViewController(withIdentifier: ProductRegisterView.identifier) as! ProductRegisterView
             

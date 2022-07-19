@@ -10,15 +10,12 @@ import UIKit
 class OptionSelectView: UIViewController {
     static let identifier = "OptionSelectView"
     
-    var completion: (([String]) -> Void)?
+//    var completion: (([String]) -> Void)?
+    var completion: (([Int]) -> Void)?
     
     var used: Int = 0
     var exchange: Int = 0
     var deliveryCharge: Int = 0
-    
-    var usedText: String = "중고상품"
-    var exchangeText: String = "교환불가"
-    var deliveryChargeText: String = "배송비포함"
     
     @IBOutlet weak var countTextField: UITextField!
     @IBOutlet var usedButton: [UIButton]!
@@ -32,10 +29,12 @@ class OptionSelectView: UIViewController {
     
     // MARK: - Actions
     @IBAction func didTapCompleteButton(_ sender: Any) {
-        let count = "\(countTextField.text ?? "")개"
-        
-        completion?([count, usedText, exchangeText, deliveryChargeText])
-        self.dismiss(animated: true, completion: nil)
+        if let countText = countTextField.text, countText != "" {
+            let count = Int(countText)!
+            
+            completion?([count, used, exchange, deliveryCharge])
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }
 
@@ -70,10 +69,8 @@ private extension OptionSelectView {
         usedButton[used].backgroundColor = .systemPink
         
         if used > 0 {
-            usedText = "중고상품"
             usedButton[0].backgroundColor = .white
         } else {
-            usedText = "새상품"
             usedButton[1].backgroundColor = .white
         }
     }
@@ -85,10 +82,8 @@ private extension OptionSelectView {
         exchangeButton[exchange].backgroundColor = .systemPink
         
         if exchange > 0 {
-            exchangeText = "교환불가"
             exchangeButton[0].backgroundColor = .white
         } else {
-            exchangeText = "교환가능"
             exchangeButton[1].backgroundColor = .white
         }
     }
@@ -100,10 +95,8 @@ private extension OptionSelectView {
         deliveryChargeButton[deliveryCharge].backgroundColor = .systemPink
         
         if deliveryCharge > 0 {
-            deliveryChargeText = "배송비포함"
             deliveryChargeButton[0].backgroundColor = .white
         } else {
-            deliveryChargeText = "배송비별도"
             deliveryChargeButton[1].backgroundColor = .white
         }
     }
