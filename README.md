@@ -43,3 +43,10 @@
 - 탭 바 > 등록 버튼 클릭 시 탭 이동 대신 등록 버튼 창만 띄울 수 있도록 하고 싶음
 
 </details>
+
+<details>
+<summary>07 / 20 (수)</summary>
+
+- 홈 화면 API 연동
+
+</details>
