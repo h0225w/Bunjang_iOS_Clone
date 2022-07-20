@@ -32,9 +32,16 @@ class ShopInfoView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationBar()
         setupData()
         setupShopProducts()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = false
     }
     
     @IBAction func didTapBackButton(_ sender: Any) {
@@ -44,11 +51,6 @@ class ShopInfoView: UIViewController {
 
 // MARK: - Extension
 private extension ShopInfoView {
-    // MARK: 네비게이션 바 설정
-    func setupNavigationBar() {
-        navigationController?.isNavigationBarHidden = true
-    }
-    
     // MARK: 상점 정보 데이터 가져오기
     func setupData() {
         if let storeId = storeId {
