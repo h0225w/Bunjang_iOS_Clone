@@ -10,9 +10,12 @@ import UIKit
 class RecommendProductListView: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var products: [HomeProductsResult]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        setupData()
     }
 }
 
@@ -25,12 +28,26 @@ private extension RecommendProductListView {
         
         collectionView.register(UINib(nibName: RecommendProductCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: RecommendProductCollectionViewCell.identifier)
     }
+    
+    // MARK: 추천 상품 목록 데이터 가져오기
+    func setupData() {
+        HomeService.getProducts { [weak self] data in
+            guard let self = self else { return }
+            
+            self.products = data.result
+            self.collectionView.reloadData()
+        }
+    }
 }
 
 // MARK: - UICollectionViewDelegate, UICollectionVieWDataSource
 extension RecommendProductListView: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecommendProductCollectionViewCell.identifier, for: indexPath) as! RecommendProductCollectionViewCell
+        
+        if let products = products {
+            cell.updateUI(products[indexPath.row])
+        }
         
         return cell
     }

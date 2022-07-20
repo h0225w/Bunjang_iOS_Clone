@@ -16,7 +16,8 @@ class Helper {
         var request = URLRequest(url: url)
             
         request.httpMethod = method
-        if token != "" { request.setValue("X-ACCESS-TOKEN", forHTTPHeaderField: token) }
+        if token != "" {
+            request.setValue("X-ACCESS-TOKEN", forHTTPHeaderField: token) }
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         if let dict = dict {

@@ -65,6 +65,8 @@ private extension HomeView {
         scrollView.delegate = self
     }
     
+    // MARK: - 이미지 배너
+    
     // MARK: 이미지 배너 설정
     func setupImageBanner() {
         imageBannerCollectionView.delegate = self
@@ -90,18 +92,12 @@ private extension HomeView {
         }
         
         self.timer?.resume()
-//        timer = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(moveToNextIndex), userInfo: nil, repeats: true)
     }
     
     // MARK: 이미지 배너 타이머 중지
     func stopImageBannerTimer() {
         self.timer?.cancel()
         self.timer = nil
-    }
-    
-    // MARK: 이미지 배너 다음 슬라이드로 이동
-    @objc func moveToNextIndex() {
-        
     }
 }
 

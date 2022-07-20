@@ -56,6 +56,12 @@
                 <constraint firstItem="soM-zB-1uG" firstAttribute="top" secondItem="VFB-gf-dHA" secondAttribute="bottom" constant="10" id="ytJ-Sc-6QH"/>
                 <constraint firstItem="VFB-gf-dHA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="zq4-HX-Olw"/>
             </constraints>
+            <connections>
+                <outlet property="productImageView" destination="VFB-gf-dHA" id="Zah-uy-sna"/>
+                <outlet property="productInfoLabel" destination="N3G-de-TWB" id="vhf-aF-PDC"/>
+                <outlet property="productNameLabel" destination="LB2-tE-b6V" id="Sbv-lI-4Pm"/>
+                <outlet property="productPriceLabel" destination="soM-zB-1uG" id="Kap-if-wjn"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="107.8125"/>
         </collectionViewCell>
     </objects>
