@@ -50,6 +50,11 @@
                 <constraint firstAttribute="trailing" secondItem="TW2-3D-wOV" secondAttribute="trailing" id="kqL-nM-n9I"/>
             </constraints>
             <size key="customSize" width="154" height="228"/>
+            <connections>
+                <outlet property="productImageView" destination="TW2-3D-wOV" id="3WQ-cw-yk5"/>
+                <outlet property="productNameLabel" destination="wsQ-VP-U89" id="egT-by-Hjs"/>
+                <outlet property="productPriceLabel" destination="5bz-X9-yQV" id="yHh-eY-oLr"/>
+            </connections>
             <point key="canvasLocation" x="213.04347826086959" y="167.41071428571428"/>
         </collectionViewCell>
     </objects>

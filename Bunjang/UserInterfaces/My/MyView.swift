@@ -42,7 +42,9 @@ private extension MyView {
     
     // MARK: 내 정보 가져오기
     func setupData() {
-        ShopService.getShopInfo { [weak self] data in
+        guard let storeId = UserDefaults.standard.string(forKey: "storeId") else { return }
+        
+        ShopService.getShopInfo(storeId: Int(storeId)!) { [weak self] data in
             guard let self = self else { return }
             
             self.profileNameLabel.text = "\(data.result.storeName)"

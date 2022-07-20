@@ -10,28 +10,39 @@ import UIKit
 class ProductDetailView: UIViewController {
     static let identifier = "ProductDetailView"
     
+    var productId: Int?
+    var storeId: Int?
+    
     @IBOutlet weak var imageBannerCollectionView: UICollectionView!
     @IBOutlet weak var tagCollectionView: UICollectionView!
     @IBOutlet weak var productCollectionView: UICollectionView!
+    
+    @IBOutlet weak var productPriceLabel: UILabel!
+    @IBOutlet weak var productNameLabel: UILabel!
+    @IBOutlet weak var productInfoLabel: UILabel!
+    @IBOutlet weak var productCountLabel: UILabel!
+    @IBOutlet weak var usedLabel: UILabel!
+    @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var deliveryChargeLabel: UILabel!
+    @IBOutlet weak var exchangeLabel: UILabel!
+    @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var storeNameLabel: UILabel!
+    @IBOutlet weak var storeInfoLabel: UILabel!
+    
+    // TODO: 상품 후기는 후기 개발 완료 후 진행 예정
     
     @IBOutlet weak var profileImageView: UIImageView!
     
     // MARK: 이미지 배너 관련 변수
     var timer: DispatchSourceTimer?
     var currentCellIndex = 0
-    var images = [
-        "",
-        "",
-        "",
-        "",
-        ""
-    ]
+    var images: [String] = []
     
     // MARK: 태그 목록 관련 변수
-    var letters = ["발렌시아가", "트레이닝 하의", "발렌시아가트랙팬츠", "#발렌시아가그레이", "#트랙팬츠"]
+    var letters: [String]?
     
     // MARK: 이 상점의 상품 목록 관련 변수
-    var products = ["", "", "", "", "", ""]
+    var products: [StoreInfoProduct]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +51,7 @@ class ProductDetailView: UIViewController {
         setupImageBanner()
         setupTags()
         setupProducts()
+        setupData()
     }
 }
 
@@ -68,6 +80,11 @@ private extension ProductDetailView {
         imageBannerCollectionView.delegate = self
         imageBannerCollectionView.dataSource = self
         
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        imageBannerCollectionView.collectionViewLayout = layout
+        imageBannerCollectionView.clipsToBounds = true
+        
         imageBannerCollectionView.register(UINib(nibName: ImageBannerCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: ImageBannerCollectionViewCell.identifier)
     }
     
@@ -90,7 +107,42 @@ private extension ProductDetailView {
         productCollectionView.delegate = self
         productCollectionView.dataSource = self
         
+        let layout = UICollectionViewFlowLayout()
+        productCollectionView.collectionViewLayout = layout
+        productCollectionView.clipsToBounds = true
+        
         productCollectionView.register(UINib(nibName: ProductCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: ProductCollectionViewCell.identifier)
+    }
+    
+    // MARK: 상품 상세 데이터 가져오기
+    func setupData() {
+        guard let productId = productId else { return }
+        
+        ProductService.getProductDetail(productId) { [weak self] data in
+            guard let self = self else { return }
+            
+            self.storeId = data.result.storeInformation.storeID
+            
+            self.images = data.result.image
+            self.letters = data.result.tag
+            self.products = data.result.storeInformation.product
+            
+            self.productPriceLabel.text = "\(data.result.price)원"
+            self.productNameLabel.text = "\(data.result.name)"
+            self.productInfoLabel.text = "\(data.result.date)"
+            self.productCountLabel.text = "❤️ \(data.result.dibsCount)"
+            self.usedLabel.text = "\(data.result.used ? "중고상품" : "새상품")"
+            self.countLabel.text = "총 \(data.result.count)개"
+            self.deliveryChargeLabel.text = "\(data.result.includeDeliveryCharge ? "배송비포함" : "배송비별도")"
+            self.exchangeLabel.text = "\(data.result.exchange ? "교환가능" : "교환불가")"
+            self.contentLabel.text = data.result.content
+            self.storeNameLabel.text = data.result.storeInformation.storeName
+            self.storeInfoLabel.text = "★ \(data.result.storeInformation.rating) ﹒ 팔로워 \(data.result.storeInformation.followerCount)"
+            
+            self.imageBannerCollectionView.reloadData()
+            self.tagCollectionView.reloadData()
+            self.productCollectionView.reloadData()
+        }
     }
     
     // MARK: 검색 버튼 눌렀을 때
@@ -105,8 +157,11 @@ private extension ProductDetailView {
     
     // MARK: 프로필 이미지 눌렀을 때
     @objc func didTapProfileImage(_ sender: AnyObject) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: ShopInfoView.identifier) as! ShopInfoView
-        navigationController?.pushViewController(vc, animated: true)
+        if let storeId = storeId {
+            let vc = storyboard?.instantiateViewController(withIdentifier: ShopInfoView.identifier) as! ShopInfoView
+            vc.storeId = storeId
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 
@@ -117,9 +172,17 @@ extension ProductDetailView: UICollectionViewDelegate, UICollectionViewDataSourc
         case imageBannerCollectionView:
             return images.count
         case tagCollectionView:
-            return letters.count
+            if let letters = letters {
+                return letters.count
+            } else {
+                return 0
+            }
         default:
-            return products.count
+            if let products = products {
+                return products.count
+            } else {
+                return 0
+            }
         }
     }
     
@@ -132,12 +195,16 @@ extension ProductDetailView: UICollectionViewDelegate, UICollectionViewDataSourc
             return cell
         case tagCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TagCollectionViewCell.identifier, for: indexPath) as! TagCollectionViewCell
-            cell.updateUI(letters[indexPath.row])
+            if let letters = letters {
+                cell.updateUI(letters[indexPath.row])
+            }
             
             return cell
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCollectionViewCell.identifier, for: indexPath) as! ProductCollectionViewCell
-//            cell.updateUI(products[indexPath.row])
+            if let products = products {
+                cell.updateUI(products[indexPath.row])
+            }
             
             return cell
         }
@@ -164,7 +231,7 @@ extension ProductDetailView: UICollectionViewDelegateFlowLayout {
             return 10
         }
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         switch collectionView {
         case productCollectionView:

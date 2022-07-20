@@ -1558,7 +1558,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gs-v9-ZgK" userLabel="FixedView">
-                                                <rect key="frame" x="0.0" y="796" width="414" height="100"/>
+                                                <rect key="frame" x="0.0" y="1549" width="414" height="100"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoQ-WT-XqA">
                                                         <rect key="frame" x="10" y="30" width="40" height="40"/>
@@ -1697,10 +1697,21 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="contentLabel" destination="k0R-qz-BBO" id="DdU-1n-5Om"/>
+                        <outlet property="countLabel" destination="Tjf-g0-5Aq" id="Fsb-Fk-8R0"/>
+                        <outlet property="deliveryChargeLabel" destination="bsh-4Q-VW8" id="nID-BA-1Ig"/>
+                        <outlet property="exchangeLabel" destination="zGD-Je-ULB" id="Pvu-j5-cEn"/>
                         <outlet property="imageBannerCollectionView" destination="0JP-jY-SkX" id="ZJb-fD-u8K"/>
                         <outlet property="productCollectionView" destination="dUJ-df-CdV" id="EAJ-Vw-utR"/>
+                        <outlet property="productCountLabel" destination="SaA-RO-7Qe" id="1iJ-AP-Zxd"/>
+                        <outlet property="productInfoLabel" destination="sfN-Fl-Dbk" id="LAZ-3d-owz"/>
+                        <outlet property="productNameLabel" destination="R3R-Q6-eG0" id="dkP-JS-0u3"/>
+                        <outlet property="productPriceLabel" destination="XRs-pQ-J8H" id="hvm-yw-Ibg"/>
                         <outlet property="profileImageView" destination="aDN-k4-DRX" id="zMj-nv-CgV"/>
+                        <outlet property="storeInfoLabel" destination="6ef-p0-VFB" id="beU-WP-QoJ"/>
+                        <outlet property="storeNameLabel" destination="AA8-0w-0Lw" id="5gK-au-y0G"/>
                         <outlet property="tagCollectionView" destination="RlQ-9P-THD" id="hl3-hH-fGb"/>
+                        <outlet property="usedLabel" destination="FvN-cx-0ip" id="z7B-yH-HSV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jik-fD-don" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

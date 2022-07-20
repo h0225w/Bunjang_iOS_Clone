@@ -45,4 +45,27 @@ class ProductService {
                 }
             }
     }
+    
+    // MARK: 상품 상세
+    static func getProductDetail(_ productId: Int, completion: @escaping (ProductDetailResultData) -> Void) {
+        guard let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
+        
+        let url = URL(string: "https://dev.idha-etu.shop/api/products/\(productId)")!
+        
+        let headers: HTTPHeaders = [
+            "X-ACCESS-TOKEN": token,
+            "Content-Type": "application/json"
+        ]
+        
+        AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers)
+            .responseDecodable(of: ProductDetailResultData.self) { response in
+                switch response.result {
+                case .success:
+                    guard let data = response.value else { return }
+                    completion(data)
+                case let .failure(error):
+                    print(error)
+                }
+            }
+    }
 }

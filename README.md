@@ -48,5 +48,7 @@
 <summary>07 / 20 (수)</summary>
 
 - 홈 화면 API 연동
+- 상품 상세 API 연동
+- 상점 정보 및 프로필 API 연동 부분 수정
 
 </details>

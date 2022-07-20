@@ -28,6 +28,8 @@ class ShopInfoView: UIViewController {
     
     @IBOutlet weak var productCollectionView: UICollectionView!
     
+    var storeId: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
@@ -49,16 +51,18 @@ private extension ShopInfoView {
     
     // MARK: 상점 정보 데이터 가져오기
     func setupData() {
-        ShopService.getShopInfo { [weak self] data in
-            guard let self = self else { return }
-            self.profileNameLabel.text = data.result.storeName
-            self.profileReviewLabel.text = "★ \(data.result.rating) (\(data.result.ratingCount))"
-            self.profileInfoLabel.text = "오픈일 +\(data.result.openDate) 방문수 \(data.result.visitCount)"
-            self.productCountLabel.text = "\(data.result.productCount)"
-            self.reviewCountLabel.text = "\(data.result.reviewCount)"
-            self.followingCountLabel.text = "\(data.result.followingCount)"
-            self.followerCountLabel.text = "\(data.result.followerCount)"
-            self.saleCountLabel.text = "\(data.result.saleCount)회"
+        if let storeId = storeId {
+            ShopService.getShopInfo(storeId: storeId) { [weak self] data in
+                guard let self = self else { return }
+                self.profileNameLabel.text = data.result.storeName
+                self.profileReviewLabel.text = "★ \(data.result.rating) (\(data.result.ratingCount))"
+                self.profileInfoLabel.text = "오픈일 +\(data.result.openDate) 방문수 \(data.result.visitCount)"
+                self.productCountLabel.text = "\(data.result.productCount)"
+                self.reviewCountLabel.text = "\(data.result.reviewCount)"
+                self.followingCountLabel.text = "\(data.result.followingCount)"
+                self.followerCountLabel.text = "\(data.result.followerCount)"
+                self.saleCountLabel.text = "\(data.result.saleCount)회"
+            }
         }
     }
     

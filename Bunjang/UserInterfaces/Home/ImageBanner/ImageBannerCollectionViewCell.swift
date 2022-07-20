@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ImageBannerCollectionViewCell: UICollectionViewCell {
     static let identifier = "ImageBannerCollectionViewCell"
@@ -13,12 +14,20 @@ class ImageBannerCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.layer.masksToBounds = true
     }
     
     func updateUI(_ image: String) {
-//        imageView.image = UIImage(named: image)
-        imageView.backgroundColor = .random
+        if image != "" {
+            let imageUrl = URL(string: image)
+            
+            imageView.kf.indicatorType = .activity
+            imageView.kf.setImage(with: imageUrl)
+        } else {
+            imageView.backgroundColor = .random
+        }
     }
 }
 

@@ -10,8 +10,8 @@ import Alamofire
 
 class ShopService {
     // MARK: 상점 정보
-    static func getShopInfo(completion: @escaping (ShopInfoResultData) -> Void) {
-        guard let storeId = UserDefaults.standard.string(forKey: "storeId"), let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
+    static func getShopInfo(storeId: Int, completion: @escaping (ShopInfoResultData) -> Void) {
+        guard let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
         
         let url = URL(string: "https://dev.idha-etu.shop/api/stores/\(storeId)")!
         
