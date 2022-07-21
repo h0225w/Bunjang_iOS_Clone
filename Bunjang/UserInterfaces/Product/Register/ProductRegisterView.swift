@@ -84,7 +84,7 @@ class ProductRegisterView: UIViewController {
             let price = Int(priceText)!
             
             // TODO: 이미지도 전달되도록 작업 필요
-            let product = Product(name: name, category: category, content: content, price: price, count: count, safePayment: safePayment, deliveryCharge: includeDeliveryCharge, used: used, exchange: exchange, tag: tag, images: ["https://risingcamp.com/assets/image-top-banner.svg"])
+            let product = Product(name: name, category: category, content: content, price: price, count: count, safePayment: safePayment, deliveryCharge: includeDeliveryCharge, used: used, exchange: exchange, tag: tag, images: ["https://cdn.pixabay.com/photo/2019/12/23/01/16/cream-4713579__480.jpg"])
             
             ProductService.register(product) { [weak self] data in
                 guard let self = self else { return }

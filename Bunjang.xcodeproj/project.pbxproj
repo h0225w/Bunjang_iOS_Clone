@@ -23,6 +23,7 @@
 		B7AE4B9428840F25003D1D7A /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AE4B9328840F25003D1D7A /* ProductDetailView.swift */; };
 		B7AE4B9828844B29003D1D7A /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AE4B9628844B29003D1D7A /* TagCollectionViewCell.swift */; };
 		B7AE4B9928844B29003D1D7A /* TagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7AE4B9728844B29003D1D7A /* TagCollectionViewCell.xib */; };
+		B7B99BED28899021009E7F56 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B99BEC28899021009E7F56 /* PaymentView.swift */; };
 		B7C0AFE4288841450001A489 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0AFE3288841450001A489 /* HomeService.swift */; };
 		B7CC863528828EAC000F46F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC863428828EAC000F46F1 /* AppDelegate.swift */; };
 		B7CC863728828EAC000F46F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC863628828EAC000F46F1 /* SceneDelegate.swift */; };
@@ -108,6 +109,7 @@
 		B7AE4B9328840F25003D1D7A /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		B7AE4B9628844B29003D1D7A /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
 		B7AE4B9728844B29003D1D7A /* TagCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagCollectionViewCell.xib; sourceTree = "<group>"; };
+		B7B99BEC28899021009E7F56 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		B7C0AFE3288841450001A489 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		B7CC863128828EAC000F46F1 /* Bunjang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bunjang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7CC863428828EAC000F46F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -271,6 +273,14 @@
 			path = Tag;
 			sourceTree = "<group>";
 		};
+		B7B99BEB2889900C009E7F56 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				B7B99BEC28899021009E7F56 /* PaymentView.swift */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
 		B7C0AFDD288841010001A489 /* VO */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,6 +363,7 @@
 				B7CC86662882902C000F46F1 /* Authentication */,
 				B7CC86792882B900000F46F1 /* Home */,
 				B7AE4B9228840EFB003D1D7A /* Product */,
+				B7B99BEB2889900C009E7F56 /* Payment */,
 				B7CC867F2882EF91000F46F1 /* My */,
 				B7D581BC288657B500F3AFAB /* Shop */,
 				B7CC867A2882BB02000F46F1 /* Main.storyboard */,
@@ -696,6 +707,7 @@
 				B7CC86832882EFAC000F46F1 /* MyView.swift in Sources */,
 				B754075E2886DCC30038F58C /* OptionSelectView.swift in Sources */,
 				B72618CD28884FDD0078E16A /* HomeProductsResultData.swift in Sources */,
+				B7B99BED28899021009E7F56 /* PaymentView.swift in Sources */,
 				B7E20DDE2885441600C5949F /* CertNumberResultData.swift in Sources */,
 				B7CC86762882B2C0000F46F1 /* CertNumberView.swift in Sources */,
 				B71FE9052886F9EF0019E382 /* ProductService.swift in Sources */,
