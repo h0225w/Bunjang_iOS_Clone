@@ -54,11 +54,6 @@ class ProductDetailView: UIViewController {
         setupData()
     }
     
-    // MARK: 닫기 버튼 눌렀을 때
-    @IBAction func didTapCloseButton(_ sender: Any) {
-        self.dismiss(animated: true)
-    }
-    
     // MARK: 안전하게 결제하기 눌렀을 때
     @IBAction func didTapPaymentButton(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: PaymentView.identifier) as! PaymentView

@@ -1737,7 +1737,7 @@
                                         <barButtonItem key="rightBarButtonItem" image="xmark" catalog="system" id="nm7-RZ-fec">
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
-                                                <action selector="didTapCloseButton:" destination="YW2-UM-bdo" id="BDb-xk-JG4"/>
+                                                <action selector="didTapCloseButton:" destination="pWK-f7-2xr" id="Z7h-F5-LNE"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -2204,11 +2204,11 @@
                     </view>
                     <connections>
                         <outlet property="addressView" destination="n2M-ND-9Bz" id="hyb-dR-FaD"/>
+                        <outlet property="paymentMethodView" destination="nPu-O4-1E4" id="EIH-Vp-lLg"/>
                         <outlet property="paymentView" destination="3M7-dQ-Op4" id="X9z-g3-dI4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jhk-TY-SRb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="YW2-UM-bdo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-4391.304347826087" y="4189.9553571428569"/>
         </scene>
