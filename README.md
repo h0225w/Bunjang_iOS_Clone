@@ -52,3 +52,10 @@
 - 상점 정보 및 프로필 API 연동 부분 수정
 
 </details>
+
+<details>
+<summary>07 / 21 (목)</summary>
+
+- 결제 화면 구현
+
+</details>
