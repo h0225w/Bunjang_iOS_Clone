@@ -58,4 +58,11 @@
 
 - 결제 화면 구현
 
+</detail>
+
+<details>
+<summary>07 / 22 (금)</summary>
+
+- 배송지 추가 / 관리 / 선택 화면 구현
+
 </details>
