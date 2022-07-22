@@ -16,6 +16,19 @@ class AddressSelectView: UIViewController {
         super.viewDidLoad()
         setupTableView()
     }
+    
+    // MARK: 주소 관리 버튼 눌렀을 때
+    @IBAction func didTapAddressManageButton(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: AddressManageView.identifier) as! AddressManageView
+        
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+    }
+    
+    // MARK: 닫기 버튼 눌렀을 때
+    @IBAction func didTapCloseButton(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
 }
 
 // MARK: - Extension
