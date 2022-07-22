@@ -22,7 +22,7 @@ class AddressSelectView: UIViewController {
         let vc = storyboard?.instantiateViewController(withIdentifier: AddressManageView.identifier) as! AddressManageView
         
         vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true)
+        self.present(vc, animated: false)
     }
     
     // MARK: 닫기 버튼 눌렀을 때

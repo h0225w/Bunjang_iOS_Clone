@@ -21,6 +21,14 @@ class AddressManageView: UIViewController {
     @IBAction func didTapBackButton(_ sender: Any) {
         self.dismiss(animated: true)
     }
+    
+    // MARK: - 주소 추가 버튼 눌렀을 때
+    @IBAction func didTapAddressFormButton(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: AddressFormView.identifier) as! AddressFormView
+        
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: false)
+    }
 }
 
 // MARK: - Extension
