@@ -18,6 +18,20 @@ class PaymentView: UIViewController {
         super.viewDidLoad()
         setupViews()
     }
+    
+    // MARK: 배송지 주소 선택 버튼 눌렀을 때
+    @IBAction func didTapAddressSelectButton(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: AddressSelectView.identifier) as! AddressSelectView
+        
+        vc.modalPresentationStyle = .pageSheet
+        
+        if let sheet = vc.sheetPresentationController {
+            sheet.detents = [.medium()]
+        }
+        
+        self.present(vc, animated: true)
+    }
+    
     // MARK: 닫기 버튼 눌렀을 때
     @IBAction func didTapCloseButton(_ sender: Any) {
         self.dismiss(animated: true)

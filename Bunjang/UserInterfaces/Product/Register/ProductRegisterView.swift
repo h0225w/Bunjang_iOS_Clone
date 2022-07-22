@@ -157,6 +157,7 @@ private extension ProductRegisterView {
             
             self.optionLabel.text = "\(data[0])개﹒\(usedText)﹒\(exchangeText)﹒\(deliveryChargeText)"
         }
+        
         if let sheet = vc.sheetPresentationController {
             sheet.detents = [.medium()]
         }
