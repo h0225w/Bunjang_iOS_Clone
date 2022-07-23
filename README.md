@@ -71,5 +71,6 @@
 <summary>07 / 23 (토)</summary>
 
 - 배송지 추가 / 조회 / 수정 / 삭제 API 연동
+- 결제 API 연동
 
 </details>
