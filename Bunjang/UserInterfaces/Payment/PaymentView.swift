@@ -14,6 +14,13 @@ class PaymentView: UIViewController {
     @IBOutlet weak var paymentView: UIView!
     @IBOutlet weak var paymentMethodView: UIView!
     
+    @IBOutlet weak var addressNameLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var addressPhoneLabel: UILabel!
+    
+    // MARK: 배송지
+    var address: AddressListResult?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -23,6 +30,13 @@ class PaymentView: UIViewController {
     @IBAction func didTapAddressSelectButton(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: AddressSelectView.identifier) as! AddressSelectView
         
+        vc.completion = { [weak self] data in
+            guard let self = self else { return }
+            
+            self.addressNameLabel.text = data.name
+            self.addressLabel.text = data.content + " " + data.detail
+            self.addressPhoneLabel.text = data.phone
+        }
         vc.modalPresentationStyle = .pageSheet
         
         if let sheet = vc.sheetPresentationController {

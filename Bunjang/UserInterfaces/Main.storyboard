@@ -1747,7 +1747,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CCs-Zr-0Kr">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1592"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1642"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="택배거래, 안전결제로 구매합니다" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gL1-gb-CGu">
                                                 <rect key="frame" x="30" y="20" width="252.5" height="72"/>
@@ -1789,16 +1789,16 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n2M-ND-9Bz">
-                                                <rect key="frame" x="30" y="276" width="354" height="50"/>
+                                                <rect key="frame" x="30" y="276" width="354" height="100"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="홍길동" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15E-cS-6pe">
-                                                        <rect key="frame" x="20" y="15.5" width="42" height="19.5"/>
+                                                        <rect key="frame" x="20" y="18.5" width="42" height="19.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekj-4B-nyk">
-                                                        <rect key="frame" x="285.5" y="9.5" width="48.5" height="31"/>
+                                                        <rect key="frame" x="285.5" y="12.5" width="48.5" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="변경">
                                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
@@ -1808,18 +1808,36 @@
                                                             <action selector="didTapAddressSelectButton:" destination="pWK-f7-2xr" eventType="touchUpInside" id="Ldz-4y-DOG"/>
                                                         </connections>
                                                     </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주소" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Rn-ex-STU">
+                                                        <rect key="frame" x="20" y="43" width="21" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전화번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5FZ-RV-aCD">
+                                                        <rect key="frame" x="20" y="62.5" width="42" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="Fea-z3-snj"/>
-                                                    <constraint firstItem="15E-cS-6pe" firstAttribute="centerY" secondItem="n2M-ND-9Bz" secondAttribute="centerY" id="JbW-k7-KAC"/>
-                                                    <constraint firstItem="ekj-4B-nyk" firstAttribute="centerY" secondItem="n2M-ND-9Bz" secondAttribute="centerY" id="YW5-OI-nuC"/>
+                                                    <constraint firstAttribute="height" constant="100" id="Fea-z3-snj"/>
+                                                    <constraint firstItem="2Rn-ex-STU" firstAttribute="leading" secondItem="n2M-ND-9Bz" secondAttribute="leading" constant="20" id="PQG-9K-D7G"/>
+                                                    <constraint firstItem="ekj-4B-nyk" firstAttribute="centerY" secondItem="15E-cS-6pe" secondAttribute="centerY" id="TMq-w3-UdT"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5FZ-RV-aCD" secondAttribute="trailing" constant="20" id="TaL-fE-wPL"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2Rn-ex-STU" secondAttribute="trailing" constant="20" id="UtJ-7o-kfz"/>
+                                                    <constraint firstItem="5FZ-RV-aCD" firstAttribute="leading" secondItem="n2M-ND-9Bz" secondAttribute="leading" constant="20" id="b3S-a1-2de"/>
                                                     <constraint firstAttribute="trailing" secondItem="ekj-4B-nyk" secondAttribute="trailing" constant="20" id="epY-HN-Ohs"/>
                                                     <constraint firstItem="15E-cS-6pe" firstAttribute="leading" secondItem="n2M-ND-9Bz" secondAttribute="leading" constant="20" id="j0x-JF-xt3"/>
+                                                    <constraint firstItem="5FZ-RV-aCD" firstAttribute="top" secondItem="2Rn-ex-STU" secondAttribute="bottom" constant="5" id="nUs-6V-ofL"/>
+                                                    <constraint firstItem="2Rn-ex-STU" firstAttribute="centerY" secondItem="n2M-ND-9Bz" secondAttribute="centerY" id="wH7-Gd-hJS"/>
+                                                    <constraint firstItem="2Rn-ex-STU" firstAttribute="top" secondItem="15E-cS-6pe" secondAttribute="bottom" constant="5" id="ycy-JO-uQT"/>
                                                 </constraints>
                                             </view>
-                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="요청사항" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZUR-79-nqz">
-                                                <rect key="frame" x="30" y="336" width="354" height="50"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="직접입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZUR-79-nqz">
+                                                <rect key="frame" x="30" y="386" width="354" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="UK3-oM-QpQ"/>
                                                 </constraints>
@@ -1827,7 +1845,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="배송 요청사항을 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BtK-vm-XjW">
-                                                <rect key="frame" x="30" y="396" width="354" height="50"/>
+                                                <rect key="frame" x="30" y="446" width="354" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="Vjp-DN-Z0x"/>
                                                 </constraints>
@@ -1835,13 +1853,13 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="번개포인트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEM-um-Gse">
-                                                <rect key="frame" x="30" y="486" width="87" height="24"/>
+                                                <rect key="frame" x="30" y="536" width="87" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qjH-QC-GB2">
-                                                <rect key="frame" x="30" y="530" width="354" height="50"/>
+                                                <rect key="frame" x="30" y="580" width="354" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="ip3-zs-lhi"/>
                                                 </constraints>
@@ -1849,19 +1867,19 @@
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용 가능한 번개 포인트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kK8-jZ-0lJ">
-                                                <rect key="frame" x="30" y="590" width="132.5" height="17"/>
+                                                <rect key="frame" x="30" y="640" width="132.5" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTI-jK-8xX">
-                                                <rect key="frame" x="167.5" y="590" width="9" height="17"/>
+                                                <rect key="frame" x="167.5" y="640" width="9" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="83u-co-daG">
-                                                <rect key="frame" x="30" y="691" width="354" height="100"/>
+                                                <rect key="frame" x="30" y="741" width="354" height="100"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="번개페이 혜택이 적용되었습니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meO-FV-uvO">
                                                         <rect key="frame" x="20" y="30" width="207" height="20"/>
@@ -1886,7 +1904,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3M7-dQ-Op4">
-                                                <rect key="frame" x="30" y="801" width="354" height="270"/>
+                                                <rect key="frame" x="30" y="851" width="354" height="270"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상품금액" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ve-dY-oha">
                                                         <rect key="frame" x="10" y="20" width="48.5" height="17"/>
@@ -2007,19 +2025,19 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="결제금액" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAz-qA-h2d">
-                                                <rect key="frame" x="30" y="647" width="70" height="24"/>
+                                                <rect key="frame" x="30" y="697" width="70" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="결제수단" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5is-l9-kUI">
-                                                <rect key="frame" x="30" y="1111" width="70" height="24"/>
+                                                <rect key="frame" x="30" y="1161" width="70" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKI-wy-e6s">
-                                                <rect key="frame" x="20" y="1165" width="374" height="31"/>
+                                                <rect key="frame" x="20" y="1215" width="374" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="circle.inset.filled" catalog="system" title=" 번개장터 간편결제">
                                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
@@ -2027,7 +2045,7 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDm-al-3fd">
-                                                <rect key="frame" x="20" y="1206" width="125" height="31"/>
+                                                <rect key="frame" x="20" y="1256" width="125" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="circle" catalog="system" title=" 다른 결제수단">
                                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
@@ -2035,7 +2053,7 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nPu-O4-1E4">
-                                                <rect key="frame" x="20" y="1257" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="1307" width="374" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="결제 수단을 등록해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="625-AM-omv">
                                                         <rect key="frame" x="10" y="15.5" width="160.5" height="19.5"/>
@@ -2063,40 +2081,40 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WLK-f0-TWa">
-                                                <rect key="frame" x="20" y="1347" width="374" height="1"/>
+                                                <rect key="frame" x="20" y="1397" width="374" height="1"/>
                                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="kfx-WQ-fxy"/>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQp-nf-3QG">
-                                                <rect key="frame" x="20" y="1368" width="26" height="31"/>
+                                                <rect key="frame" x="20" y="1418" width="26" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system">
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="개인정보 제 3자 제공동의와 결제대행 서비스 이용약관에 동의합니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpB-ta-9wY">
-                                                <rect key="frame" x="56" y="1359.5" width="338" height="48"/>
+                                                <rect key="frame" x="56" y="1409.5" width="338" height="48"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="자세히 보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFF-Yn-bCJ">
-                                                <rect key="frame" x="56" y="1417.5" width="338" height="17"/>
+                                                <rect key="frame" x="56" y="1467.5" width="338" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9h-qJ-Hfd">
-                                                <rect key="frame" x="56" y="1444.5" width="338" height="57.5"/>
+                                                <rect key="frame" x="56" y="1494.5" width="338" height="57.5"/>
                                                 <string key="text">"BGZT Digital", "BGZT Lab 1", "BGZT Lab 2", "BGZT 컬렉션" 상점의 판매상품을 제외한 모든 상품들에 대하여, 번개장터(주)는 통신판매중개자로서 중고거래마켓 번개장터의 거래 당사자가 아니며, 입점판매자가 등록한 상품정보 및 거래에 대한 책임을 지지 않습니다.</string>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svy-3R-Nfn">
-                                                <rect key="frame" x="20" y="1522" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="1572" width="374" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="B2F-bl-0SM"/>
                                                 </constraints>
@@ -2206,6 +2224,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addressLabel" destination="2Rn-ex-STU" id="3k6-7y-2ul"/>
+                        <outlet property="addressNameLabel" destination="15E-cS-6pe" id="QCu-ls-QL8"/>
+                        <outlet property="addressPhoneLabel" destination="5FZ-RV-aCD" id="uvw-zM-w0V"/>
                         <outlet property="addressView" destination="n2M-ND-9Bz" id="hyb-dR-FaD"/>
                         <outlet property="paymentMethodView" destination="nPu-O4-1E4" id="EIH-Vp-lLg"/>
                         <outlet property="paymentView" destination="3M7-dQ-Op4" id="X9z-g3-dI4"/>

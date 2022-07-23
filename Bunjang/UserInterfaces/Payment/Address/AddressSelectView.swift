@@ -12,6 +12,7 @@ class AddressSelectView: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var completion: ((AddressListResult) -> Void)?
     var addressList: [AddressListResult] = []
     
     override func viewDidLoad() {
@@ -67,5 +68,10 @@ extension AddressSelectView: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: AddressSelectTableViewCell.identifier, for: indexPath) as! AddressSelectTableViewCell
         cell.updateUI(addressList[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        completion?(addressList[indexPath.row])
+        self.dismiss(animated: true)
     }
 }
