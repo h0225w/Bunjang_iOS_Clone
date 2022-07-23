@@ -69,6 +69,11 @@
                 <constraint firstItem="2dj-MC-fBk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="t8j-oe-FrZ"/>
             </constraints>
             <size key="customSize" width="539" height="134"/>
+            <connections>
+                <outlet property="addressLabel" destination="2dj-MC-fBk" id="2CR-qF-ei3"/>
+                <outlet property="nameLabel" destination="5t9-6z-kTP" id="lmx-MC-NVM"/>
+                <outlet property="phoneLabel" destination="ttb-VE-v7c" id="wOz-Zj-1La"/>
+            </connections>
             <point key="canvasLocation" x="492.02898550724643" y="111.83035714285714"/>
         </collectionViewCell>
     </objects>

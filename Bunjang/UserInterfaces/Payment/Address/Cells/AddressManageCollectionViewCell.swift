@@ -10,6 +10,10 @@ import UIKit
 class AddressManageCollectionViewCell: UICollectionViewCell {
     static let identifier = "AddressManageCollectionViewCell"
     
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -17,5 +21,10 @@ class AddressManageCollectionViewCell: UICollectionViewCell {
         layer.borderColor = UIColor.systemGray5.cgColor
         layer.cornerRadius = 5
     }
-
+    
+    func updateUI(_ data: AddressListResult) {
+        nameLabel.text = data.name
+        addressLabel.text = data.content
+        phoneLabel.text = data.phone
+    }
 }

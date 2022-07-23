@@ -10,6 +10,9 @@ import UIKit
 class AddressSelectTableViewCell: UITableViewCell {
     static let identifier = "AddressSelectTableViewCell"
     
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +22,11 @@ class AddressSelectTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func updateUI(_ data: AddressListResult) {
+        addressLabel.text = data.content + " " + data.detail
+        nameLabel.text = data.name
     }
     
 }

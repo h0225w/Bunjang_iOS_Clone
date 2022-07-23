@@ -12,9 +12,16 @@ class AddressManageView: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var addressList: [AddressListResult] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupData()
     }
     
     // MARK: 뒤로 가기 버튼 눌렀을 때
@@ -39,16 +46,27 @@ private extension AddressManageView {
         
         collectionView.register(UINib(nibName: AddressManageCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: AddressManageCollectionViewCell.identifier)
     }
+    
+    func setupData() {
+        AddressService.getAddressList { [weak self] data in
+            guard let self = self else { return }
+            
+            self.addressList = data.result
+            
+            self.collectionView.reloadData()
+        }
+    }
 }
 
 // MARK: - UICollectionViewDelegate, UICollectionViewDataSource
 extension AddressManageView: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return addressList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AddressManageCollectionViewCell.identifier, for: indexPath) as! AddressManageCollectionViewCell
+        cell.updateUI(addressList[indexPath.row])
         
         return cell
     }

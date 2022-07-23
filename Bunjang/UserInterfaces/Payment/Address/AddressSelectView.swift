@@ -12,9 +12,16 @@ class AddressSelectView: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var addressList: [AddressListResult] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupData()
     }
     
     // MARK: 주소 관리 버튼 눌렀을 때
@@ -39,17 +46,26 @@ private extension AddressSelectView {
         
         tableView.register(UINib(nibName: AddressSelectTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: AddressSelectTableViewCell.identifier)
     }
+    
+    func setupData() {
+        AddressService.getAddressList { [weak self] data in
+            guard let self = self else { return }
+                
+            self.addressList = data.result
+            self.tableView.reloadData()
+        }
+    }
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
 extension AddressSelectView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return addressList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: AddressSelectTableViewCell.identifier, for: indexPath) as! AddressSelectTableViewCell
-        
+        cell.updateUI(addressList[indexPath.row])
         return cell
     }
 }
