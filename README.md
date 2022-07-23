@@ -66,3 +66,10 @@
 - 배송지 추가 / 관리 / 선택 화면 구현
 
 </details>
+
+<details>
+<summary>07 / 23 (토)</summary>
+
+- 배송지 추가 / 조회 / 수정 / 삭제 API 연동
+
+</details>
