@@ -16,11 +16,14 @@ class AddressFormView: UIViewController {
     @IBOutlet weak var addressDetailField: UITextField!
     @IBOutlet weak var defaultAddressButton: UIButton!
     
+    var addressId: Int?
+    
     var defaultAddress: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        setupData()
     }
     
     // MARK: 뒤로 가기 버튼 눌렀을 때
@@ -51,12 +54,23 @@ class AddressFormView: UIViewController {
         if name != "" && phone != "" && address != "" && addressDetail != "" {
             let address = Address(name: name, phone: phone, content: address, detail: addressDetail, defaultAddress: defaultAddress)
             
-            AddressService.register(address) { [weak self] data in
-                if data.isSuccess {
-                    self?.dismiss(animated: false)
-                } else {
-                    let alert = Helper().alert(title: "주소 추가", msg: data.message)
-                    self?.present(alert, animated: true)
+            if let addressId = addressId {
+                AddressService.edit(address, addressId: addressId) { [weak self] data in
+                    if data.isSuccess {
+                        self?.dismiss(animated: false)
+                    } else {
+                        let alert = Helper().alert(title: "주소 수정 실패", msg: data.message)
+                        self?.present(alert, animated: true)
+                    }
+                }
+            } else {
+                AddressService.register(address) { [weak self] data in
+                    if data.isSuccess {
+                        self?.dismiss(animated: false)
+                    } else {
+                        let alert = Helper().alert(title: "주소 추가 실패", msg: data.message)
+                        self?.present(alert, animated: true)
+                    }
                 }
             }
         }
@@ -68,6 +82,20 @@ private extension AddressFormView {
     func setupViews() {
         [nameField, phoneField, addressField, addressDetailField].forEach {
             $0?.addBottomBorder()
+        }
+    }
+    
+    func setupData() {
+        if let addressId = addressId {
+            AddressService.getAddress(addressId: addressId) { [weak self] data in
+                guard let self = self else { return }
+                print(data)
+                self.nameField.text = data.result.name
+                self.phoneField.text = data.result.phone
+                self.addressField.text = data.result.content
+                self.addressDetailField.text = data.result.detail
+                self.defaultAddressButton.isSelected = data.result.defaultAddress
+            }
         }
     }
 }

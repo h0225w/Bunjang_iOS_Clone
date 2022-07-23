@@ -41,6 +41,9 @@
                             <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                             <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </buttonConfiguration>
+                        <connections>
+                            <action selector="didTapEditButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="qqp-hy-4ZY"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAn-J5-DCP">
                         <rect key="frame" x="474" y="25.5" width="45" height="28.5"/>
@@ -49,6 +52,9 @@
                             <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                             <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </buttonConfiguration>
+                        <connections>
+                            <action selector="didTapDeleteButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="nr3-EV-eBr"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>

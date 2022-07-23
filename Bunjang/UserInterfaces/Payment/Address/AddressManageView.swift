@@ -66,6 +66,7 @@ extension AddressManageView: UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AddressManageCollectionViewCell.identifier, for: indexPath) as! AddressManageCollectionViewCell
+        cell.delegate = self
         cell.updateUI(addressList[indexPath.row])
         
         return cell
@@ -80,5 +81,20 @@ extension AddressManageView: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+    }
+}
+
+// MARK: - Extension
+extension AddressManageView: AddressManageCollectionViewCellDelegate {
+    func moveToEditForm(addressId: Int) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: AddressFormView.identifier) as! AddressFormView
+        
+        vc.addressId = addressId
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: false)
+    }
+    
+    func delete(addressId: Int) {
+        
     }
 }
