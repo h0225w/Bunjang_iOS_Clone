@@ -52,6 +52,10 @@
 		B7CC8686288300BB000F46F1 /* Tabman in Frameworks */ = {isa = PBXBuildFile; productRef = B7CC8685288300BB000F46F1 /* Tabman */; };
 		B7CC86882883033B000F46F1 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC86872883033B000F46F1 /* ProductListView.swift */; };
 		B7CC868A28830803000F46F1 /* TabManView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC868928830803000F46F1 /* TabManView.swift */; };
+		B7D5125E288BE399006C25CF /* PaymentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D5125D288BE399006C25CF /* PaymentService.swift */; };
+		B7D51260288BEB6B006C25CF /* AddressFormResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D5125F288BEB6B006C25CF /* AddressFormResultData.swift */; };
+		B7D51263288BED5C006C25CF /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D51262288BED5C006C25CF /* Address.swift */; };
+		B7D51265288BEE34006C25CF /* AddressService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D51264288BEE34006C25CF /* AddressService.swift */; };
 		B7D581BE28865BBE00F3AFAB /* ShopInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D581BD28865BBE00F3AFAB /* ShopInfoView.swift */; };
 		B7DFA54928844FD200E5BB51 /* CollectionViewLeftAlignFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DFA54828844FD200E5BB51 /* CollectionViewLeftAlignFlowLayout.swift */; };
 		B7E20DCC2885124600C5949F /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E20DCA2885124600C5949F /* ProductCollectionViewCell.swift */; };
@@ -148,6 +152,10 @@
 		B7CC86822882EFAC000F46F1 /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
 		B7CC86872883033B000F46F1 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		B7CC868928830803000F46F1 /* TabManView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabManView.swift; sourceTree = "<group>"; };
+		B7D5125D288BE399006C25CF /* PaymentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentService.swift; sourceTree = "<group>"; };
+		B7D5125F288BEB6B006C25CF /* AddressFormResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressFormResultData.swift; sourceTree = "<group>"; };
+		B7D51262288BED5C006C25CF /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		B7D51264288BEE34006C25CF /* AddressService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressService.swift; sourceTree = "<group>"; };
 		B7D581BD28865BBE00F3AFAB /* ShopInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopInfoView.swift; sourceTree = "<group>"; };
 		B7DFA54828844FD200E5BB51 /* CollectionViewLeftAlignFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLeftAlignFlowLayout.swift; sourceTree = "<group>"; };
 		B7E20DCA2885124600C5949F /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -312,6 +320,9 @@
 		B7B99BEB2889900C009E7F56 /* Payment */ = {
 			isa = PBXGroup;
 			children = (
+				B7D5125B288BE269006C25CF /* VO */,
+				B7D51261288BED4F006C25CF /* Models */,
+				B7D5125C288BE270006C25CF /* Services */,
 				B7B7EA2E288AF39500CBF431 /* Address */,
 				B7B99BEC28899021009E7F56 /* PaymentView.swift */,
 			);
@@ -484,6 +495,31 @@
 				B7CC868928830803000F46F1 /* TabManView.swift */,
 			);
 			path = My;
+			sourceTree = "<group>";
+		};
+		B7D5125B288BE269006C25CF /* VO */ = {
+			isa = PBXGroup;
+			children = (
+				B7D5125F288BEB6B006C25CF /* AddressFormResultData.swift */,
+			);
+			path = VO;
+			sourceTree = "<group>";
+		};
+		B7D5125C288BE270006C25CF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B7D5125D288BE399006C25CF /* PaymentService.swift */,
+				B7D51264288BEE34006C25CF /* AddressService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B7D51261288BED4F006C25CF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B7D51262288BED5C006C25CF /* Address.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		B7D581BC288657B500F3AFAB /* Shop */ = {
@@ -740,10 +776,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7CC86882883033B000F46F1 /* ProductListView.swift in Sources */,
+				B7D51263288BED5C006C25CF /* Address.swift in Sources */,
 				B7CC86812882EFA6000F46F1 /* HomeView.swift in Sources */,
 				B7CC86782882B5C9000F46F1 /* InputShopNameView.swift in Sources */,
 				B7AE4B872883F97D003D1D7A /* RecommendProductListView.swift in Sources */,
 				B7CC86832882EFAC000F46F1 /* MyView.swift in Sources */,
+				B7D51260288BEB6B006C25CF /* AddressFormResultData.swift in Sources */,
 				B754075E2886DCC30038F58C /* OptionSelectView.swift in Sources */,
 				B72618CD28884FDD0078E16A /* HomeProductsResultData.swift in Sources */,
 				B7B99BED28899021009E7F56 /* PaymentView.swift in Sources */,
@@ -759,6 +797,7 @@
 				B788D1F0288B059B003212F9 /* AddressFormView.swift in Sources */,
 				B72618CF288855A80078E16A /* ProductDetailResultData.swift in Sources */,
 				B788D1EA288AF8C6003212F9 /* AddressManageView.swift in Sources */,
+				B7D51265288BEE34006C25CF /* AddressService.swift in Sources */,
 				B7AE4B832883DE6A003D1D7A /* ImageBannerCollectionViewCell.swift in Sources */,
 				B7B7EA34288AF42E00CBF431 /* AddressSelectTableViewCell.swift in Sources */,
 				B7B7EA30288AF3A300CBF431 /* AddressSelectView.swift in Sources */,
@@ -773,6 +812,7 @@
 				B7E20DCC2885124600C5949F /* ProductCollectionViewCell.swift in Sources */,
 				B7E20DD22885329000C5949F /* LoginService.swift in Sources */,
 				B788D1ED288B01D6003212F9 /* AddressManageCollectionViewCell.swift in Sources */,
+				B7D5125E288BE399006C25CF /* PaymentService.swift in Sources */,
 				B7CC863528828EAC000F46F1 /* AppDelegate.swift in Sources */,
 				B7E20DE0288549C300C5949F /* ShopNameResultData.swift in Sources */,
 				B71FE90A2886FAB30019E382 /* Product.swift in Sources */,
