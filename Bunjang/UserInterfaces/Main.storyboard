@@ -1838,6 +1838,7 @@
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="직접입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZUR-79-nqz">
                                                 <rect key="frame" x="30" y="386" width="354" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="UK3-oM-QpQ"/>
                                                 </constraints>
@@ -2039,32 +2040,32 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKI-wy-e6s">
                                                 <rect key="frame" x="20" y="1215" width="374" height="31"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="circle.inset.filled" catalog="system" title=" 번개장터 간편결제">
+                                                <buttonConfiguration key="configuration" style="plain" image="circle" catalog="system" title=" 번개장터 간편결제">
                                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
-                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDm-al-3fd">
                                                 <rect key="frame" x="20" y="1256" width="125" height="31"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="circle" catalog="system" title=" 다른 결제수단">
+                                                <buttonConfiguration key="configuration" style="plain" image="circle.inset.filled" catalog="system" title=" 다른 결제수단">
                                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
-                                                    <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nPu-O4-1E4">
                                                 <rect key="frame" x="20" y="1307" width="374" height="50"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="결제 수단을 등록해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="625-AM-omv">
-                                                        <rect key="frame" x="10" y="15.5" width="160.5" height="19.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="625-AM-omv">
+                                                        <rect key="frame" x="10" y="15" width="28" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lez-ks-5r9">
-                                                        <rect key="frame" x="305.5" y="9.5" width="48.5" height="31"/>
+                                                        <rect key="frame" x="305" y="9.5" width="49" height="31"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="등록">
+                                                        <buttonConfiguration key="configuration" style="plain" title="변경">
                                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
                                                             <color key="baseForegroundColor" systemColor="systemTealColor"/>
                                                         </buttonConfiguration>
@@ -2090,7 +2091,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQp-nf-3QG">
                                                 <rect key="frame" x="20" y="1418" width="26" height="31"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system">
+                                                <buttonConfiguration key="configuration" style="plain" image="checkmark.circle.fill" catalog="system">
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                             </button>
@@ -2123,6 +2124,9 @@
                                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
                                                     <color key="baseBackgroundColor" red="1" green="0.37583685360000002" blue="0.2860160404" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTapPaymentButton:" destination="pWK-f7-2xr" eventType="touchUpInside" id="RYt-tB-Cxg"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2227,9 +2231,17 @@
                         <outlet property="addressLabel" destination="2Rn-ex-STU" id="3k6-7y-2ul"/>
                         <outlet property="addressNameLabel" destination="15E-cS-6pe" id="QCu-ls-QL8"/>
                         <outlet property="addressPhoneLabel" destination="5FZ-RV-aCD" id="uvw-zM-w0V"/>
+                        <outlet property="addressRequestField" destination="BtK-vm-XjW" id="e78-o7-l8H"/>
                         <outlet property="addressView" destination="n2M-ND-9Bz" id="hyb-dR-FaD"/>
+                        <outlet property="paymentExchangeChargeLabel" destination="yAL-hi-sST" id="0yw-hV-Vm9"/>
                         <outlet property="paymentMethodView" destination="nPu-O4-1E4" id="EIH-Vp-lLg"/>
+                        <outlet property="paymentPriceLabel" destination="HgX-e1-HYq" id="VRG-Ex-bJW"/>
+                        <outlet property="paymentProductPriceLabel" destination="s7v-wO-GDX" id="93O-b1-3tW"/>
                         <outlet property="paymentView" destination="3M7-dQ-Op4" id="X9z-g3-dI4"/>
+                        <outlet property="productImageView" destination="75x-be-1lB" id="58k-8g-6b8"/>
+                        <outlet property="productNameLabel" destination="jJe-no-eu4" id="z8k-Is-sLd"/>
+                        <outlet property="productPriceLabel" destination="WZb-38-Dqn" id="XIL-iU-2ZS"/>
+                        <outlet property="usingPointField" destination="qjH-QC-GB2" id="hjc-sX-8gv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jhk-TY-SRb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -3065,7 +3077,6 @@
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="bell" catalog="system" width="128" height="124"/>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
-        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>

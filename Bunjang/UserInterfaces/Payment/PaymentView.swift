@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PaymentView: UIViewController {
     static let identifier = "PaymentView"
@@ -14,12 +15,27 @@ class PaymentView: UIViewController {
     @IBOutlet weak var paymentView: UIView!
     @IBOutlet weak var paymentMethodView: UIView!
     
+    @IBOutlet weak var productImageView: UIImageView!
+    @IBOutlet weak var productPriceLabel: UILabel!
+    @IBOutlet weak var productNameLabel: UILabel!
+    
     @IBOutlet weak var addressNameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var addressPhoneLabel: UILabel!
+    @IBOutlet weak var addressRequestField: UITextField!
     
-    // MARK: 배송지
+    @IBOutlet weak var usingPointField: UITextField!
+    
+    @IBOutlet weak var paymentProductPriceLabel: UILabel!
+    @IBOutlet weak var paymentExchangeChargeLabel: UILabel!
+    @IBOutlet weak var paymentPriceLabel: UILabel!
+    
+    // MARK: 배송지 정보
     var address: AddressListResult?
+    
+    // MARK: 상품 정보
+    var productId: Int?
+    var product: ProductDetailResult?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +52,8 @@ class PaymentView: UIViewController {
             self.addressNameLabel.text = data.name
             self.addressLabel.text = data.content + " " + data.detail
             self.addressPhoneLabel.text = data.phone
+            
+            self.address = data
         }
         vc.modalPresentationStyle = .pageSheet
         
@@ -44,6 +62,32 @@ class PaymentView: UIViewController {
         }
         
         self.present(vc, animated: true)
+    }
+    
+    // MARK: 결제 하기 버튼 눌렀을 때
+    @IBAction func didTapPaymentButton(_ sender: Any) {
+        let addressRequest = addressRequestField.text ?? ""
+        let usingPoint = usingPointField.text ?? ""
+        let parcel = true
+        let paymentMethod = "카드"
+        
+        if let productId = productId, let address = address {
+            let payment = Payment(productId: productId, addressId: address.addressID, parcel: parcel, request: addressRequest, paymentMethod: paymentMethod, usingPoint: Int(usingPoint) ?? 0)
+            
+            PaymentService.register(payment) { [weak self] data in
+                if data.isSuccess {
+                    let action: (() -> Void) = {
+                        self?.dismiss(animated: false)
+                    }
+                    
+                    let alert = Helper().alert(title: "결제 완료", msg: data.message, action: action)
+                    self?.present(alert, animated: true)
+                } else {
+                    let alert = Helper().alert(title: "결제 실패", msg: data.message)
+                    self?.present(alert, animated: true)
+                }
+            }
+        }
     }
     
     // MARK: 닫기 버튼 눌렀을 때
@@ -55,6 +99,16 @@ class PaymentView: UIViewController {
 // MARK: - Extension
 private extension PaymentView {
     func setupViews() {
+        if let product = product {
+            let imageUrl = URL(string: product.image[0])
+            productImageView.kf.indicatorType = .activity
+            productImageView.kf.setImage(with: imageUrl)
+            [productPriceLabel, paymentProductPriceLabel, paymentPriceLabel].forEach {
+                $0.text = "\(product.price)원"
+            }
+            productNameLabel.text = "\(product.name)"
+        }
+        
         [addressView, paymentView, paymentMethodView].forEach {
             $0?.layer.borderColor = UIColor.systemGray5.cgColor
             $0?.layer.borderWidth = 1

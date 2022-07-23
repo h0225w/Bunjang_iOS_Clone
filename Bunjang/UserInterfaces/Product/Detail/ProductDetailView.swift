@@ -44,6 +44,9 @@ class ProductDetailView: UIViewController {
     // MARK: 이 상점의 상품 목록 관련 변수
     var products: [StoreInfoProduct]?
     
+    // MARK: 해당 상품 정보
+    var product: ProductDetailResult?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
@@ -57,6 +60,8 @@ class ProductDetailView: UIViewController {
     // MARK: 안전하게 결제하기 눌렀을 때
     @IBAction func didTapPaymentButton(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: PaymentView.identifier) as! PaymentView
+        vc.productId = self.productId
+        vc.product = self.product
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }
@@ -127,6 +132,8 @@ private extension ProductDetailView {
         
         ProductService.getProductDetail(productId) { [weak self] data in
             guard let self = self else { return }
+            
+            self.product = data.result
             
             self.storeId = data.result.storeInformation.storeID
             
