@@ -95,6 +95,15 @@ extension AddressManageView: AddressManageCollectionViewCellDelegate {
     }
     
     func delete(addressId: Int) {
-        
+        AddressService.delete(addressId: addressId) { [weak self] data in
+            guard let self = self else { return }
+            
+            if data.isSuccess {
+                self.setupData()
+            } else {
+                let alert = Helper().alert(title: "주소 삭제 실패", msg: data.message)
+                self.present(alert, animated: true)
+            }
+        }
     }
 }

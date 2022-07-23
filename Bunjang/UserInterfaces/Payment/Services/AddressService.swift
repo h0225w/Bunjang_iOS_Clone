@@ -71,6 +71,29 @@ class AddressService {
             }
     }
     
+    // MARK: 주소 삭제
+    static func delete(addressId: Int, completion: @escaping (AddressFormResultData) -> Void) {
+        guard let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
+        
+        let url = URL(string: "https://dev.idha-etu.shop/api/address/\(addressId)/status")!
+        
+        let headers: HTTPHeaders = [
+            "X-ACCESS-TOKEN": token,
+            "Content-Type": "application/json"
+        ]
+        
+        AF.request(url, method: .patch, parameters: nil, encoding: JSONEncoding.default, headers: headers)
+            .responseDecodable(of: AddressFormResultData.self) { response in
+                switch response.result {
+                case .success:
+                    guard let data = response.value else { return }
+                    completion(data)
+                case let .failure(error):
+                    print(error)
+                }
+            }
+    }
+    
     // MARK: 주소 목록 조회
     static func getAddressList(completion: @escaping (AddressListResultData) -> Void) {
         guard let storeId = UserDefaults.standard.string(forKey: "storeId"), let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
