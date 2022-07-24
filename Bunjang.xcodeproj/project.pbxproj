@@ -52,6 +52,10 @@
 		B7CC8686288300BB000F46F1 /* Tabman in Frameworks */ = {isa = PBXBuildFile; productRef = B7CC8685288300BB000F46F1 /* Tabman */; };
 		B7CC86882883033B000F46F1 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC86872883033B000F46F1 /* ProductListView.swift */; };
 		B7CC868A28830803000F46F1 /* TabManView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC868928830803000F46F1 /* TabManView.swift */; };
+		B7D0FFF8288D732D0067DA77 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D0FFF7288D732D0067DA77 /* ReviewView.swift */; };
+		B7D0FFFA288D73350067DA77 /* ReviewFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D0FFF9288D73350067DA77 /* ReviewFormView.swift */; };
+		B7D0FFFE288D744B0067DA77 /* ReviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D0FFFC288D744B0067DA77 /* ReviewCollectionViewCell.swift */; };
+		B7D0FFFF288D744B0067DA77 /* ReviewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7D0FFFD288D744B0067DA77 /* ReviewCollectionViewCell.xib */; };
 		B7D5125E288BE399006C25CF /* PaymentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D5125D288BE399006C25CF /* PaymentService.swift */; };
 		B7D51260288BEB6B006C25CF /* AddressFormResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D5125F288BEB6B006C25CF /* AddressFormResultData.swift */; };
 		B7D51263288BED5C006C25CF /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D51262288BED5C006C25CF /* Address.swift */; };
@@ -156,6 +160,10 @@
 		B7CC86822882EFAC000F46F1 /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
 		B7CC86872883033B000F46F1 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		B7CC868928830803000F46F1 /* TabManView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabManView.swift; sourceTree = "<group>"; };
+		B7D0FFF7288D732D0067DA77 /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
+		B7D0FFF9288D73350067DA77 /* ReviewFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewFormView.swift; sourceTree = "<group>"; };
+		B7D0FFFC288D744B0067DA77 /* ReviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCollectionViewCell.swift; sourceTree = "<group>"; };
+		B7D0FFFD288D744B0067DA77 /* ReviewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewCollectionViewCell.xib; sourceTree = "<group>"; };
 		B7D5125D288BE399006C25CF /* PaymentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentService.swift; sourceTree = "<group>"; };
 		B7D5125F288BEB6B006C25CF /* AddressFormResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressFormResultData.swift; sourceTree = "<group>"; };
 		B7D51262288BED5C006C25CF /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
@@ -505,6 +513,25 @@
 			path = My;
 			sourceTree = "<group>";
 		};
+		B7D0FFF6288D73190067DA77 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				B7D0FFFB288D743F0067DA77 /* Cells */,
+				B7D0FFF7288D732D0067DA77 /* ReviewView.swift */,
+				B7D0FFF9288D73350067DA77 /* ReviewFormView.swift */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
+		B7D0FFFB288D743F0067DA77 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B7D0FFFC288D744B0067DA77 /* ReviewCollectionViewCell.swift */,
+				B7D0FFFD288D744B0067DA77 /* ReviewCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		B7D5125B288BE269006C25CF /* VO */ = {
 			isa = PBXGroup;
 			children = (
@@ -540,6 +567,7 @@
 				B7FEFE83288680EC004AEA1A /* VO */,
 				B7FEFE82288680E7004AEA1A /* Services */,
 				B7FEFE88288682CB004AEA1A /* ShopInfo */,
+				B7D0FFF6288D73190067DA77 /* Review */,
 			);
 			path = Shop;
 			sourceTree = "<group>";
@@ -762,6 +790,7 @@
 				B7B7EA35288AF42E00CBF431 /* AddressSelectTableViewCell.xib in Resources */,
 				B7CC863E28828EAC000F46F1 /* Assets.xcassets in Resources */,
 				B7E20DCD2885124600C5949F /* ProductCollectionViewCell.xib in Resources */,
+				B7D0FFFF288D744B0067DA77 /* ReviewCollectionViewCell.xib in Resources */,
 				B7CC867B2882BB02000F46F1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -807,6 +836,7 @@
 				B7AE4B9028840026003D1D7A /* RecommendProductCollectionViewCell.swift in Sources */,
 				B7FEFE852886824F004AEA1A /* ShopInfoResultData.swift in Sources */,
 				B7DFA54928844FD200E5BB51 /* CollectionViewLeftAlignFlowLayout.swift in Sources */,
+				B7D0FFFA288D73350067DA77 /* ReviewFormView.swift in Sources */,
 				B7CC866E28829E78000F46F1 /* FirstView.swift in Sources */,
 				B788D1F0288B059B003212F9 /* AddressFormView.swift in Sources */,
 				B72618CF288855A80078E16A /* ProductDetailResultData.swift in Sources */,
@@ -818,6 +848,8 @@
 				B7CC86702882A70E000F46F1 /* LoginView.swift in Sources */,
 				B7D51269288C1384006C25CF /* AddressSingleResultData.swift in Sources */,
 				B7C0AFE4288841450001A489 /* HomeService.swift in Sources */,
+				B7D0FFF8288D732D0067DA77 /* ReviewView.swift in Sources */,
+				B7D0FFFE288D744B0067DA77 /* ReviewCollectionViewCell.swift in Sources */,
 				B7AE4B9828844B29003D1D7A /* TagCollectionViewCell.swift in Sources */,
 				B7FEFE8F2886C342004AEA1A /* ProductRegisterView.swift in Sources */,
 				B7E20DD42885329900C5949F /* LoginResultData.swift in Sources */,

@@ -1520,6 +1520,9 @@
                                                     <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="baseBackgroundColor" systemColor="systemGray6Color"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTapMoreReviewButton:" destination="CMf-Do-XSx" eventType="touchUpInside" id="qqI-wB-H2z"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8X-hf-g79">
                                                 <rect key="frame" x="20" y="1500" width="374" height="50"/>
@@ -1558,7 +1561,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gs-v9-ZgK" userLabel="FixedView">
-                                                <rect key="frame" x="0.0" y="796" width="414" height="100"/>
+                                                <rect key="frame" x="0.0" y="1736" width="414" height="100"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoQ-WT-XqA">
                                                         <rect key="frame" x="10" y="30" width="40" height="40"/>
@@ -2949,7 +2952,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQl-it-b7a">
-                                                <rect key="frame" x="0.0" y="728" width="414" height="80"/>
+                                                <rect key="frame" x="0.0" y="886" width="414" height="80"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCd-5P-htq">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
@@ -3071,6 +3074,103 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qz2-Sb-HMg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="959" y="2340"/>
+        </scene>
+        <!--Review View-->
+        <scene sceneID="Mjk-6i-BEa">
+            <objects>
+                <viewController storyboardIdentifier="ReviewView" id="meL-MZ-fHQ" customClass="ReviewView" customModule="Bunjang" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZNs-8a-BUG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0DS-Hw-5Mc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="상점후기" id="7cI-Vw-eEi">
+                                        <barButtonItem key="leftBarButtonItem" image="arrow.left" catalog="system" id="cKy-Mk-Tug">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jpR-mU-46I">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ufQ-aJ-3TX">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="iEg-CT-gTh">
+                                        <rect key="frame" x="0.0" y="50" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1tU-SI-gO4">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reusableView" id="jZB-fZ-UOc">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpu-fK-A2Z">
+                                            <rect key="frame" x="18" y="18" width="378" height="14"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="상점후기쓰기">
+                                                <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                            </buttonConfiguration>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="vpu-fK-A2Z" secondAttribute="bottom" constant="10" id="2Ge-gX-BnB"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="vpu-fK-A2Z" secondAttribute="trailing" constant="10" id="4oj-aw-k89"/>
+                                        <constraint firstItem="vpu-fK-A2Z" firstAttribute="leading" secondItem="jZB-fZ-UOc" secondAttribute="leadingMargin" constant="10" id="adb-nA-g6u"/>
+                                        <constraint firstItem="vpu-fK-A2Z" firstAttribute="top" secondItem="jZB-fZ-UOc" secondAttribute="topMargin" constant="10" id="tTC-cO-ceq"/>
+                                    </constraints>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ikH-UX-teH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ikH-UX-teH" firstAttribute="trailing" secondItem="jpR-mU-46I" secondAttribute="trailing" id="2s4-kd-F4Z"/>
+                            <constraint firstItem="0DS-Hw-5Mc" firstAttribute="top" secondItem="ikH-UX-teH" secondAttribute="top" id="5ev-gm-Vp2"/>
+                            <constraint firstItem="0DS-Hw-5Mc" firstAttribute="leading" secondItem="ikH-UX-teH" secondAttribute="leading" id="77S-p6-a1K"/>
+                            <constraint firstItem="ikH-UX-teH" firstAttribute="bottom" secondItem="jpR-mU-46I" secondAttribute="bottom" id="Q5O-y5-JAA"/>
+                            <constraint firstItem="0DS-Hw-5Mc" firstAttribute="trailing" secondItem="ikH-UX-teH" secondAttribute="trailing" id="RnW-3T-sNg"/>
+                            <constraint firstItem="jpR-mU-46I" firstAttribute="leading" secondItem="ikH-UX-teH" secondAttribute="leading" id="aQQ-nz-HpH"/>
+                            <constraint firstItem="jpR-mU-46I" firstAttribute="top" secondItem="0DS-Hw-5Mc" secondAttribute="bottom" id="lc0-k5-kTi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="jpR-mU-46I" id="XdF-qI-LlW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p20-hM-Bcd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940" y="3010"/>
+        </scene>
+        <!--Review Form View-->
+        <scene sceneID="FrS-nO-KBV">
+            <objects>
+                <viewController storyboardIdentifier="ReviewFormView" id="Wa0-pj-hGY" customClass="ReviewFormView" customModule="Bunjang" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mp3-vj-2Dt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="MGA-Hd-pE9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zej-7M-neb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1622" y="3009"/>
         </scene>
     </scenes>
     <resources>

@@ -65,6 +65,12 @@ class ProductDetailView: UIViewController {
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }
+    
+    // MARK: 후기 전체보기 눌렀을 때
+    @IBAction func didTapMoreReviewButton(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: ReviewView.identifier) as! ReviewView
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 // MARK: - Extension
