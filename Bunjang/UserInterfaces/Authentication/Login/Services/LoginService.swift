@@ -25,9 +25,11 @@ class LoginService {
             "birthDate": birthDate
         ]
         
-        let request = Helper.makeRequest(url, method: "POST", dict: params)
-                                 
-        AF.request(request)
+        let headers: HTTPHeaders = [
+            "Content-Type": "application/json"
+        ]
+        
+        AF.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
             .responseDecodable(of: LoginResultData.self) { response in
                 switch response.result {
                 case .success:
@@ -37,6 +39,15 @@ class LoginService {
                     print(error)
                 }
             }
+    }
+    
+    // MARK: 로그아웃
+    static func logout(completion: @escaping () -> Void) {
+        UserDefaults.standard.removeObject(forKey: "isLogined")
+        UserDefaults.standard.removeObject(forKey: "storeId")
+        UserDefaults.standard.removeObject(forKey: "jwtToken")
+        
+        completion()
     }
     
     // MARK: 인증번호 확인
@@ -78,6 +89,34 @@ class LoginService {
                 switch response.result {
                 case .success:
                     guard let data = response.value else { return }
+                    completion(data)
+                case let .failure(error):
+                    print(error)
+                }
+            }
+    }
+    
+    // MARK: 회원 탈퇴
+    static func delete(completion: @escaping (ShopDeleteResultData) -> Void) {
+        guard let storeId = UserDefaults.standard.string(forKey: "storeId"), let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
+        
+        let url = URL(string: "https://dev.idha-etu.shop/api/stores/\(storeId)/status")!
+        
+        let headers: HTTPHeaders = [
+            "X-ACCESS-TOKEN": token,
+            "Content-Type": "application/json"
+        ]
+        
+        AF.request(url, method: .patch, headers: headers)
+            .responseDecodable(of: ShopDeleteResultData.self) { response in
+                switch response.result {
+                case .success:
+                    guard let data = response.value else { return }
+                    
+                    UserDefaults.standard.removeObject(forKey: "isLogined")
+                    UserDefaults.standard.removeObject(forKey: "storeId")
+                    UserDefaults.standard.removeObject(forKey: "jwtToken")
+                    
                     completion(data)
                 case let .failure(error):
                     print(error)

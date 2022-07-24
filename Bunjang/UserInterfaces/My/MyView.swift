@@ -24,13 +24,28 @@ class MyView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
         setupViews()
         setupData()
+    }
+    
+    // MARK: - Action
+    
+    // MARK: 설정 버튼 눌렀을 때
+    @IBAction func didTapSettingButton(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: SettingView.identifier) as! SettingView
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
 // MARK: - Extension
 private extension MyView {
+    // MARK: 네비게이션 바 설정
+    func setupNavigationBar() {
+        navigationItem.backButtonTitle = ""
+    }
+    
     // MARK: View 설정
     func setupViews() {
         shopImageView.layer.cornerRadius = 30

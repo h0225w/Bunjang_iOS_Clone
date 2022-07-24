@@ -15,5 +15,7 @@ struct LoginResultData: Codable {
 
 // MARK: - LoginResult
 struct LoginResult: Codable {
-    let code: String // 인증코드
+    let code: String
 }
+
+
