@@ -1561,7 +1561,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gs-v9-ZgK" userLabel="FixedView">
-                                                <rect key="frame" x="0.0" y="1736" width="414" height="100"/>
+                                                <rect key="frame" x="0.0" y="796" width="414" height="100"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoQ-WT-XqA">
                                                         <rect key="frame" x="10" y="30" width="40" height="40"/>
@@ -2952,7 +2952,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQl-it-b7a">
-                                                <rect key="frame" x="0.0" y="886" width="414" height="80"/>
+                                                <rect key="frame" x="0.0" y="728" width="414" height="80"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCd-5P-htq">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
@@ -3125,6 +3125,9 @@
                                                 <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
                                                 <color key="baseForegroundColor" systemColor="systemRedColor"/>
                                             </buttonConfiguration>
+                                            <connections>
+                                                <action selector="didTapReviewFormButton:" destination="meL-MZ-fHQ" eventType="touchUpInside" id="sOP-2a-44M"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemGray5Color"/>
@@ -3164,13 +3167,59 @@
                     <view key="view" contentMode="scaleToFill" id="Mp3-vj-2Dt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d2e-vj-N0G">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="상점후기" id="dPy-MO-MxZ">
+                                        <barButtonItem key="leftBarButtonItem" image="arrow.left" catalog="system" id="WZM-uv-Vjs">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="등록" id="k6b-78-yZq">
+                                            <color key="tintColor" systemColor="systemRedColor"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XRd-SS-sKh" customClass="CosmosView" customModule="Cosmos">
+                                <rect key="frame" x="60" y="98" width="294" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="inl-Ch-ZKf"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nWw-c2-o1p">
+                                <rect key="frame" x="20" y="158" width="374" height="694"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="MGA-Hd-pE9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nWw-c2-o1p" firstAttribute="leading" secondItem="MGA-Hd-pE9" secondAttribute="leading" constant="20" id="3cC-nu-fRm"/>
+                            <constraint firstItem="MGA-Hd-pE9" firstAttribute="bottom" secondItem="nWw-c2-o1p" secondAttribute="bottom" constant="10" id="ALG-GW-juj"/>
+                            <constraint firstItem="MGA-Hd-pE9" firstAttribute="trailing" secondItem="d2e-vj-N0G" secondAttribute="trailing" id="Heq-4A-hvd"/>
+                            <constraint firstItem="d2e-vj-N0G" firstAttribute="leading" secondItem="Mp3-vj-2Dt" secondAttribute="leading" id="P9e-Fl-Ni2"/>
+                            <constraint firstItem="nWw-c2-o1p" firstAttribute="top" secondItem="XRd-SS-sKh" secondAttribute="bottom" constant="10" id="Stm-gQ-OUc"/>
+                            <constraint firstItem="MGA-Hd-pE9" firstAttribute="trailing" secondItem="nWw-c2-o1p" secondAttribute="trailing" constant="20" id="Was-ve-aa5"/>
+                            <constraint firstItem="d2e-vj-N0G" firstAttribute="top" secondItem="MGA-Hd-pE9" secondAttribute="top" id="fqN-0Z-JFt"/>
+                            <constraint firstItem="XRd-SS-sKh" firstAttribute="top" secondItem="d2e-vj-N0G" secondAttribute="bottom" constant="10" id="kug-HN-bLe"/>
+                            <constraint firstItem="XRd-SS-sKh" firstAttribute="leading" secondItem="MGA-Hd-pE9" secondAttribute="leading" constant="60" id="ox9-W9-Jza"/>
+                            <constraint firstItem="MGA-Hd-pE9" firstAttribute="trailing" secondItem="XRd-SS-sKh" secondAttribute="trailing" constant="60" id="ta2-Cg-eb2"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cosmosView" destination="XRd-SS-sKh" id="Dvn-cs-FLf"/>
+                        <outlet property="textView" destination="nWw-c2-o1p" id="6VO-p8-8xv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zej-7M-neb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1622" y="3009"/>
+            <point key="canvasLocation" x="1621.7391304347827" y="3008.7053571428569"/>
         </scene>
     </scenes>
     <resources>

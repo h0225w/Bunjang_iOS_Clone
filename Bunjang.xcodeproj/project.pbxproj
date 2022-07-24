@@ -52,6 +52,7 @@
 		B7CC8686288300BB000F46F1 /* Tabman in Frameworks */ = {isa = PBXBuildFile; productRef = B7CC8685288300BB000F46F1 /* Tabman */; };
 		B7CC86882883033B000F46F1 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC86872883033B000F46F1 /* ProductListView.swift */; };
 		B7CC868A28830803000F46F1 /* TabManView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC868928830803000F46F1 /* TabManView.swift */; };
+		B7D00002288D7E200067DA77 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = B7D00001288D7E200067DA77 /* Cosmos */; };
 		B7D0FFF8288D732D0067DA77 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D0FFF7288D732D0067DA77 /* ReviewView.swift */; };
 		B7D0FFFA288D73350067DA77 /* ReviewFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D0FFF9288D73350067DA77 /* ReviewFormView.swift */; };
 		B7D0FFFE288D744B0067DA77 /* ReviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D0FFFC288D744B0067DA77 /* ReviewCollectionViewCell.swift */; };
@@ -203,6 +204,7 @@
 				B7E20DE728855B4700C5949F /* KakaoSDKCommon in Frameworks */,
 				B7E20DEB28855B4700C5949F /* KakaoSDKNavi in Frameworks */,
 				B7FEFE8B28868515004AEA1A /* Kingfisher in Frameworks */,
+				B7D00002288D7E200067DA77 /* Cosmos in Frameworks */,
 				B7E20DFA28856CC000C5949F /* GoogleSignInSwift in Frameworks */,
 				B7E20DF528855B4700C5949F /* KakaoSDKUser in Frameworks */,
 				B7E20DF128855B4700C5949F /* KakaoSDKTalk in Frameworks */,
@@ -684,6 +686,7 @@
 				B7E20DF728856CC000C5949F /* GoogleSignIn */,
 				B7E20DF928856CC000C5949F /* GoogleSignInSwift */,
 				B7FEFE8A28868515004AEA1A /* Kingfisher */,
+				B7D00001288D7E200067DA77 /* Cosmos */,
 			);
 			productName = Bunjang;
 			productReference = B7CC863128828EAC000F46F1 /* Bunjang.app */;
@@ -763,6 +766,7 @@
 				B7E20DE128855B4700C5949F /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 				B7E20DF628856CC000C5949F /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				B7FEFE8928868515004AEA1A /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				B7D00000288D7E200067DA77 /* XCRemoteSwiftPackageReference "Cosmos" */,
 			);
 			productRefGroup = B7CC863228828EAC000F46F1 /* Products */;
 			projectDirPath = "";
@@ -1212,6 +1216,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		B7D00000288D7E200067DA77 /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/Cosmos";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		B7E20DD52885335000C5949F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -1251,6 +1263,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B7CC8684288300BB000F46F1 /* XCRemoteSwiftPackageReference "Tabman" */;
 			productName = Tabman;
+		};
+		B7D00001288D7E200067DA77 /* Cosmos */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7D00000288D7E200067DA77 /* XCRemoteSwiftPackageReference "Cosmos" */;
+			productName = Cosmos;
 		};
 		B7E20DD62885335000C5949F /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
