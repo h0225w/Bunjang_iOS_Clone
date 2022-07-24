@@ -69,6 +69,8 @@ class ProductDetailView: UIViewController {
     // MARK: 후기 전체보기 눌렀을 때
     @IBAction func didTapMoreReviewButton(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: ReviewView.identifier) as! ReviewView
+        
+        vc.storeId = self.storeId
         navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -12,9 +12,15 @@ class ReviewView: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    // MARK: 상점 식별자
+    var storeId: Int?
+    
+    var reviewList: [ReviewListResult] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        setupData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -26,6 +32,11 @@ class ReviewView: UIViewController {
     }
     
     // MARK: - Actions
+    
+    // MARK: 뒤로가기 눌렀을 때
+    @IBAction func didTapBackButton(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
     
     // MARK: 상점후기쓰기 눌렀을 때
     @IBAction func didTapReviewFormButton(_ sender: Any) {
@@ -43,16 +54,32 @@ private extension ReviewView {
         
         collectionView.register(UINib(nibName: ReviewCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: ReviewCollectionViewCell.identifier)
     }
+    
+    func setupData() {
+        if let storeId = storeId {
+            ReviewService.getReviews(storeId: storeId) { [weak self] data in
+                if data.isSuccess {
+                    self?.reviewList = data.result
+                    
+                    self?.collectionView.reloadData()
+                } else {
+                    let alert = Helper().alert(title: "상점 후기", msg: data.message)
+                    self?.present(alert, animated: true)
+                }
+            }
+        }
+    }
 }
 
 // MARK: - UICollectionViewDelegate, UICollectionViewDataSource
 extension ReviewView: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return reviewList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReviewCollectionViewCell.identifier, for: indexPath) as! ReviewCollectionViewCell
+        cell.updateUI(reviewList[indexPath.row])
         
         return cell
     }
@@ -72,7 +99,7 @@ extension ReviewView: UICollectionViewDelegate, UICollectionViewDataSource {
 extension ReviewView: UICollectionViewDelegateFlowLayout {
     // TODO: collectionView 동적 높이 구하는 법
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 100)
+        return CGSize(width: collectionView.frame.width, height: 120)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {

@@ -3090,6 +3090,9 @@
                                     <navigationItem title="상점후기" id="7cI-Vw-eEi">
                                         <barButtonItem key="leftBarButtonItem" image="arrow.left" catalog="system" id="cKy-Mk-Tug">
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="didTapBackButton:" destination="meL-MZ-fHQ" id="R06-rL-kRB"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>

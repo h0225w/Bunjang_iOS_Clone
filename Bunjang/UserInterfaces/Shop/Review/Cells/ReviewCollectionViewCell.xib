@@ -56,6 +56,12 @@
                             <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </buttonConfiguration>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="구매 상품: 상품명" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHz-vP-wrh">
+                        <rect key="frame" x="70" y="144" width="96.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
@@ -63,19 +69,30 @@
                 <constraint firstItem="p7y-Cd-9Cj" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="0bY-j8-HWn"/>
                 <constraint firstItem="LXK-QJ-dqJ" firstAttribute="leading" secondItem="axo-sO-8MP" secondAttribute="leading" id="5G8-W3-RWC"/>
                 <constraint firstItem="fsQ-wU-sSF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="p7y-Cd-9Cj" secondAttribute="trailing" constant="10" id="BBR-Hn-Bft"/>
+                <constraint firstAttribute="bottom" secondItem="LHz-vP-wrh" secondAttribute="bottom" constant="10" id="Bjp-VQ-1x1"/>
                 <constraint firstItem="axo-sO-8MP" firstAttribute="top" secondItem="p7y-Cd-9Cj" secondAttribute="bottom" constant="5" id="CDu-1p-LOw"/>
+                <constraint firstItem="LHz-vP-wrh" firstAttribute="top" relation="greaterThanOrEqual" secondItem="LXK-QJ-dqJ" secondAttribute="bottom" constant="10" id="Cdk-hD-tDU"/>
+                <constraint firstItem="LHz-vP-wrh" firstAttribute="leading" secondItem="LXK-QJ-dqJ" secondAttribute="leading" id="DOk-LQ-S1X"/>
                 <constraint firstItem="zOJ-ah-wWG" firstAttribute="centerY" secondItem="fsQ-wU-sSF" secondAttribute="centerY" id="LCh-zR-qxq"/>
                 <constraint firstItem="axo-sO-8MP" firstAttribute="leading" secondItem="k6O-P6-M7r" secondAttribute="trailing" constant="10" id="SkT-yJ-1jK"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LXK-QJ-dqJ" secondAttribute="trailing" constant="10" id="Tqo-D2-Qo9"/>
                 <constraint firstAttribute="trailing" secondItem="zOJ-ah-wWG" secondAttribute="trailing" constant="10" id="Uc0-qh-FQD"/>
                 <constraint firstItem="zOJ-ah-wWG" firstAttribute="leading" secondItem="fsQ-wU-sSF" secondAttribute="trailing" constant="10" id="ZJi-14-AtF"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LHz-vP-wrh" secondAttribute="trailing" constant="10" id="c9r-1I-xs1"/>
                 <constraint firstItem="LXK-QJ-dqJ" firstAttribute="top" secondItem="axo-sO-8MP" secondAttribute="bottom" constant="10" id="cKy-Nh-XTV"/>
-                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="LXK-QJ-dqJ" secondAttribute="bottom" constant="10" id="cfq-Oh-iE1"/>
                 <constraint firstItem="k6O-P6-M7r" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="fkP-I1-4UG"/>
                 <constraint firstItem="p7y-Cd-9Cj" firstAttribute="leading" secondItem="k6O-P6-M7r" secondAttribute="trailing" constant="10" id="iIC-Eo-Q2F"/>
                 <constraint firstItem="fsQ-wU-sSF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="l3Z-cJ-emn"/>
                 <constraint firstItem="k6O-P6-M7r" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="tth-VU-wuz"/>
             </constraints>
             <size key="customSize" width="404" height="171"/>
+            <connections>
+                <outlet property="contentLabel" destination="LXK-QJ-dqJ" id="vdA-qV-Cky"/>
+                <outlet property="dateLabel" destination="fsQ-wU-sSF" id="zaG-Fw-IPg"/>
+                <outlet property="nameLabel" destination="p7y-Cd-9Cj" id="Som-qZ-ZzW"/>
+                <outlet property="productNameLabel" destination="LHz-vP-wrh" id="O4V-0l-jRN"/>
+                <outlet property="ratingLabel" destination="axo-sO-8MP" id="2rW-i5-qgt"/>
+            </connections>
             <point key="canvasLocation" x="388.40579710144931" y="124.21875"/>
         </collectionViewCell>
     </objects>

@@ -79,5 +79,6 @@
 <summary>07 / 24 (일)</summary>
 
 - 상점 후기 작성, 목록 화면 구현
+- 상점 후기 목록 API 연동
 
 </details>

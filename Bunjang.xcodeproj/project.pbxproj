@@ -13,6 +13,8 @@
 		B72618CD28884FDD0078E16A /* HomeProductsResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72618CC28884FDD0078E16A /* HomeProductsResultData.swift */; };
 		B72618CF288855A80078E16A /* ProductDetailResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72618CE288855A80078E16A /* ProductDetailResultData.swift */; };
 		B754075E2886DCC30038F58C /* OptionSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B754075D2886DCC30038F58C /* OptionSelectView.swift */; };
+		B7556386288D89F400C79DB8 /* ReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7556385288D89F400C79DB8 /* ReviewService.swift */; };
+		B7556388288D8A0C00C79DB8 /* ReviewListResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7556387288D8A0C00C79DB8 /* ReviewListResultData.swift */; };
 		B788D1EA288AF8C6003212F9 /* AddressManageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B788D1E9288AF8C6003212F9 /* AddressManageView.swift */; };
 		B788D1ED288B01D6003212F9 /* AddressManageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B788D1EB288B01D6003212F9 /* AddressManageCollectionViewCell.swift */; };
 		B788D1EE288B01D6003212F9 /* AddressManageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B788D1EC288B01D6003212F9 /* AddressManageCollectionViewCell.xib */; };
@@ -119,6 +121,8 @@
 		B72618CC28884FDD0078E16A /* HomeProductsResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProductsResultData.swift; sourceTree = "<group>"; };
 		B72618CE288855A80078E16A /* ProductDetailResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailResultData.swift; sourceTree = "<group>"; };
 		B754075D2886DCC30038F58C /* OptionSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSelectView.swift; sourceTree = "<group>"; };
+		B7556385288D89F400C79DB8 /* ReviewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewService.swift; sourceTree = "<group>"; };
+		B7556387288D8A0C00C79DB8 /* ReviewListResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListResultData.swift; sourceTree = "<group>"; };
 		B788D1E9288AF8C6003212F9 /* AddressManageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressManageView.swift; sourceTree = "<group>"; };
 		B788D1EB288B01D6003212F9 /* AddressManageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressManageCollectionViewCell.swift; sourceTree = "<group>"; };
 		B788D1EC288B01D6003212F9 /* AddressManageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressManageCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -614,6 +618,7 @@
 			isa = PBXGroup;
 			children = (
 				B7FEFE8628868276004AEA1A /* ShopService.swift */,
+				B7556385288D89F400C79DB8 /* ReviewService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -622,6 +627,7 @@
 			isa = PBXGroup;
 			children = (
 				B7FEFE842886824F004AEA1A /* ShopInfoResultData.swift */,
+				B7556387288D8A0C00C79DB8 /* ReviewListResultData.swift */,
 			);
 			path = VO;
 			sourceTree = "<group>";
@@ -821,6 +827,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7CC86882883033B000F46F1 /* ProductListView.swift in Sources */,
+				B7556386288D89F400C79DB8 /* ReviewService.swift in Sources */,
 				B7D5126B288C3BBA006C25CF /* Payment.swift in Sources */,
 				B7D51263288BED5C006C25CF /* Address.swift in Sources */,
 				B7CC86812882EFA6000F46F1 /* HomeView.swift in Sources */,
@@ -850,6 +857,7 @@
 				B7B7EA34288AF42E00CBF431 /* AddressSelectTableViewCell.swift in Sources */,
 				B7B7EA30288AF3A300CBF431 /* AddressSelectView.swift in Sources */,
 				B7CC86702882A70E000F46F1 /* LoginView.swift in Sources */,
+				B7556388288D8A0C00C79DB8 /* ReviewListResultData.swift in Sources */,
 				B7D51269288C1384006C25CF /* AddressSingleResultData.swift in Sources */,
 				B7C0AFE4288841450001A489 /* HomeService.swift in Sources */,
 				B7D0FFF8288D732D0067DA77 /* ReviewView.swift in Sources */,
