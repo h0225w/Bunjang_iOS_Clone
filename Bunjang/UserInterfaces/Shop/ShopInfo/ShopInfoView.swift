@@ -32,6 +32,8 @@ class ShopInfoView: UIViewController {
     
     var storeId: Int?
     
+    var productList: [ShopProductsResult] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -97,6 +99,13 @@ private extension ShopInfoView {
                 
                 self.followButton.isSelected = data.result.follow
             }
+            
+            ShopService.getProducts(storeId: storeId) { [weak self] data in
+                guard let self = self, let products = data.result else { return }
+                
+                self.productList = products
+                self.productCollectionView.reloadData()
+            }
         }
     }
     
@@ -105,6 +114,11 @@ private extension ShopInfoView {
         productCollectionView.delegate = self
         productCollectionView.dataSource = self
         
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        productCollectionView.collectionViewLayout = layout
+        productCollectionView.clipsToBounds = true
+        
         productCollectionView.register(UINib(nibName: ShopProductCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: ShopProductCollectionViewCell.identifier)
     }
 }
@@ -112,12 +126,12 @@ private extension ShopInfoView {
 // MARK: - UICollectionViewDelegate, UICollectionViewDataSource
 extension ShopInfoView: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return productList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShopProductCollectionViewCell.identifier, for: indexPath) as! ShopProductCollectionViewCell
-        cell.updateUI("")
+        cell.updateUI(productList[indexPath.row])
         
         return cell
     }

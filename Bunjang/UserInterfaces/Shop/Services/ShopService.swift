@@ -32,6 +32,29 @@ class ShopService {
             }
     }
     
+    // MARK: 상점 상품 목록
+    static func getProducts(storeId: Int, completion: @escaping (ShopProductsResultData) -> Void) {
+        guard let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
+        
+        let url = URL(string: "https://dev.idha-etu.shop/api/stores/\(storeId)/products")!
+        
+        let headers: HTTPHeaders = [
+            "X-ACCESS-TOKEN": token,
+            "Content-Type": "application/json"
+        ]
+        
+        AF.request(url, method: .get, encoding: JSONEncoding.default, headers: headers)
+            .responseDecodable(of: ShopProductsResultData.self) { response in
+                switch response.result {
+                case .success:
+                    guard let data = response.value else { return }
+                    completion(data)
+                case let .failure(error):
+                    print("error: \(error)")
+                }
+            }
+    }
+    
     // MARK: 팔로우
     static func follow(followeeId: Int, completion: @escaping (FollowResultData) -> Void) {
         guard let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }

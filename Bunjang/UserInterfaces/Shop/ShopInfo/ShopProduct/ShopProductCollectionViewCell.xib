@@ -36,23 +36,13 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="peM-aO-5uC">
-                        <rect key="frame" x="100" y="131.5" width="15" height="12.5"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="15" id="Idf-eZ-zaj"/>
-                            <constraint firstAttribute="width" constant="15" id="clw-i2-ZBD"/>
-                        </constraints>
-                    </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="peM-aO-5uC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="7pI-Pw-Mzd"/>
-                <constraint firstItem="peM-aO-5uC" firstAttribute="centerY" secondItem="ZDV-7T-qtU" secondAttribute="centerY" id="7xm-1S-eKU"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZDV-7T-qtU" secondAttribute="trailing" constant="10" id="1GL-oo-dcD"/>
                 <constraint firstItem="PYC-uP-53e" firstAttribute="top" secondItem="ZDV-7T-qtU" secondAttribute="bottom" constant="5" id="8ML-Ti-YUI"/>
                 <constraint firstItem="WEX-cD-7f0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Gka-xy-aeS"/>
-                <constraint firstAttribute="trailing" secondItem="peM-aO-5uC" secondAttribute="trailing" constant="5" id="JDw-9a-4JP"/>
                 <constraint firstItem="ZDV-7T-qtU" firstAttribute="top" secondItem="WEX-cD-7f0" secondAttribute="bottom" constant="10" id="JRR-lz-SMy"/>
                 <constraint firstAttribute="trailing" secondItem="WEX-cD-7f0" secondAttribute="trailing" id="L8x-il-ThO"/>
                 <constraint firstItem="PYC-uP-53e" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="M6m-Pa-Kxr"/>
@@ -61,10 +51,12 @@
                 <constraint firstItem="WEX-cD-7f0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="sQS-qw-1HL"/>
             </constraints>
             <size key="customSize" width="120" height="249"/>
+            <connections>
+                <outlet property="imageView" destination="WEX-cD-7f0" id="kO7-vN-zr8"/>
+                <outlet property="nameLabel" destination="PYC-uP-53e" id="2EH-YS-kmG"/>
+                <outlet property="priceLabel" destination="ZDV-7T-qtU" id="lhl-S6-vmZ"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="136.27232142857142"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="heart" catalog="system" width="128" height="109"/>
-    </resources>
 </document>
