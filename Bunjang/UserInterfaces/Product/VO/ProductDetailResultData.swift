@@ -34,7 +34,8 @@ struct ProductDetailResult: Codable {
 struct StoreInfo: Codable {
     let storeID: Int
     let storeName: String
-    let rating, followerCount, productCount, reviewCount: Int
+    let rating: Double
+    let followerCount, productCount, reviewCount: Int
     let product: [StoreInfoProduct]?
     let review: [StoreInfoReview]?
 

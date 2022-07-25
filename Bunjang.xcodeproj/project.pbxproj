@@ -24,9 +24,10 @@
 		B7556399288E659D00C79DB8 /* PaymentListResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7556398288E659D00C79DB8 /* PaymentListResultData.swift */; };
 		B755639B288E6CB400C79DB8 /* DibResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B755639A288E6CB400C79DB8 /* DibResultData.swift */; };
 		B755639E288E715300C79DB8 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = B755639D288E715300C79DB8 /* Review.swift */; };
-		B75563A0288E71FD00C79DB8 /* ReviewRegisterResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B755639F288E71FD00C79DB8 /* ReviewRegisterResultData.swift */; };
 		B75563A2288E87FD00C79DB8 /* FollowResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75563A1288E87FD00C79DB8 /* FollowResultData.swift */; };
 		B75563A4288E918300C79DB8 /* ReviewStatusChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75563A3288E918300C79DB8 /* ReviewStatusChangeView.swift */; };
+		B75563A6288EAF0100C79DB8 /* ReviewSingleResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75563A5288EAF0100C79DB8 /* ReviewSingleResultData.swift */; };
+		B75563A8288EB0D300C79DB8 /* ReviewFormResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75563A7288EB0D300C79DB8 /* ReviewFormResultData.swift */; };
 		B788D1EA288AF8C6003212F9 /* AddressManageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B788D1E9288AF8C6003212F9 /* AddressManageView.swift */; };
 		B788D1ED288B01D6003212F9 /* AddressManageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B788D1EB288B01D6003212F9 /* AddressManageCollectionViewCell.swift */; };
 		B788D1EE288B01D6003212F9 /* AddressManageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B788D1EC288B01D6003212F9 /* AddressManageCollectionViewCell.xib */; };
@@ -143,9 +144,10 @@
 		B7556398288E659D00C79DB8 /* PaymentListResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentListResultData.swift; sourceTree = "<group>"; };
 		B755639A288E6CB400C79DB8 /* DibResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DibResultData.swift; sourceTree = "<group>"; };
 		B755639D288E715300C79DB8 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
-		B755639F288E71FD00C79DB8 /* ReviewRegisterResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRegisterResultData.swift; sourceTree = "<group>"; };
 		B75563A1288E87FD00C79DB8 /* FollowResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowResultData.swift; sourceTree = "<group>"; };
 		B75563A3288E918300C79DB8 /* ReviewStatusChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewStatusChangeView.swift; sourceTree = "<group>"; };
+		B75563A5288EAF0100C79DB8 /* ReviewSingleResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewSingleResultData.swift; sourceTree = "<group>"; };
+		B75563A7288EB0D300C79DB8 /* ReviewFormResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewFormResultData.swift; sourceTree = "<group>"; };
 		B788D1E9288AF8C6003212F9 /* AddressManageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressManageView.swift; sourceTree = "<group>"; };
 		B788D1EB288B01D6003212F9 /* AddressManageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressManageCollectionViewCell.swift; sourceTree = "<group>"; };
 		B788D1EC288B01D6003212F9 /* AddressManageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressManageCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -675,8 +677,9 @@
 			children = (
 				B7FEFE842886824F004AEA1A /* ShopInfoResultData.swift */,
 				B7556387288D8A0C00C79DB8 /* ReviewListResultData.swift */,
-				B755639F288E71FD00C79DB8 /* ReviewRegisterResultData.swift */,
+				B75563A7288EB0D300C79DB8 /* ReviewFormResultData.swift */,
 				B75563A1288E87FD00C79DB8 /* FollowResultData.swift */,
+				B75563A5288EAF0100C79DB8 /* ReviewSingleResultData.swift */,
 			);
 			path = VO;
 			sourceTree = "<group>";
@@ -878,13 +881,13 @@
 			files = (
 				B7CC86882883033B000F46F1 /* ProductListView.swift in Sources */,
 				B7556386288D89F400C79DB8 /* ReviewService.swift in Sources */,
-				B75563A0288E71FD00C79DB8 /* ReviewRegisterResultData.swift in Sources */,
 				B7D5126B288C3BBA006C25CF /* Payment.swift in Sources */,
 				B7D51263288BED5C006C25CF /* Address.swift in Sources */,
 				B7CC86812882EFA6000F46F1 /* HomeView.swift in Sources */,
 				B7CC86782882B5C9000F46F1 /* InputShopNameView.swift in Sources */,
 				B7AE4B872883F97D003D1D7A /* RecommendProductListView.swift in Sources */,
 				B7CC86832882EFAC000F46F1 /* MyView.swift in Sources */,
+				B75563A8288EB0D300C79DB8 /* ReviewFormResultData.swift in Sources */,
 				B7D51260288BEB6B006C25CF /* AddressFormResultData.swift in Sources */,
 				B754075E2886DCC30038F58C /* OptionSelectView.swift in Sources */,
 				B72618CD28884FDD0078E16A /* HomeProductsResultData.swift in Sources */,
@@ -928,6 +931,7 @@
 				B7E20DD22885329000C5949F /* LoginService.swift in Sources */,
 				B788D1ED288B01D6003212F9 /* AddressManageCollectionViewCell.swift in Sources */,
 				B755639B288E6CB400C79DB8 /* DibResultData.swift in Sources */,
+				B75563A6288EAF0100C79DB8 /* ReviewSingleResultData.swift in Sources */,
 				B7556391288D94DB00C79DB8 /* LoginResultData.swift in Sources */,
 				B7D5125E288BE399006C25CF /* PaymentService.swift in Sources */,
 				B7CC863528828EAC000F46F1 /* AppDelegate.swift in Sources */,

@@ -20,11 +20,11 @@ class ReviewView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
-        setupData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
+        setupData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -63,11 +63,12 @@ private extension ReviewView {
         if let storeId = storeId {
             ReviewService.getReviews(storeId: storeId) { [weak self] data in
                 if data.isSuccess {
-                    self?.reviewList = data.result
+                    guard let review = data.result else { return }
+                    self?.reviewList = review
                     
                     self?.collectionView.reloadData()
                 } else {
-                    let alert = Helper().alert(title: "상점 후기", msg: data.message)
+                    let alert = Helper().alert(title: "후기 조회 실패", msg: data.message)
                     self?.present(alert, animated: true)
                 }
             }
@@ -117,9 +118,10 @@ extension ReviewView: UICollectionViewDelegateFlowLayout {
 // MARK: - ReviewCollectionViewCellDelegate
 extension ReviewView: ReviewCollectionViewCellDelegate {
     // MARK: 상태 변경 창 열기
-    func presentModal() {
+    func presentModal(reviewId: Int) {
         let vc = storyboard?.instantiateViewController(withIdentifier: ReviewStatusChangeView.identifier) as! ReviewStatusChangeView
         
+        vc.reviewId = reviewId
         vc.modalPresentationStyle = .pageSheet
         
         if let sheet = vc.sheetPresentationController {

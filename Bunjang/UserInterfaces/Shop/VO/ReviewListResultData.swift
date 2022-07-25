@@ -10,7 +10,7 @@ struct ReviewListResultData: Codable {
     let isSuccess: Bool
     let code: Int
     let message: String
-    let result: [ReviewListResult]
+    let result: [ReviewListResult]?
 }
 
 // MARK: - ReviewListResult

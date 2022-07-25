@@ -8,11 +8,13 @@
 import UIKit
 
 protocol ReviewCollectionViewCellDelegate: AnyObject {
-    func presentModal()
+    func presentModal(reviewId: Int)
 }
 
 class ReviewCollectionViewCell: UICollectionViewCell {
     static let identifier = "ReviewCollectionViewCell"
+    
+    var reviewId: Int?
     
     weak var delegate: ReviewCollectionViewCellDelegate?
     
@@ -33,10 +35,13 @@ class ReviewCollectionViewCell: UICollectionViewCell {
         contentLabel.text = data.content
         dateLabel.text = data.date
         productNameLabel.text = "구매 상품: " + data.productName
+        reviewId = data.reviewID
     }
     
     // MARK: 상태변경 버튼
     @IBAction func didTapMoreButton(_ sender: Any) {
-        delegate?.presentModal()
+        if let reviewId = reviewId {
+            delegate?.presentModal(reviewId: reviewId)
+        }
     }
 }

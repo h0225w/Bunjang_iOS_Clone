@@ -17,11 +17,13 @@ class ReviewFormView: UIViewController {
     let textViewPlaceholder = "거래와 관련없는 후기는 삭제될 수 있습니다. 최소 20자 이상 입력 해주세요."
     
     var paymentId: Int?
+    var reviewId: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
         setupCosmosView()
+        setupData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,7 +38,11 @@ class ReviewFormView: UIViewController {
     
     // MARK: 뒤로가기 눌렀을 때
     @IBAction func didTapBackButton(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        if let navigationController = navigationController{
+            navigationController.popViewController(animated: true)
+        } else {
+            self.dismiss(animated: true)
+        }
     }
     
     // MARK: 등록 눌렀을 때
@@ -44,7 +50,18 @@ class ReviewFormView: UIViewController {
         let rating = cosmosView.rating
         let content = textView.text ?? ""
         
-        if let paymentId = paymentId, content != "" {
+        if let reviewId = reviewId, content != "" {
+            let review = Review(paymentId: 0, rating: rating, content: content)
+            
+            ReviewService.edit(review, reviewId: reviewId) { [weak self] data in
+                if data.isSuccess {
+                    self?.dismiss(animated: true)
+                } else {
+                    let alert = Helper().alert(title: "후기 수정 실패", msg: data.message)
+                    self?.present(alert, animated: true)
+                }
+            }
+        } else if let paymentId = paymentId, content != "" {
             let review = Review(paymentId: paymentId, rating: rating, content: content)
             
             ReviewService.register(review) { [weak self] data in
@@ -73,6 +90,22 @@ private extension ReviewFormView {
         cosmosView.settings.updateOnTouch = true
         cosmosView.settings.fillMode = .half
         cosmosView.settings.starSize = 50
+    }
+    
+    func setupData() {
+        if let reviewId = reviewId {
+            ReviewService.getReviewSingle(reviewId: reviewId) { [weak self] data in
+                if data.isSuccess {
+                    guard let review = data.result else { return }
+                    self?.textView.text = review.content
+                    self?.textView.textColor = .label
+                    self?.cosmosView.rating = review.rating
+                } else {
+                    let alert = Helper().alert(title: "후기 조회 실패", msg: data.message)
+                    self?.present(alert, animated: true)
+                }
+            }
+        }
     }
 }
 
