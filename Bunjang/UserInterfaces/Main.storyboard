@@ -1665,7 +1665,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gs-v9-ZgK" userLabel="FixedView">
-                                                <rect key="frame" x="0.0" y="1323" width="414" height="100"/>
+                                                <rect key="frame" x="0.0" y="1736" width="414" height="100"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoQ-WT-XqA">
                                                         <rect key="frame" x="10" y="30" width="40" height="40"/>
@@ -1824,6 +1824,9 @@
                         <outlet property="productNameLabel" destination="R3R-Q6-eG0" id="dkP-JS-0u3"/>
                         <outlet property="productPriceLabel" destination="XRs-pQ-J8H" id="hvm-yw-Ibg"/>
                         <outlet property="profileImageView" destination="aDN-k4-DRX" id="zMj-nv-CgV"/>
+                        <outlet property="reviewContentLabel" destination="7aO-bf-2xd" id="EfJ-8a-XuB"/>
+                        <outlet property="reviewInfoLabel" destination="rOT-o8-dDb" id="jZn-db-MpR"/>
+                        <outlet property="reviewRatingLabel" destination="EZB-gi-uhW" id="0b2-nd-6h5"/>
                         <outlet property="storeInfoLabel" destination="6ef-p0-VFB" id="beU-WP-QoJ"/>
                         <outlet property="storeNameLabel" destination="AA8-0w-0Lw" id="5gK-au-y0G"/>
                         <outlet property="storeProductTitleLabel" destination="akP-UF-LdG" id="bH0-Tx-Aqq"/>

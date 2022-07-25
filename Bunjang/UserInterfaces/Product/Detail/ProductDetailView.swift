@@ -32,7 +32,10 @@ class ProductDetailView: UIViewController {
     @IBOutlet weak var storeProductTitleLabel: UILabel!
     @IBOutlet weak var storeReviewTitleLabel: UILabel!
     
-    // TODO: 상품 후기는 후기 개발 완료 후 진행 예정
+    @IBOutlet weak var reviewRatingLabel: UILabel!
+    @IBOutlet weak var reviewContentLabel: UILabel!
+    @IBOutlet weak var reviewInfoLabel: UILabel!
+    
     
     @IBOutlet weak var profileImageView: UIImageView!
     
@@ -219,6 +222,11 @@ private extension ProductDetailView {
             self.dibsButton.isSelected = data.result.dibs
             self.followsButton.isSelected = data.result.follow
             
+            if let review = data.result.storeInformation.review {
+                self.reviewRatingLabel.text = "★ \(review[0].rating)"
+                self.reviewContentLabel.text = review[0].content
+                self.reviewInfoLabel.text = review[0].storeName + " ﹒ " + review[0].createdDate
+            }
             self.imageBannerCollectionView.reloadData()
             self.tagCollectionView.reloadData()
             self.productCollectionView.reloadData()
