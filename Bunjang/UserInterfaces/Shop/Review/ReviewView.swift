@@ -83,6 +83,7 @@ extension ReviewView: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReviewCollectionViewCell.identifier, for: indexPath) as! ReviewCollectionViewCell
+        cell.delegate = self
         cell.updateUI(reviewList[indexPath.row])
         
         return cell
@@ -110,5 +111,21 @@ extension ReviewView: UICollectionViewDelegateFlowLayout {
             let width: CGFloat = collectionView.frame.width
             let height: CGFloat = 70
             return CGSize(width: width, height: height)
+    }
+}
+
+// MARK: - ReviewCollectionViewCellDelegate
+extension ReviewView: ReviewCollectionViewCellDelegate {
+    // MARK: 상태 변경 창 열기
+    func presentModal() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: ReviewStatusChangeView.identifier) as! ReviewStatusChangeView
+        
+        vc.modalPresentationStyle = .pageSheet
+        
+        if let sheet = vc.sheetPresentationController {
+            sheet.detents = [.medium()]
+        }
+        
+        self.present(vc, animated: true)
     }
 }

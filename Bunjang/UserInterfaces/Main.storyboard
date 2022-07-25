@@ -3196,6 +3196,85 @@
             </objects>
             <point key="canvasLocation" x="959" y="2340"/>
         </scene>
+        <!--Review Status Change View-->
+        <scene sceneID="932-rs-uqV">
+            <objects>
+                <viewController storyboardIdentifier="ReviewStatusChangeView" id="ZsZ-wv-xkK" customClass="ReviewStatusChangeView" customModule="Bunjang" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bBa-P3-9IY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HvT-a5-X1d">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="상태변경" id="eV2-YD-kDW">
+                                        <barButtonItem key="rightBarButtonItem" image="xmark" catalog="system" id="37t-L1-Y4G">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFP-WN-CuQ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dg3-8n-tcT"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="수정하기">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qod-7D-MIP">
+                                <rect key="frame" x="0.0" y="139" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="OYu-JC-IMh"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="삭제하기">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3O-ik-Yze">
+                                <rect key="frame" x="10" y="138" width="394" height="1"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="h9E-DQ-4gM"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tne-yo-jNx">
+                                <rect key="frame" x="10" y="189" width="394" height="1"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="V2D-l3-Tmi"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xMg-Yt-fN9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qod-7D-MIP" firstAttribute="top" secondItem="k3O-ik-Yze" secondAttribute="bottom" id="7WF-3R-Y71"/>
+                            <constraint firstItem="xMg-Yt-fN9" firstAttribute="trailing" secondItem="HvT-a5-X1d" secondAttribute="trailing" id="CBc-Gw-wsc"/>
+                            <constraint firstItem="xMg-Yt-fN9" firstAttribute="trailing" secondItem="Qod-7D-MIP" secondAttribute="trailing" id="NMf-IR-yQl"/>
+                            <constraint firstItem="HvT-a5-X1d" firstAttribute="top" secondItem="xMg-Yt-fN9" secondAttribute="top" id="OHT-T2-PTi"/>
+                            <constraint firstItem="xMg-Yt-fN9" firstAttribute="trailing" secondItem="YFP-WN-CuQ" secondAttribute="trailing" id="S7Q-LZ-x2N"/>
+                            <constraint firstItem="tne-yo-jNx" firstAttribute="top" secondItem="Qod-7D-MIP" secondAttribute="bottom" id="YB3-Xu-DyM"/>
+                            <constraint firstItem="HvT-a5-X1d" firstAttribute="leading" secondItem="bBa-P3-9IY" secondAttribute="leading" id="ZWl-QA-EDP"/>
+                            <constraint firstItem="YFP-WN-CuQ" firstAttribute="leading" secondItem="xMg-Yt-fN9" secondAttribute="leading" id="gXj-Fg-7mm"/>
+                            <constraint firstAttribute="trailing" secondItem="tne-yo-jNx" secondAttribute="trailing" constant="10" id="h3e-cs-x9R"/>
+                            <constraint firstItem="Qod-7D-MIP" firstAttribute="leading" secondItem="xMg-Yt-fN9" secondAttribute="leading" id="hYl-l0-WD0"/>
+                            <constraint firstItem="k3O-ik-Yze" firstAttribute="leading" secondItem="xMg-Yt-fN9" secondAttribute="leading" constant="10" id="pdl-91-x16"/>
+                            <constraint firstItem="tne-yo-jNx" firstAttribute="leading" secondItem="bBa-P3-9IY" secondAttribute="leading" constant="10" id="qP0-1M-l63"/>
+                            <constraint firstItem="xMg-Yt-fN9" firstAttribute="trailing" secondItem="k3O-ik-Yze" secondAttribute="trailing" constant="10" id="wbs-Re-pxj"/>
+                            <constraint firstItem="k3O-ik-Yze" firstAttribute="top" secondItem="YFP-WN-CuQ" secondAttribute="bottom" id="wip-QF-dF3"/>
+                            <constraint firstItem="YFP-WN-CuQ" firstAttribute="top" secondItem="HvT-a5-X1d" secondAttribute="bottom" id="xw6-Q0-xf3"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QPU-v5-Czi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="200" y="3009"/>
+        </scene>
         <!--Review View-->
         <scene sceneID="Mjk-6i-BEa">
             <objects>
