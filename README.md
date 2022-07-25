@@ -84,3 +84,12 @@
 - 회원 삭제 API 연동
 
 </details>
+
+<details>
+<summary>07 / 25 (월)</summary>
+
+- 찜 기능 구현 및 API 연동
+- 상품 후기 작성 API 연동
+- 후기 > 상품 선택 API 연동
+
+</details>
