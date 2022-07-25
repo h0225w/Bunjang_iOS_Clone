@@ -14,6 +14,8 @@ class PaymentSelectView: UIViewController {
     
     var paymentList: [PaymentListResult] = []
     
+    var completion: ((Bool) -> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -82,7 +84,7 @@ extension PaymentSelectView: UITableViewDelegate, UITableViewDataSource {
         let vc = storyboard?.instantiateViewController(withIdentifier: ReviewFormView.identifier) as! ReviewFormView
         
         vc.paymentId = paymentList[indexPath.row].paymentID
-        
+        vc.completion = completion
         navigationController?.pushViewController(vc, animated: true)
     }
 }

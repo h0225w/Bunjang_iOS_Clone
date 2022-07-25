@@ -41,7 +41,11 @@ class ReviewView: UIViewController {
     // MARK: 상점후기쓰기 눌렀을 때
     @IBAction func didTapReviewFormButton(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: PaymentSelectView.identifier) as! PaymentSelectView
-        
+        vc.completion = { isSuccess in
+            if isSuccess {
+                self.setupData()
+            }
+        }
         navigationController?.pushViewController(vc, animated: true)
     }
 }
@@ -121,6 +125,11 @@ extension ReviewView: ReviewCollectionViewCellDelegate {
     func presentModal(reviewId: Int) {
         let vc = storyboard?.instantiateViewController(withIdentifier: ReviewStatusChangeView.identifier) as! ReviewStatusChangeView
         
+        vc.completion = { isSuccess in
+            if isSuccess {
+                self.setupData()
+            }
+        }
         vc.reviewId = reviewId
         vc.modalPresentationStyle = .pageSheet
         

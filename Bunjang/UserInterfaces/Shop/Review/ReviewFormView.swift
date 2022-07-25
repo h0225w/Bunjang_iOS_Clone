@@ -19,6 +19,8 @@ class ReviewFormView: UIViewController {
     var paymentId: Int?
     var reviewId: Int?
     
+    var completion: ((Bool) -> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -56,6 +58,7 @@ class ReviewFormView: UIViewController {
             ReviewService.edit(review, reviewId: reviewId) { [weak self] data in
                 if data.isSuccess {
                     self?.dismiss(animated: true)
+                    self?.completion?(true)
                 } else {
                     let alert = Helper().alert(title: "후기 수정 실패", msg: data.message)
                     self?.present(alert, animated: true)
@@ -66,7 +69,8 @@ class ReviewFormView: UIViewController {
             
             ReviewService.register(review) { [weak self] data in
                 if data.isSuccess {
-                    self?.dismiss(animated: true)
+                    self?.navigationController?.popViewController(animated: false)
+                    self?.completion?(true)
                 } else {
                     let alert = Helper().alert(title: "후기 작성 실패", msg: data.message)
                     self?.present(alert, animated: true)

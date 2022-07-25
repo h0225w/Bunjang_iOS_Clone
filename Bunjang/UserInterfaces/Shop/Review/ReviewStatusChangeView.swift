@@ -10,6 +10,7 @@ import UIKit
 class ReviewStatusChangeView: UIViewController {
     static let identifier = "ReviewStatusChangeView"
     
+    var completion: ((Bool) -> Void)?
     var reviewId: Int?
     
     override func viewDidLoad() {
@@ -28,6 +29,7 @@ class ReviewStatusChangeView: UIViewController {
         let vc = storyboard?.instantiateViewController(withIdentifier: ReviewFormView.identifier) as! ReviewFormView
         
         vc.reviewId = reviewId
+        vc.completion = completion
         vc.modalPresentationStyle = .fullScreen
         
         self.present(vc, animated: false)
@@ -41,6 +43,7 @@ class ReviewStatusChangeView: UIViewController {
             if data.isSuccess {
                 let action: (() -> Void) = {
                     self?.dismiss(animated: true)
+                    self?.completion?(true)
                 }
                 
                 let alert = Helper().alert(title: "후기 삭제 성공", msg: data.message, action: action)
