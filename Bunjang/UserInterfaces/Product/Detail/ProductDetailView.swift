@@ -36,6 +36,9 @@ class ProductDetailView: UIViewController {
     
     @IBOutlet weak var profileImageView: UIImageView!
     
+    // MARK: 팔로우 버튼
+    @IBOutlet weak var followsButton: UIButton!
+    
     // MARK: 찜 버튼
     @IBOutlet weak var dibsButton: UIButton!
     
@@ -80,6 +83,26 @@ class ProductDetailView: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    // MARK: 팔로우 / 팔로잉 버튼 눌렀을 때
+    @IBAction func didTapFollowsButton(_ sender: UIButton) {
+        sender.isSelected.toggle()
+        
+        let follow = sender.isSelected ? "팔로우" : "팔로우 해제"
+        
+        if let storeId = storeId {
+            ShopService.follow(followeeId: storeId) { [weak self] data in
+                if data.isSuccess {
+                    self?.setupData()
+                    let alert = Helper().alert(title: "\(follow) 성공", msg: data.message)
+                    self?.present(alert, animated: true)
+                } else {
+                    let alert = Helper().alert(title: "\(follow) 실패", msg: data.message)
+                    self?.present(alert, animated: true)
+                }
+            }
+        }
+    }
+    
     // MARK: 찜 버튼 눌렀을 때
     @IBAction func didTapDibsButton(_ sender: UIButton) {
         sender.isSelected.toggle()
@@ -87,6 +110,7 @@ class ProductDetailView: UIViewController {
         if let productId = productId {
             ProductService.dib(productId: productId) { [weak self] data in
                 if data.isSuccess {
+                    self?.setupData()
                     let alert = Helper().alert(title: "찜 성공", msg: data.message)
                     self?.present(alert, animated: true)
                 } else {
@@ -116,6 +140,10 @@ private extension ProductDetailView {
         
         profileImageView.isUserInteractionEnabled = true
         profileImageView.addGestureRecognizer(tapGestureRecognizer)
+        
+        followsButton.setTitle("팔로우", for: .normal)
+        followsButton.setTitle("팔로잉", for: .selected)
+        followsButton.titleLabel?.font = .systemFont(ofSize: 14, weight: .semibold)
         
         dibsButton.setImage(UIImage(systemName: "heart.fill"), for: .selected)
         dibsButton.setImage(UIImage(systemName: "heart"), for: .normal)
@@ -166,7 +194,6 @@ private extension ProductDetailView {
         
         ProductService.getProductDetail(productId) { [weak self] data in
             guard let self = self else { return }
-            
             self.product = data.result
             
             self.storeId = data.result.storeInformation.storeID
