@@ -21,9 +21,10 @@ struct ShopInfoResult: Codable {
     let ratingCount, openDate, visitCount, productCount: Int
     let reviewCount, followingCount, followerCount, saleCount: Int
     let dibsCount: Int
+    let follow: Bool
 
     enum CodingKeys: String, CodingKey {
         case storeID = "storeId"
-        case storeName, rating, ratingCount, openDate, visitCount, productCount, reviewCount, followingCount, followerCount, saleCount, dibsCount
+        case storeName, rating, ratingCount, openDate, visitCount, productCount, reviewCount, followingCount, followerCount, saleCount, dibsCount, follow
     }
 }

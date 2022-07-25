@@ -15,9 +15,12 @@ class ShopService {
         
         let url = URL(string: "https://dev.idha-etu.shop/api/stores/\(storeId)")!
         
-        let request = Helper.makeRequest(url, method: "GET", dict: nil, token: token)
-                                 
-        AF.request(request)
+        let headers: HTTPHeaders = [
+            "X-ACCESS-TOKEN": token,
+            "Content-Type": "application/json"
+        ]
+        
+        AF.request(url, method: .get, encoding: JSONEncoding.default, headers: headers)
             .responseDecodable(of: ShopInfoResultData.self) { response in
                 switch response.result {
                 case .success:

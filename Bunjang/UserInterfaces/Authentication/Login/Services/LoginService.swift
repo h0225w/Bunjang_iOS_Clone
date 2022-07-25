@@ -58,9 +58,11 @@ class LoginService {
             "code": code
         ]
         
-        let request = Helper.makeRequest(url, method: "POST", dict: params)
-                                 
-        AF.request(request)
+        let headers: HTTPHeaders = [
+            "Content-Type": "application/json"
+        ]
+        
+        AF.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
             .responseDecodable(of: CertNumberResultData.self) { response in
                 switch response.result {
                 case .success:
@@ -82,9 +84,12 @@ class LoginService {
             "storeName": storeName
         ]
         
-        let request = Helper.makeRequest(url, method: "PATCH", dict: params, token: token)
-
-        AF.request(request)
+        let headers: HTTPHeaders = [
+            "X-ACCESS-TOKEN": token,
+            "Content-Type": "application/json"
+        ]
+        
+        AF.request(url, method: .patch, parameters: params, encoding: JSONEncoding.default, headers: headers)
             .responseDecodable(of: ShopNameResultData.self) { response in
                 switch response.result {
                 case .success:

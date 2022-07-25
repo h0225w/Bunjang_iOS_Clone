@@ -217,6 +217,7 @@ private extension ProductDetailView {
             self.storeReviewTitleLabel.text = "이 상점의 거래후기 \(data.result.storeInformation.reviewCount)"
             
             self.dibsButton.isSelected = data.result.dibs
+            self.followsButton.isSelected = data.result.follow
             
             self.imageBannerCollectionView.reloadData()
             self.tagCollectionView.reloadData()

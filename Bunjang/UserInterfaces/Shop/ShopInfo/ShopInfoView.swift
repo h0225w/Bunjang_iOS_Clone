@@ -94,6 +94,8 @@ private extension ShopInfoView {
                 self.followingCountLabel.text = "\(data.result.followingCount)"
                 self.followerCountLabel.text = "\(data.result.followerCount)"
                 self.saleCountLabel.text = "\(data.result.saleCount)회"
+                
+                self.followButton.isSelected = data.result.follow
             }
         }
     }
