@@ -1662,7 +1662,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gs-v9-ZgK" userLabel="FixedView">
-                                                <rect key="frame" x="0.0" y="796" width="414" height="100"/>
+                                                <rect key="frame" x="0.0" y="1725" width="414" height="100"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoQ-WT-XqA">
                                                         <rect key="frame" x="10" y="30" width="40" height="40"/>
@@ -1670,10 +1670,14 @@
                                                             <constraint firstAttribute="width" constant="40" id="Dqn-LA-sYB"/>
                                                             <constraint firstAttribute="height" constant="40" id="j4n-OI-fgm"/>
                                                         </constraints>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system">
-                                                            <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="baseForegroundColor" systemColor="systemRedColor"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didTapDibsButton:" destination="CMf-Do-XSx" eventType="touchUpInside" id="Klc-ch-B0U"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IoO-dI-fy1">
                                                         <rect key="frame" x="60" y="25" width="344" height="50"/>
@@ -1807,6 +1811,7 @@
                         <outlet property="contentLabel" destination="k0R-qz-BBO" id="DdU-1n-5Om"/>
                         <outlet property="countLabel" destination="Tjf-g0-5Aq" id="Fsb-Fk-8R0"/>
                         <outlet property="deliveryChargeLabel" destination="bsh-4Q-VW8" id="nID-BA-1Ig"/>
+                        <outlet property="dibsButton" destination="xoQ-WT-XqA" id="m2p-jB-88Q"/>
                         <outlet property="exchangeLabel" destination="zGD-Je-ULB" id="Pvu-j5-cEn"/>
                         <outlet property="imageBannerCollectionView" destination="0JP-jY-SkX" id="ZJb-fD-u8K"/>
                         <outlet property="productCollectionView" destination="dUJ-df-CdV" id="EAJ-Vw-utR"/>
@@ -1817,6 +1822,8 @@
                         <outlet property="profileImageView" destination="aDN-k4-DRX" id="zMj-nv-CgV"/>
                         <outlet property="storeInfoLabel" destination="6ef-p0-VFB" id="beU-WP-QoJ"/>
                         <outlet property="storeNameLabel" destination="AA8-0w-0Lw" id="5gK-au-y0G"/>
+                        <outlet property="storeProductTitleLabel" destination="akP-UF-LdG" id="bH0-Tx-Aqq"/>
+                        <outlet property="storeReviewTitleLabel" destination="95J-GO-VPQ" id="gH3-P6-ygz"/>
                         <outlet property="tagCollectionView" destination="RlQ-9P-THD" id="hl3-hH-fGb"/>
                         <outlet property="usedLabel" destination="FvN-cx-0ip" id="z7B-yH-HSV"/>
                     </connections>

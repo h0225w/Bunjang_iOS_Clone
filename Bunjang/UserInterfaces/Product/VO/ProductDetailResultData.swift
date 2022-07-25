@@ -26,6 +26,7 @@ struct ProductDetailResult: Codable {
     let dibsCount: Int
     let status: String
     let storeInformation: StoreInfo
+    let dibs: Bool
 }
 
 // MARK: - StoreInfo

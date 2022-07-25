@@ -29,9 +29,15 @@ class ProductDetailView: UIViewController {
     @IBOutlet weak var storeNameLabel: UILabel!
     @IBOutlet weak var storeInfoLabel: UILabel!
     
+    @IBOutlet weak var storeProductTitleLabel: UILabel!
+    @IBOutlet weak var storeReviewTitleLabel: UILabel!
+    
     // TODO: 상품 후기는 후기 개발 완료 후 진행 예정
     
     @IBOutlet weak var profileImageView: UIImageView!
+    
+    // MARK: 찜 버튼
+    @IBOutlet weak var dibsButton: UIButton!
     
     // MARK: 이미지 배너 관련 변수
     var timer: DispatchSourceTimer?
@@ -73,6 +79,23 @@ class ProductDetailView: UIViewController {
         vc.storeId = self.storeId
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    // MARK: 찜 버튼 눌렀을 때
+    @IBAction func didTapDibsButton(_ sender: UIButton) {
+        sender.isSelected.toggle()
+        
+        if let productId = productId {
+            ProductService.dib(productId: productId) { [weak self] data in
+                if data.isSuccess {
+                    let alert = Helper().alert(title: "찜 성공", msg: data.message)
+                    self?.present(alert, animated: true)
+                } else {
+                    let alert = Helper().alert(title: "찜 실패", msg: data.message)
+                    self?.present(alert, animated: true)
+                }
+            }
+        }
+    }
 }
 
 // MARK: - Extension
@@ -93,6 +116,9 @@ private extension ProductDetailView {
         
         profileImageView.isUserInteractionEnabled = true
         profileImageView.addGestureRecognizer(tapGestureRecognizer)
+        
+        dibsButton.setImage(UIImage(systemName: "heart.fill"), for: .selected)
+        dibsButton.setImage(UIImage(systemName: "heart"), for: .normal)
     }
     
     // MARK: 이미지 배너 설정
@@ -160,6 +186,10 @@ private extension ProductDetailView {
             self.contentLabel.text = data.result.content
             self.storeNameLabel.text = data.result.storeInformation.storeName
             self.storeInfoLabel.text = "★ \(data.result.storeInformation.rating) ﹒ 팔로워 \(data.result.storeInformation.followerCount)"
+            self.storeProductTitleLabel.text = "이 상점의 상품 \(data.result.storeInformation.productCount)"
+            self.storeReviewTitleLabel.text = "이 상점의 거래후기 \(data.result.storeInformation.reviewCount)"
+            
+            self.dibsButton.isSelected = data.result.dibs
             
             self.imageBannerCollectionView.reloadData()
             self.tagCollectionView.reloadData()

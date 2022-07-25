@@ -68,4 +68,31 @@ class ProductService {
                 }
             }
     }
+    
+    // MARK: 상품 찜
+    static func dib(productId: Int, completion: @escaping (DibResultData) -> Void) {
+        guard let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
+        
+        let url = URL(string: "https://dev.idha-etu.shop/api/dibs")!
+        
+        let params = [
+            "productId": productId
+        ] as [String : Any]
+        
+        let headers: HTTPHeaders = [
+            "X-ACCESS-TOKEN": token,
+            "Content-Type": "application/json"
+        ]
+        
+        AF.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
+            .responseDecodable(of: DibResultData.self) { response in
+                switch response.result {
+                case .success:
+                    guard let data = response.value else { return }
+                    completion(data)
+                case let .failure(error):
+                    print(error)
+                }
+            }
+    }
 }
