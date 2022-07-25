@@ -40,4 +40,29 @@ class PaymentService {
                 }
             }
     }
+    
+    // MARK: 거래완료된 결제 내역
+    static func getPayments(_ type: String = "all", completion: @escaping (PaymentListResultData) -> Void) {
+        guard let storeId = UserDefaults.standard.string(forKey: "storeId"), let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
+        
+        let url = URL(string: "https://dev.idha-etu.shop/api/stores/\(storeId)/payments?type=\(type)")!
+        
+        
+        let headers: HTTPHeaders = [
+            "X-ACCESS-TOKEN": token,
+            "Content-Type": "application/json"
+        ]
+        
+        AF.request(url, method: .get, headers: headers)
+            .responseDecodable(of: PaymentListResultData
+                                .self) { response in
+                switch response.result {
+                case .success:
+                    guard let data = response.value else { return }
+                    completion(data)
+                case let .failure(error):
+                    print(error)
+                }
+            }
+    }
 }

@@ -26,7 +26,10 @@ class PaymentSelectTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
         
-    func updateUI() {
-        
+    func updateUI(_ data: PaymentListResult) {
+        nameLabel.text = data.productName
+        priceLabel.text = "\(data.price)원"
+        storeNameLabel.text = data.productStoreName
+        paymentDateLabel.text = data.date
     }
 }

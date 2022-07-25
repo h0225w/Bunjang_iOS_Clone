@@ -21,6 +21,7 @@
 		B7556393288E61EE00C79DB8 /* PaymentSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7556392288E61EE00C79DB8 /* PaymentSelectView.swift */; };
 		B7556396288E622E00C79DB8 /* PaymentSelectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7556394288E622E00C79DB8 /* PaymentSelectTableViewCell.swift */; };
 		B7556397288E622E00C79DB8 /* PaymentSelectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7556395288E622E00C79DB8 /* PaymentSelectTableViewCell.xib */; };
+		B7556399288E659D00C79DB8 /* PaymentListResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7556398288E659D00C79DB8 /* PaymentListResultData.swift */; };
 		B788D1EA288AF8C6003212F9 /* AddressManageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B788D1E9288AF8C6003212F9 /* AddressManageView.swift */; };
 		B788D1ED288B01D6003212F9 /* AddressManageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B788D1EB288B01D6003212F9 /* AddressManageCollectionViewCell.swift */; };
 		B788D1EE288B01D6003212F9 /* AddressManageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B788D1EC288B01D6003212F9 /* AddressManageCollectionViewCell.xib */; };
@@ -134,6 +135,7 @@
 		B7556392288E61EE00C79DB8 /* PaymentSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSelectView.swift; sourceTree = "<group>"; };
 		B7556394288E622E00C79DB8 /* PaymentSelectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSelectTableViewCell.swift; sourceTree = "<group>"; };
 		B7556395288E622E00C79DB8 /* PaymentSelectTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentSelectTableViewCell.xib; sourceTree = "<group>"; };
+		B7556398288E659D00C79DB8 /* PaymentListResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentListResultData.swift; sourceTree = "<group>"; };
 		B788D1E9288AF8C6003212F9 /* AddressManageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressManageView.swift; sourceTree = "<group>"; };
 		B788D1EB288B01D6003212F9 /* AddressManageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressManageCollectionViewCell.swift; sourceTree = "<group>"; };
 		B788D1EC288B01D6003212F9 /* AddressManageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressManageCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -567,6 +569,7 @@
 				B7D51266288BFBCC006C25CF /* AddressListResultData.swift */,
 				B7D51268288C1384006C25CF /* AddressSingleResultData.swift */,
 				B7D5126C288C3C99006C25CF /* PaymentResultData.swift */,
+				B7556398288E659D00C79DB8 /* PaymentListResultData.swift */,
 			);
 			path = VO;
 			sourceTree = "<group>";
@@ -873,6 +876,7 @@
 				B7FEFE852886824F004AEA1A /* ShopInfoResultData.swift in Sources */,
 				B7DFA54928844FD200E5BB51 /* CollectionViewLeftAlignFlowLayout.swift in Sources */,
 				B7D0FFFA288D73350067DA77 /* ReviewFormView.swift in Sources */,
+				B7556399288E659D00C79DB8 /* PaymentListResultData.swift in Sources */,
 				B7CC866E28829E78000F46F1 /* FirstView.swift in Sources */,
 				B788D1F0288B059B003212F9 /* AddressFormView.swift in Sources */,
 				B72618CF288855A80078E16A /* ProductDetailResultData.swift in Sources */,

@@ -16,6 +16,8 @@ class ReviewFormView: UIViewController {
     
     let textViewPlaceholder = "거래와 관련없는 후기는 삭제될 수 있습니다. 최소 20자 이상 입력 해주세요."
     
+    var paymentId: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
