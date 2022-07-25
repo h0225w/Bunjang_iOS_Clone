@@ -3339,6 +3339,9 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="등록" id="k6b-78-yZq">
                                             <color key="tintColor" systemColor="systemRedColor"/>
+                                            <connections>
+                                                <action selector="didTapSubmitButton:" destination="Wa0-pj-hGY" id="GKM-tO-2n3"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>

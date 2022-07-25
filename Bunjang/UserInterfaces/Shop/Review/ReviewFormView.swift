@@ -38,6 +38,25 @@ class ReviewFormView: UIViewController {
     @IBAction func didTapBackButton(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
+    
+    // MARK: 등록 눌렀을 때
+    @IBAction func didTapSubmitButton(_ sender: Any) {
+        let rating = cosmosView.rating
+        let content = textView.text ?? ""
+        
+        if let paymentId = paymentId, content != "" {
+            let review = Review(paymentId: paymentId, rating: rating, content: content)
+            
+            ReviewService.register(review) { [weak self] data in
+                if data.isSuccess {
+                    self?.dismiss(animated: true)
+                } else {
+                    let alert = Helper().alert(title: "후기 작성 실패", msg: data.message)
+                    self?.present(alert, animated: true)
+                }
+            }
+        }
+    }
 }
 
 // MARK: - Extension

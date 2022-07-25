@@ -23,7 +23,7 @@ class ReviewCollectionViewCell: UICollectionViewCell {
     
     func updateUI(_ data: ReviewListResult) {
         nameLabel.text = data.storeName
-        ratingLabel.text = "\(data.rating)"
+        ratingLabel.text = "★ \(data.rating)"
         contentLabel.text = data.content
         dateLabel.text = data.date
         productNameLabel.text = "구매 상품: " + data.productName

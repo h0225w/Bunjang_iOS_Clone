@@ -29,7 +29,7 @@ class PaymentSelectTableViewCell: UITableViewCell {
     func updateUI(_ data: PaymentListResult) {
         nameLabel.text = data.productName
         priceLabel.text = "\(data.price)원"
-        storeNameLabel.text = data.productStoreName
+        storeNameLabel.text = data.seller
         paymentDateLabel.text = data.date
     }
 }

@@ -17,14 +17,15 @@ struct PaymentListResultData: Codable {
 struct PaymentListResult: Codable {
     let paymentID: Int
     let purchase: Bool
+    let canCreateReview: Bool
     let paymentStatus: String
     let productImage: String
     let productName: String
     let price: Int
-    let productStoreName, date: String
+    let seller, date: String
 
     enum CodingKeys: String, CodingKey {
         case paymentID = "paymentId"
-        case purchase, paymentStatus, productImage, productName, price, productStoreName, date
+        case purchase, canCreateReview, paymentStatus, productImage, productName, price, seller, date
     }
 }

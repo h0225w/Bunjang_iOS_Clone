@@ -52,6 +52,10 @@ private extension ReviewView {
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        collectionView.collectionViewLayout = layout
+        
         collectionView.register(UINib(nibName: ReviewCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: ReviewCollectionViewCell.identifier)
     }
     
@@ -99,7 +103,7 @@ extension ReviewView: UICollectionViewDelegate, UICollectionViewDataSource {
 extension ReviewView: UICollectionViewDelegateFlowLayout {
     // TODO: collectionView 동적 높이 구하는 법
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 120)
+        return CGSize(width: collectionView.frame.width, height: 130)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
