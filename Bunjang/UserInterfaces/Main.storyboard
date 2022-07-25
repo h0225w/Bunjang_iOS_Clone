@@ -3264,6 +3264,53 @@
             </objects>
             <point key="canvasLocation" x="940" y="3010"/>
         </scene>
+        <!--Payment Select View-->
+        <scene sceneID="iZ0-fe-11p">
+            <objects>
+                <viewController storyboardIdentifier="PaymentSelectView" id="MCX-05-hSo" customClass="PaymentSelectView" customModule="Bunjang" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aB3-Nh-E8K">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="haY-Q5-NoW">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="상품 선택" id="4Uh-wx-qWn">
+                                        <barButtonItem key="leftBarButtonItem" image="arrow.left" catalog="system" id="9mz-h1-69K">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="didTapBackButton:" destination="MCX-05-hSo" id="PdP-nX-Mzw"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Odu-eA-5om">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KgT-9G-YMi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Odu-eA-5om" firstAttribute="leading" secondItem="KgT-9G-YMi" secondAttribute="leading" id="07I-2L-J9Y"/>
+                            <constraint firstItem="haY-Q5-NoW" firstAttribute="leading" secondItem="KgT-9G-YMi" secondAttribute="leading" id="LGE-fa-G1j"/>
+                            <constraint firstItem="KgT-9G-YMi" firstAttribute="trailing" secondItem="Odu-eA-5om" secondAttribute="trailing" id="bop-fZ-3GR"/>
+                            <constraint firstItem="haY-Q5-NoW" firstAttribute="top" secondItem="KgT-9G-YMi" secondAttribute="top" id="h1x-jS-5Qp"/>
+                            <constraint firstItem="Odu-eA-5om" firstAttribute="top" secondItem="haY-Q5-NoW" secondAttribute="bottom" id="hn1-1B-1Dh"/>
+                            <constraint firstItem="KgT-9G-YMi" firstAttribute="bottom" secondItem="Odu-eA-5om" secondAttribute="bottom" id="iEh-SO-QAS"/>
+                            <constraint firstAttribute="trailing" secondItem="haY-Q5-NoW" secondAttribute="trailing" id="zco-KG-hd0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Odu-eA-5om" id="2I5-X6-Nqr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gEa-iE-Zdg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1639" y="3009"/>
+        </scene>
         <!--Review Form View-->
         <scene sceneID="FrS-nO-KBV">
             <objects>
@@ -3279,6 +3326,9 @@
                                     <navigationItem title="상점후기" id="dPy-MO-MxZ">
                                         <barButtonItem key="leftBarButtonItem" image="arrow.left" catalog="system" id="WZM-uv-Vjs">
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="didTapBackButton:" destination="Wa0-pj-hGY" id="SDs-jC-wcx"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="등록" id="k6b-78-yZq">
                                             <color key="tintColor" systemColor="systemRedColor"/>
@@ -3323,7 +3373,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zej-7M-neb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1621.7391304347827" y="3008.7053571428569"/>
+            <point key="canvasLocation" x="2328" y="3009"/>
         </scene>
     </scenes>
     <resources>

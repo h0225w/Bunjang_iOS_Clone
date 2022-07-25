@@ -40,7 +40,7 @@ class ReviewView: UIViewController {
     
     // MARK: 상점후기쓰기 눌렀을 때
     @IBAction func didTapReviewFormButton(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: ReviewFormView.identifier) as! ReviewFormView
+        let vc = storyboard?.instantiateViewController(withIdentifier: PaymentSelectView.identifier) as! PaymentSelectView
         
         navigationController?.pushViewController(vc, animated: true)
     }

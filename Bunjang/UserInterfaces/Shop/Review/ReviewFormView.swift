@@ -29,6 +29,13 @@ class ReviewFormView: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = false
     }
+    
+    // MARK: - Actions
+    
+    // MARK: 뒤로가기 눌렀을 때
+    @IBAction func didTapBackButton(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
 }
 
 // MARK: - Extension
