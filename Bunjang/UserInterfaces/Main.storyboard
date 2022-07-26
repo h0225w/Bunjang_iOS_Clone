@@ -524,15 +524,128 @@
             </objects>
             <point key="canvasLocation" x="-5649.275362318841" y="954.91071428571422"/>
         </scene>
-        <!--View Controller-->
+        <!--Payment Event View-->
         <scene sceneID="uqR-dR-dEg">
             <objects>
-                <viewController id="fxw-ke-GCy" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PaymentEventView" id="fxw-ke-GCy" customClass="PaymentEventView" customModule="Bunjang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ARI-GJ-ErI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RhB-g8-dHH">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="번개페 첫 구매 이벤트" id="YMO-bs-jzX">
+                                        <barButtonItem key="rightBarButtonItem" image="xmark" catalog="system" id="Hah-2u-gbr">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="didTapCloseButton:" destination="fxw-ke-GCy" id="4gA-G3-Pig"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ALU-OI-kdj">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5R5-CT-QBr">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="2200"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Nsb-sz-XuU">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="2100"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eventP_01" translatesAutoresizingMaskIntoConstraints="NO" id="dw3-tS-m1h">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1378.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eventP_02" translatesAutoresizingMaskIntoConstraints="NO" id="KNe-A7-Ad8">
+                                                        <rect key="frame" x="0.0" y="1378.5" width="414" height="90.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eventP_03" translatesAutoresizingMaskIntoConstraints="NO" id="eft-tn-NRy">
+                                                        <rect key="frame" x="0.0" y="1469" width="414" height="631"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FP8-dg-inJ">
+                                                <rect key="frame" x="0.0" y="2100" width="414" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="wp8-F2-CPX"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azN-cV-Wy8">
+                                                <rect key="frame" x="0.0" y="704" width="414" height="70"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2i-wD-gMb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="207" height="70"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="번개페이란?">
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
+                                                            <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5G-hd-zb6">
+                                                        <rect key="frame" x="207" y="0.0" width="207" height="70"/>
+                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="상품 둘러보기">
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
+                                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="S2i-wD-gMb" firstAttribute="leading" secondItem="azN-cV-Wy8" secondAttribute="leading" id="0V9-yX-fGb"/>
+                                                    <constraint firstAttribute="bottom" secondItem="b5G-hd-zb6" secondAttribute="bottom" id="5jP-pj-db4"/>
+                                                    <constraint firstItem="S2i-wD-gMb" firstAttribute="height" secondItem="azN-cV-Wy8" secondAttribute="height" id="KiC-RO-Nfm"/>
+                                                    <constraint firstItem="b5G-hd-zb6" firstAttribute="top" secondItem="azN-cV-Wy8" secondAttribute="top" id="O0A-oG-g4M"/>
+                                                    <constraint firstItem="S2i-wD-gMb" firstAttribute="centerY" secondItem="azN-cV-Wy8" secondAttribute="centerY" id="Qdg-Yh-4cR"/>
+                                                    <constraint firstItem="b5G-hd-zb6" firstAttribute="leading" secondItem="S2i-wD-gMb" secondAttribute="trailing" id="QfZ-g8-9Ro"/>
+                                                    <constraint firstAttribute="trailing" secondItem="b5G-hd-zb6" secondAttribute="trailing" id="YdZ-or-meB"/>
+                                                    <constraint firstItem="b5G-hd-zb6" firstAttribute="width" secondItem="S2i-wD-gMb" secondAttribute="width" id="bDG-Vp-gkV"/>
+                                                    <constraint firstAttribute="height" constant="70" id="hdn-PO-b5Q"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Nsb-sz-XuU" secondAttribute="trailing" id="0ah-ME-b0f"/>
+                                            <constraint firstAttribute="bottom" secondItem="FP8-dg-inJ" secondAttribute="bottom" id="1XB-Cc-AG3"/>
+                                            <constraint firstItem="FP8-dg-inJ" firstAttribute="leading" secondItem="5R5-CT-QBr" secondAttribute="leading" id="E11-bg-yej"/>
+                                            <constraint firstItem="FP8-dg-inJ" firstAttribute="top" secondItem="Nsb-sz-XuU" secondAttribute="bottom" id="Ufb-SR-yIe"/>
+                                            <constraint firstItem="Nsb-sz-XuU" firstAttribute="leading" secondItem="5R5-CT-QBr" secondAttribute="leading" id="cRM-af-hfC"/>
+                                            <constraint firstAttribute="trailing" secondItem="FP8-dg-inJ" secondAttribute="trailing" id="gK3-jI-fBg"/>
+                                            <constraint firstItem="Nsb-sz-XuU" firstAttribute="top" secondItem="5R5-CT-QBr" secondAttribute="top" id="ppa-bb-0dN"/>
+                                            <constraint firstAttribute="height" constant="2200" id="vWU-ZJ-e2q"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="5R5-CT-QBr" firstAttribute="width" secondItem="eTw-Hy-4bC" secondAttribute="width" id="762-4d-ZfP"/>
+                                    <constraint firstItem="eTw-Hy-4bC" firstAttribute="trailing" secondItem="azN-cV-Wy8" secondAttribute="trailing" id="RVh-9k-B5c"/>
+                                    <constraint firstItem="azN-cV-Wy8" firstAttribute="leading" secondItem="eTw-Hy-4bC" secondAttribute="leading" id="RZO-DC-hiT"/>
+                                    <constraint firstItem="eTw-Hy-4bC" firstAttribute="bottom" secondItem="azN-cV-Wy8" secondAttribute="bottom" id="b2G-cr-vv6"/>
+                                    <constraint firstAttribute="top" secondItem="5R5-CT-QBr" secondAttribute="top" id="dqC-bI-7Pn"/>
+                                    <constraint firstItem="5R5-CT-QBr" firstAttribute="trailing" secondItem="Gou-Ti-vzT" secondAttribute="trailing" id="ePW-VW-7WD"/>
+                                    <constraint firstItem="Gou-Ti-vzT" firstAttribute="leading" secondItem="5R5-CT-QBr" secondAttribute="leading" id="t9R-hb-gh4"/>
+                                    <constraint firstAttribute="bottom" secondItem="5R5-CT-QBr" secondAttribute="bottom" id="z9k-YH-PSF"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Gou-Ti-vzT"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="eTw-Hy-4bC"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="LPb-Nf-sLs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LPb-Nf-sLs" firstAttribute="trailing" secondItem="ALU-OI-kdj" secondAttribute="trailing" id="16s-M2-Nd9"/>
+                            <constraint firstItem="ALU-OI-kdj" firstAttribute="top" secondItem="RhB-g8-dHH" secondAttribute="bottom" id="4ai-WY-O14"/>
+                            <constraint firstItem="LPb-Nf-sLs" firstAttribute="bottom" secondItem="ALU-OI-kdj" secondAttribute="bottom" id="6Dt-7v-aeH"/>
+                            <constraint firstItem="RhB-g8-dHH" firstAttribute="trailing" secondItem="LPb-Nf-sLs" secondAttribute="trailing" id="DH5-fP-hg6"/>
+                            <constraint firstItem="ALU-OI-kdj" firstAttribute="leading" secondItem="LPb-Nf-sLs" secondAttribute="leading" id="SDz-Qd-MrD"/>
+                            <constraint firstItem="RhB-g8-dHH" firstAttribute="top" secondItem="LPb-Nf-sLs" secondAttribute="top" id="hiL-za-Khg"/>
+                            <constraint firstItem="RhB-g8-dHH" firstAttribute="leading" secondItem="LPb-Nf-sLs" secondAttribute="leading" id="szP-y4-8BG"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3RR-bM-vvc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2126,6 +2239,9 @@
                                                         <buttonConfiguration key="configuration" style="filled" title="자세히 보기" buttonSize="mini">
                                                             <color key="baseBackgroundColor" red="1" green="0.83643011960000002" blue="0.29275730210000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didTapPaymentEventButton:" destination="pWK-f7-2xr" eventType="touchUpInside" id="lP5-F1-oku"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="1" green="0.9457653679694441" blue="0.82073156559485549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -3623,6 +3739,9 @@
         <image name="event06_05" width="1500" height="532"/>
         <image name="event06_06" width="1500" height="532"/>
         <image name="event06_07" width="1500" height="532"/>
+        <image name="eventP_01" width="1500" height="4936"/>
+        <image name="eventP_02" width="1500" height="324"/>
+        <image name="eventP_03" width="1500" height="2260"/>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="house" catalog="system" width="128" height="106"/>

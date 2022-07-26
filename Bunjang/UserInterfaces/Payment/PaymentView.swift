@@ -94,6 +94,13 @@ class PaymentView: UIViewController {
     @IBAction func didTapCloseButton(_ sender: Any) {
         self.dismiss(animated: true)
     }
+    
+    // MARK: 번개페이 혜택 이벤트 자세히보기 버튼 눌렀을 때
+    @IBAction func didTapPaymentEventButton(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: PaymentEventView.identifier) as! PaymentEventView
+        
+        self.present(vc, animated: true)
+    }
 }
 
 // MARK: - Extension

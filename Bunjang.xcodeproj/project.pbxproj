@@ -49,6 +49,7 @@
 		B7B99BED28899021009E7F56 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B99BEC28899021009E7F56 /* PaymentView.swift */; };
 		B7C0AFE4288841450001A489 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0AFE3288841450001A489 /* HomeService.swift */; };
 		B7C5C6792890362C00791EFF /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C5C6782890362C00791EFF /* EventView.swift */; };
+		B7C5C67B289044DE00791EFF /* PaymentEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C5C67A289044DE00791EFF /* PaymentEventView.swift */; };
 		B7CC863528828EAC000F46F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC863428828EAC000F46F1 /* AppDelegate.swift */; };
 		B7CC863728828EAC000F46F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC863628828EAC000F46F1 /* SceneDelegate.swift */; };
 		B7CC863E28828EAC000F46F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7CC863D28828EAC000F46F1 /* Assets.xcassets */; };
@@ -171,6 +172,7 @@
 		B7B99BEC28899021009E7F56 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		B7C0AFE3288841450001A489 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		B7C5C6782890362C00791EFF /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
+		B7C5C67A289044DE00791EFF /* PaymentEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentEventView.swift; sourceTree = "<group>"; };
 		B7CC863128828EAC000F46F1 /* Bunjang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bunjang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7CC863428828EAC000F46F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7CC863628828EAC000F46F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -416,6 +418,7 @@
 			isa = PBXGroup;
 			children = (
 				B7C5C6782890362C00791EFF /* EventView.swift */,
+				B7C5C67A289044DE00791EFF /* PaymentEventView.swift */,
 			);
 			path = Event;
 			sourceTree = "<group>";
@@ -906,6 +909,7 @@
 				B754075E2886DCC30038F58C /* OptionSelectView.swift in Sources */,
 				B72618CD28884FDD0078E16A /* HomeProductsResultData.swift in Sources */,
 				B7B99BED28899021009E7F56 /* PaymentView.swift in Sources */,
+				B7C5C67B289044DE00791EFF /* PaymentEventView.swift in Sources */,
 				B75563A2288E87FD00C79DB8 /* FollowResultData.swift in Sources */,
 				B7E20DDE2885441600C5949F /* CertNumberResultData.swift in Sources */,
 				B7CC86762882B2C0000F46F1 /* CertNumberView.swift in Sources */,
