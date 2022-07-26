@@ -48,6 +48,7 @@
 		B7B7EA35288AF42E00CBF431 /* AddressSelectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7B7EA33288AF42E00CBF431 /* AddressSelectTableViewCell.xib */; };
 		B7B99BED28899021009E7F56 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B99BEC28899021009E7F56 /* PaymentView.swift */; };
 		B7C0AFE4288841450001A489 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0AFE3288841450001A489 /* HomeService.swift */; };
+		B7C5C6792890362C00791EFF /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C5C6782890362C00791EFF /* EventView.swift */; };
 		B7CC863528828EAC000F46F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC863428828EAC000F46F1 /* AppDelegate.swift */; };
 		B7CC863728828EAC000F46F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC863628828EAC000F46F1 /* SceneDelegate.swift */; };
 		B7CC863E28828EAC000F46F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7CC863D28828EAC000F46F1 /* Assets.xcassets */; };
@@ -169,6 +170,7 @@
 		B7B7EA33288AF42E00CBF431 /* AddressSelectTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressSelectTableViewCell.xib; sourceTree = "<group>"; };
 		B7B99BEC28899021009E7F56 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		B7C0AFE3288841450001A489 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		B7C5C6782890362C00791EFF /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		B7CC863128828EAC000F46F1 /* Bunjang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bunjang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7CC863428828EAC000F46F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7CC863628828EAC000F46F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -410,6 +412,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		B7C5C6772890358F00791EFF /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				B7C5C6782890362C00791EFF /* EventView.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
 		B7CC862828828EAC000F46F1 = {
 			isa = PBXGroup;
 			children = (
@@ -480,6 +490,7 @@
 				B7CC867F2882EF91000F46F1 /* My */,
 				B7D581BC288657B500F3AFAB /* Shop */,
 				B7556389288D92BD00C79DB8 /* Setting */,
+				B7C5C6772890358F00791EFF /* Event */,
 				B7CC867A2882BB02000F46F1 /* Main.storyboard */,
 			);
 			path = UserInterfaces;
@@ -911,6 +922,7 @@
 				B7CC866E28829E78000F46F1 /* FirstView.swift in Sources */,
 				B755639E288E715300C79DB8 /* Review.swift in Sources */,
 				B788D1F0288B059B003212F9 /* AddressFormView.swift in Sources */,
+				B7C5C6792890362C00791EFF /* EventView.swift in Sources */,
 				B72618CF288855A80078E16A /* ProductDetailResultData.swift in Sources */,
 				B788D1EA288AF8C6003212F9 /* AddressManageView.swift in Sources */,
 				B7D51265288BEE34006C25CF /* AddressService.swift in Sources */,
