@@ -19,16 +19,20 @@ class EventView: UIViewController {
 // MARK: - Extension
 private extension EventView {
     func setupNavigationBar() {
+        navigationController?.navigationBar.tintColor = .black
+        
         let label = UILabel()
         label.textColor = .label
         label.text = "번개장터 7월 혜택"
         navigationItem.leftBarButtonItem = .init(customView: label)
         navigationItem.leftItemsSupplementBackButton = true
         
-        let actionButton = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(didTapActionButton))
         let closeButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(didTapCloseButton))
+        let actionButton = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(didTapActionButton))
         
-        navigationItem.rightBarButtonItems = [actionButton, closeButton]
+        navigationItem.rightBarButtonItems = [closeButton, actionButton]
+        
+        navigationItem.hidesBackButton = true
     }
     
     // MARK: 공유 버튼 눌렀을 때
