@@ -17,7 +17,7 @@ struct ReviewListResultData: Codable {
 struct ReviewListResult: Codable {
     let reviewID: Int
     let storeName: String
-    let rating: Int
+    let rating: Double
     let content, date: String
     let safePayment: Bool
     let productID: Int
