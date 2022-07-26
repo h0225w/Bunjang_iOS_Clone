@@ -16,11 +16,12 @@ class HomeView: UIViewController {
     var currentCellIndex = 0
     
     var images = [
-        "",
-        "",
-        "",
-        "",
-        ""
+        "banner06",
+        "banner01",
+        "banner03",
+        "banner02",
+        "banner04",
+        "banner05"
     ]
     
     override func viewDidLoad() {
@@ -121,7 +122,7 @@ extension HomeView: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageBannerCollectionViewCell.identifier, for: indexPath) as! ImageBannerCollectionViewCell
-        cell.updateUI(images[indexPath.row])
+        cell.updateUI(images[indexPath.row], isUrl: false)
         
         return cell
     }

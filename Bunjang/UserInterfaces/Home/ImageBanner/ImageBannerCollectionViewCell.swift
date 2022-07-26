@@ -19,12 +19,14 @@ class ImageBannerCollectionViewCell: UICollectionViewCell {
         imageView.layer.masksToBounds = true
     }
     
-    func updateUI(_ image: String) {
-        if image != "" {
+    func updateUI(_ image: String, isUrl: Bool = true) {
+        if image != "" && isUrl {
             let imageUrl = URL(string: image)
             
             imageView.kf.indicatorType = .activity
             imageView.kf.setImage(with: imageUrl)
+        } else if image != "" {
+            imageView.image = UIImage(named: image)
         } else {
             imageView.backgroundColor = .random
         }
