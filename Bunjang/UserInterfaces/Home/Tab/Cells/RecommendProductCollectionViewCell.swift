@@ -26,7 +26,7 @@ class RecommendProductCollectionViewCell: UICollectionViewCell {
         
         productImageView.kf.indicatorType = .activity
         productImageView.kf.setImage(with: imageUrl)
-        productPriceLabel.text = "\(data.price)원"
+        productPriceLabel.text = "\(Helper().numberFormatter(number: data.price))원"
         productNameLabel.text = data.name
         productInfoLabel.text = data.date
     }

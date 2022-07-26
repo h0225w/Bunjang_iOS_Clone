@@ -205,7 +205,7 @@ private extension ProductDetailView {
             self.letters = data.result.tag
             self.products = data.result.storeInformation.product
             
-            self.productPriceLabel.text = "\(data.result.price)원"
+            self.productPriceLabel.text = "\(Helper().numberFormatter(number: data.result.price))원"
             self.productNameLabel.text = "\(data.result.name)"
             self.productInfoLabel.text = "\(data.result.date)"
             self.productCountLabel.text = "❤️ \(data.result.dibsCount)"

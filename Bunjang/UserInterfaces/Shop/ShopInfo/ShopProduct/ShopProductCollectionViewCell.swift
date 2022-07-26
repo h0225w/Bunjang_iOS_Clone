@@ -26,7 +26,7 @@ class ShopProductCollectionViewCell: UICollectionViewCell {
         
         imageView.kf.indicatorType = .activity
         imageView.kf.setImage(with: imageUrl)
-        priceLabel.text = "\(data.price)원"
+        priceLabel.text = "\(Helper().numberFormatter(number: data.price))원"
         nameLabel.text = data.name
     }
 }

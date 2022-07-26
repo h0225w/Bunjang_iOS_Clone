@@ -104,7 +104,7 @@ private extension PaymentView {
             productImageView.kf.indicatorType = .activity
             productImageView.kf.setImage(with: imageUrl)
             [productPriceLabel, paymentProductPriceLabel, paymentPriceLabel].forEach {
-                $0.text = "\(product.price)원"
+                $0.text = "\(Helper().numberFormatter(number: product.price))원"
             }
             productNameLabel.text = "\(product.name)"
         }

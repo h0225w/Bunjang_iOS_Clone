@@ -20,4 +20,12 @@ class Helper {
         
         return alert
     }
+    
+    // MARK: 숫자 세 자리마다 콤마 찍기
+    func numberFormatter(number: Int) -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        
+        return numberFormatter.string(from: NSNumber(value: number))!
+    }
 }
