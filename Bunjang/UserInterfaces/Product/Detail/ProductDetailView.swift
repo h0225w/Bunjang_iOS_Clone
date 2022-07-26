@@ -196,36 +196,39 @@ private extension ProductDetailView {
         guard let productId = productId else { return }
         
         ProductService.getProductDetail(productId) { [weak self] data in
-            guard let self = self else { return }
-            self.product = data.result
+            guard let self = self, let product = data.result else { return }
             
-            self.storeId = data.result.storeInformation.storeID
+            self.product = product
             
-            self.images = data.result.image
-            self.letters = data.result.tag
-            self.products = data.result.storeInformation.product
+            self.storeId = product.storeInformation.storeID
             
-            self.productPriceLabel.text = "\(Helper().numberFormatter(number: data.result.price))원"
-            self.productNameLabel.text = "\(data.result.name)"
-            self.productInfoLabel.text = "\(data.result.date)"
-            self.productCountLabel.text = "❤️ \(data.result.dibsCount)"
-            self.usedLabel.text = "\(data.result.used ? "중고상품" : "새상품")"
-            self.countLabel.text = "총 \(data.result.count)개"
-            self.deliveryChargeLabel.text = "\(data.result.includeDeliveryCharge ? "배송비포함" : "배송비별도")"
-            self.exchangeLabel.text = "\(data.result.exchange ? "교환가능" : "교환불가")"
-            self.contentLabel.text = data.result.content
-            self.storeNameLabel.text = data.result.storeInformation.storeName
-            self.storeInfoLabel.text = "★ \(data.result.storeInformation.rating) ﹒ 팔로워 \(data.result.storeInformation.followerCount)"
-            self.storeProductTitleLabel.text = "이 상점의 상품 \(data.result.storeInformation.productCount)"
-            self.storeReviewTitleLabel.text = "이 상점의 거래후기 \(data.result.storeInformation.reviewCount)"
+            self.images = product.image
+            self.letters = product.tag
+            self.products = product.storeInformation.product
             
-            self.dibsButton.isSelected = data.result.dibs
-            self.followsButton.isSelected = data.result.follow
+            self.productPriceLabel.text = "\(Helper().numberFormatter(number: product.price))원"
+            self.productNameLabel.text = "\(product.name)"
+            self.productInfoLabel.text = "\(product.date)"
+            self.productCountLabel.text = "❤️ \(product.dibsCount)"
+            self.usedLabel.text = "\(product.used ? "중고상품" : "새상품")"
+            self.countLabel.text = "총 \(product.count)개"
+            self.deliveryChargeLabel.text = "\(product.includeDeliveryCharge ? "배송비포함" : "배송비별도")"
+            self.exchangeLabel.text = "\(product.exchange ? "교환가능" : "교환불가")"
+            self.contentLabel.text = product.content
+            self.storeNameLabel.text = product.storeInformation.storeName
+            self.storeInfoLabel.text = "★ \(product.storeInformation.rating) ﹒ 팔로워 \(product.storeInformation.followerCount)"
+            self.storeProductTitleLabel.text = "이 상점의 상품 \(product.storeInformation.productCount)"
+            self.storeReviewTitleLabel.text = "이 상점의 거래후기 \(product.storeInformation.reviewCount)"
             
-            if let review = data.result.storeInformation.review {
-                self.reviewRatingLabel.text = "★ \(review[0].rating)"
-                self.reviewContentLabel.text = review[0].content
-                self.reviewInfoLabel.text = review[0].storeName + " ﹒ " + review[0].createdDate
+            self.dibsButton.isSelected = product.dibs
+            self.followsButton.isSelected = product.follow
+            
+            if let review = product.storeInformation.review {
+                if review.count > 0 {
+                    self.reviewRatingLabel.text = "★ \(review[0].rating)"
+                    self.reviewContentLabel.text = review[0].content
+                    self.reviewInfoLabel.text = review[0].storeName + " ﹒ " + review[0].createdDate
+                }
             }
             self.imageBannerCollectionView.reloadData()
             self.tagCollectionView.reloadData()
