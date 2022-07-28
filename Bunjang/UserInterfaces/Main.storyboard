@@ -717,144 +717,114 @@
                                                 <rect key="frame" x="0.0" y="300" width="414" height="150"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uRc-q9-yvT">
-                                                        <rect key="frame" x="20" y="10" width="540" height="120"/>
+                                                        <rect key="frame" x="20" y="10" width="470" height="120"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="DeH-cL-Z3c">
-                                                                <rect key="frame" x="0.0" y="0.0" width="540" height="50"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="470" height="50"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E1h-o8-4Ku">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category01" translatesAutoresizingMaskIntoConstraints="NO" id="VBQ-Vq-Tla">
                                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="50" id="2qa-31-XNk"/>
-                                                                            <constraint firstAttribute="width" constant="50" id="uc0-75-gTY"/>
+                                                                            <constraint firstAttribute="height" constant="50" id="PAz-8h-htc"/>
+                                                                            <constraint firstAttribute="width" constant="50" id="mmF-d1-WC7"/>
                                                                         </constraints>
-                                                                    </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SeF-hb-jsF">
+                                                                    </imageView>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category02" translatesAutoresizingMaskIntoConstraints="NO" id="kqg-R9-IVC">
                                                                         <rect key="frame" x="70" y="0.0" width="50" height="50"/>
-                                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="50" id="EFb-bz-tPE"/>
-                                                                            <constraint firstAttribute="width" constant="50" id="zGU-5x-oZS"/>
+                                                                            <constraint firstAttribute="width" constant="50" id="CaC-w1-Cdp"/>
+                                                                            <constraint firstAttribute="height" constant="50" id="pyO-Qi-vrk"/>
                                                                         </constraints>
-                                                                    </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hX3-1i-pgh">
+                                                                    </imageView>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category03" translatesAutoresizingMaskIntoConstraints="NO" id="Xk8-iI-Nlw">
                                                                         <rect key="frame" x="140" y="0.0" width="50" height="50"/>
-                                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="50" id="KYF-Yb-Y36"/>
-                                                                            <constraint firstAttribute="width" constant="50" id="rvc-6Z-OjM"/>
+                                                                            <constraint firstAttribute="width" constant="50" id="9ED-vS-cIU"/>
+                                                                            <constraint firstAttribute="height" constant="50" id="dwS-6o-mI2"/>
                                                                         </constraints>
-                                                                    </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2uF-c5-eq7">
+                                                                    </imageView>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category04" translatesAutoresizingMaskIntoConstraints="NO" id="54Y-nC-XaN">
                                                                         <rect key="frame" x="210" y="0.0" width="50" height="50"/>
-                                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="50" id="Jjf-tK-JZ3"/>
-                                                                            <constraint firstAttribute="width" constant="50" id="M6p-rO-FGU"/>
+                                                                            <constraint firstAttribute="width" constant="50" id="7lP-c5-nDJ"/>
+                                                                            <constraint firstAttribute="height" constant="50" id="dD2-kd-mVU"/>
                                                                         </constraints>
-                                                                    </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9xC-IY-hPg">
+                                                                    </imageView>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category05" translatesAutoresizingMaskIntoConstraints="NO" id="GSN-Lp-6yU">
                                                                         <rect key="frame" x="280" y="0.0" width="50" height="50"/>
-                                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="50" id="5kZ-Vr-X9K"/>
-                                                                            <constraint firstAttribute="height" constant="50" id="REv-Ur-Ki1"/>
+                                                                            <constraint firstAttribute="width" constant="50" id="1J9-8S-PJF"/>
+                                                                            <constraint firstAttribute="height" constant="50" id="iJM-rI-lL1"/>
                                                                         </constraints>
-                                                                    </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2aT-BU-fnp">
+                                                                    </imageView>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category11" translatesAutoresizingMaskIntoConstraints="NO" id="GfE-Fd-pE8">
                                                                         <rect key="frame" x="350" y="0.0" width="50" height="50"/>
-                                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="50" id="1zp-IA-rpd"/>
-                                                                            <constraint firstAttribute="height" constant="50" id="k3b-6P-TL4"/>
+                                                                            <constraint firstAttribute="height" constant="50" id="4SO-eO-oEd"/>
+                                                                            <constraint firstAttribute="width" constant="50" id="hbt-Xp-O3w"/>
                                                                         </constraints>
-                                                                    </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TAH-Oe-bf4">
+                                                                    </imageView>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category12" translatesAutoresizingMaskIntoConstraints="NO" id="Lh0-eV-GDU">
                                                                         <rect key="frame" x="420" y="0.0" width="50" height="50"/>
-                                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="50" id="dU3-wZ-ZK4"/>
-                                                                            <constraint firstAttribute="height" constant="50" id="nCZ-nC-faE"/>
+                                                                            <constraint firstAttribute="width" constant="50" id="lAs-e7-N2c"/>
+                                                                            <constraint firstAttribute="height" constant="50" id="x4F-hL-qhd"/>
                                                                         </constraints>
-                                                                    </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DT3-CK-FuS">
-                                                                        <rect key="frame" x="490" y="0.0" width="50" height="50"/>
-                                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="50" id="XWv-RB-rMz"/>
-                                                                            <constraint firstAttribute="height" constant="50" id="p0u-dF-BJW"/>
-                                                                        </constraints>
-                                                                    </view>
+                                                                    </imageView>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bpI-Xp-aqZ">
-                                                                <rect key="frame" x="0.0" y="70" width="540" height="50"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ENC-tI-oAn">
+                                                                <rect key="frame" x="0.0" y="70" width="470" height="50"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="81H-dG-KGt">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category06" translatesAutoresizingMaskIntoConstraints="NO" id="lvB-e5-Zl2">
                                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="50" id="VEG-9L-LzH"/>
-                                                                            <constraint firstAttribute="height" constant="50" id="oaL-gR-WEM"/>
+                                                                            <constraint firstAttribute="height" constant="50" id="erd-0E-KLy"/>
+                                                                            <constraint firstAttribute="width" constant="50" id="uZc-8L-H3v"/>
                                                                         </constraints>
-                                                                    </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MkU-Sr-DQb">
+                                                                    </imageView>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category07" translatesAutoresizingMaskIntoConstraints="NO" id="fY0-1L-noN">
                                                                         <rect key="frame" x="70" y="0.0" width="50" height="50"/>
-                                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="50" id="aLG-9C-wzS"/>
-                                                                            <constraint firstAttribute="width" constant="50" id="jsW-Mx-oIn"/>
+                                                                            <constraint firstAttribute="height" constant="50" id="U56-J0-3tu"/>
+                                                                            <constraint firstAttribute="width" constant="50" id="uyQ-qg-RS7"/>
                                                                         </constraints>
-                                                                    </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KGE-at-SCD">
+                                                                    </imageView>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category08" translatesAutoresizingMaskIntoConstraints="NO" id="tfs-gC-ixt">
                                                                         <rect key="frame" x="140" y="0.0" width="50" height="50"/>
-                                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="50" id="bm4-RE-5fY"/>
-                                                                            <constraint firstAttribute="width" constant="50" id="dpr-Eh-1B1"/>
+                                                                            <constraint firstAttribute="height" constant="50" id="VOv-ty-XwY"/>
+                                                                            <constraint firstAttribute="width" constant="50" id="nZt-Xs-6Wv"/>
                                                                         </constraints>
-                                                                    </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NCZ-bo-arK">
+                                                                    </imageView>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category09" translatesAutoresizingMaskIntoConstraints="NO" id="qwg-oJ-Bax">
                                                                         <rect key="frame" x="210" y="0.0" width="50" height="50"/>
-                                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="50" id="2Rd-v4-eba"/>
-                                                                            <constraint firstAttribute="width" constant="50" id="E8W-R4-bUO"/>
+                                                                            <constraint firstAttribute="height" constant="50" id="7Dl-Wd-Q9i"/>
+                                                                            <constraint firstAttribute="width" constant="50" id="jBL-6h-pza"/>
                                                                         </constraints>
-                                                                    </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tKm-KP-9Hu">
+                                                                    </imageView>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category11" translatesAutoresizingMaskIntoConstraints="NO" id="Ica-C8-aZ8">
                                                                         <rect key="frame" x="280" y="0.0" width="50" height="50"/>
-                                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="50" id="Lqp-UZ-dud"/>
-                                                                            <constraint firstAttribute="height" constant="50" id="teY-qL-0V1"/>
+                                                                            <constraint firstAttribute="height" constant="50" id="K8U-XT-tHb"/>
+                                                                            <constraint firstAttribute="width" constant="50" id="j0U-8M-Zfx"/>
                                                                         </constraints>
-                                                                    </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rvf-Ne-HyL">
+                                                                    </imageView>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category13" translatesAutoresizingMaskIntoConstraints="NO" id="g6F-Bc-G8i">
                                                                         <rect key="frame" x="350" y="0.0" width="50" height="50"/>
-                                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="50" id="LDF-Ep-p6b"/>
-                                                                            <constraint firstAttribute="width" constant="50" id="Qjl-yK-xSO"/>
+                                                                            <constraint firstAttribute="width" constant="50" id="MeH-IS-0sn"/>
+                                                                            <constraint firstAttribute="height" constant="50" id="V3c-IM-9oj"/>
                                                                         </constraints>
-                                                                    </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W3M-3Y-ZKV">
+                                                                    </imageView>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category14" translatesAutoresizingMaskIntoConstraints="NO" id="DAo-5U-KKC">
                                                                         <rect key="frame" x="420" y="0.0" width="50" height="50"/>
-                                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="50" id="Foo-ND-hrZ"/>
-                                                                            <constraint firstAttribute="height" constant="50" id="f2Y-VN-VyF"/>
+                                                                            <constraint firstAttribute="height" constant="50" id="piS-4e-jda"/>
+                                                                            <constraint firstAttribute="width" constant="50" id="wc8-t6-5Ne"/>
                                                                         </constraints>
-                                                                    </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GGJ-12-IPv">
-                                                                        <rect key="frame" x="490" y="0.0" width="50" height="50"/>
-                                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="50" id="00i-Hd-JKf"/>
-                                                                            <constraint firstAttribute="width" constant="50" id="Slg-oj-xvO"/>
-                                                                        </constraints>
-                                                                    </view>
+                                                                    </imageView>
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
@@ -3740,6 +3710,19 @@
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="bell" catalog="system" width="128" height="124"/>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <image name="category01" width="112" height="144"/>
+        <image name="category02" width="138" height="138"/>
+        <image name="category03" width="104" height="136"/>
+        <image name="category04" width="118" height="138"/>
+        <image name="category05" width="118" height="132"/>
+        <image name="category06" width="104" height="116"/>
+        <image name="category07" width="122" height="122"/>
+        <image name="category08" width="118" height="132"/>
+        <image name="category09" width="116" height="144"/>
+        <image name="category11" width="132" height="142"/>
+        <image name="category12" width="122" height="142"/>
+        <image name="category13" width="202" height="136"/>
+        <image name="category14" width="98" height="130"/>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
