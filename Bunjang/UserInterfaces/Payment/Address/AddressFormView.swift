@@ -26,6 +26,11 @@ class AddressFormView: UIViewController {
         setupData()
     }
     
+    // MARK: 화면 터치 시 키보드 내리기
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     // MARK: 뒤로 가기 버튼 눌렀을 때
     @IBAction func didTapBackButton(_ sender: Any) {
         self.dismiss(animated: false)

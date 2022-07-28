@@ -36,6 +36,11 @@ class ReviewFormView: UIViewController {
         navigationController?.isNavigationBarHidden = false
     }
     
+    // MARK: 화면 터치 시 키보드 내리기
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     // MARK: - Actions
     
     // MARK: 뒤로가기 눌렀을 때
