@@ -8,8 +8,9 @@
 import UIKit
 
 class HomeView: UIViewController {
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var homeScrollView: UIScrollView!
     @IBOutlet weak var imageBannerCollectionView: UICollectionView!
+    @IBOutlet weak var imageBannerLabel: UILabel!
     
     // MARK: 이미지 배너 관련 변수
     var timer: DispatchSourceTimer?
@@ -63,7 +64,7 @@ private extension HomeView {
     
     // MARK: 뷰 설정
     func setupViews() {
-        scrollView.delegate = self
+        homeScrollView.delegate = self
     }
     
     // MARK: - 이미지 배너
@@ -89,6 +90,8 @@ private extension HomeView {
                 self.currentCellIndex = 0
             }
             
+            self.imageBannerLabel.text = "\(self.currentCellIndex + 1) / \(self.images.count)"
+            
             self.imageBannerCollectionView.scrollToItem(at: IndexPath(item: self.currentCellIndex, section: 0), at: .centeredHorizontally, animated: true)
         }
         
@@ -110,6 +113,17 @@ extension HomeView: UIScrollViewDelegate {
             navigationController?.navigationBar.tintColor = .black
         } else {
             navigationController?.navigationBar.tintColor = .white
+        }
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        switch scrollView {
+        case homeScrollView:
+            break
+        default:
+            let currentPage = Int(ceil(scrollView.contentOffset.x / scrollView.frame.size.width))
+            currentCellIndex = currentPage
+            self.imageBannerLabel.text = "\(self.currentCellIndex + 1) / \(self.images.count)"
         }
     }
 }

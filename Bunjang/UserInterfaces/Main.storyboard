@@ -706,6 +706,13 @@
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 / 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndI-I0-nYP" customClass="PaddingLabel" customModule="Bunjang" customModuleProvider="target">
+                                                <rect key="frame" x="370.5" y="250" width="33.5" height="17"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.50895074503311255" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pi0-Mi-l3J">
                                                 <rect key="frame" x="0.0" y="300" width="414" height="150"/>
                                                 <subviews>
@@ -883,6 +890,7 @@
                                         <constraints>
                                             <constraint firstItem="5yE-uE-IRE" firstAttribute="leading" secondItem="gD4-Uw-G96" secondAttribute="leading" constant="20" id="C2I-9m-jdx"/>
                                             <constraint firstItem="pi0-Mi-l3J" firstAttribute="leading" secondItem="gD4-Uw-G96" secondAttribute="leading" id="I35-xR-yab"/>
+                                            <constraint firstItem="ndI-I0-nYP" firstAttribute="top" secondItem="M7N-Pq-ZV0" secondAttribute="bottom" constant="-50" id="JsW-J5-S0k"/>
                                             <constraint firstItem="M7N-Pq-ZV0" firstAttribute="top" secondItem="gD4-Uw-G96" secondAttribute="top" id="Rfv-J6-qzI"/>
                                             <constraint firstAttribute="trailing" secondItem="M7N-Pq-ZV0" secondAttribute="trailing" id="UAJ-h9-C8H"/>
                                             <constraint firstItem="5yE-uE-IRE" firstAttribute="top" secondItem="pi0-Mi-l3J" secondAttribute="bottom" constant="10" id="Vht-uJ-Zgv"/>
@@ -890,6 +898,7 @@
                                             <constraint firstItem="OMS-Qt-kvg" firstAttribute="leading" secondItem="gD4-Uw-G96" secondAttribute="leading" id="YPM-8M-UZY"/>
                                             <constraint firstItem="pi0-Mi-l3J" firstAttribute="top" secondItem="M7N-Pq-ZV0" secondAttribute="bottom" id="azB-2o-GDI"/>
                                             <constraint firstAttribute="bottom" secondItem="OMS-Qt-kvg" secondAttribute="bottom" id="bAS-fj-6mt"/>
+                                            <constraint firstItem="ndI-I0-nYP" firstAttribute="trailing" secondItem="M7N-Pq-ZV0" secondAttribute="trailing" constant="-10" id="kRG-PC-YG7"/>
                                             <constraint firstAttribute="trailing" secondItem="pi0-Mi-l3J" secondAttribute="trailing" id="s2p-m8-629"/>
                                             <constraint firstItem="M7N-Pq-ZV0" firstAttribute="leading" secondItem="gD4-Uw-G96" secondAttribute="leading" id="ubl-94-blI"/>
                                             <constraint firstAttribute="trailing" secondItem="OMS-Qt-kvg" secondAttribute="trailing" id="w6p-Kq-MpQ"/>
@@ -930,8 +939,9 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="homeScrollView" destination="ugg-q5-27L" id="6in-Vh-ir4"/>
                         <outlet property="imageBannerCollectionView" destination="M7N-Pq-ZV0" id="Alu-Td-3z3"/>
-                        <outlet property="scrollView" destination="ugg-q5-27L" id="g2S-4f-xsz"/>
+                        <outlet property="imageBannerLabel" destination="ndI-I0-nYP" id="NYI-a9-h28"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhU-Wv-Ofw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
