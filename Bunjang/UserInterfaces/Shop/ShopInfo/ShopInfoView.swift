@@ -80,6 +80,8 @@ private extension ShopInfoView {
     func setupViews() {
         followButton.setTitle("팔로우", for: .normal)
         followButton.setTitle("팔로잉", for: .selected)
+        
+        profileImageView.layer.cornerRadius = 35
     }
     
     // MARK: 상점 정보 데이터 가져오기

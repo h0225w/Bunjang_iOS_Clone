@@ -143,6 +143,7 @@ private extension ProductDetailView {
         
         profileImageView.isUserInteractionEnabled = true
         profileImageView.addGestureRecognizer(tapGestureRecognizer)
+        profileImageView.layer.cornerRadius = 20
         
         followsButton.setTitle("팔로우", for: .normal)
         followsButton.setTitle("팔로잉", for: .selected)
