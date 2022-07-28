@@ -1137,7 +1137,7 @@
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doc" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eMp-VX-uwk">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="eMp-VX-uwk">
                                                         <rect key="frame" x="37" y="5" width="20" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="20" id="K67-Ve-FZ6"/>
@@ -1163,7 +1163,7 @@
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doc" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ppO-9K-aeN">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="ppO-9K-aeN">
                                                         <rect key="frame" x="37" y="5" width="20" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="360-SO-hOy"/>
@@ -1189,7 +1189,7 @@
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doc" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="O4l-Ca-7aN">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="O4l-Ca-7aN">
                                                         <rect key="frame" x="37" y="5" width="20" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="20" id="gBb-3H-w7p"/>
@@ -1215,7 +1215,7 @@
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doc" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Wu2-vn-U2b">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="Wu2-vn-U2b">
                                                         <rect key="frame" x="37" y="5" width="20" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="caF-Pl-ZoO"/>
@@ -1903,7 +1903,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gs-v9-ZgK" userLabel="FixedView">
-                                                <rect key="frame" x="0.0" y="1206" width="414" height="100"/>
+                                                <rect key="frame" x="0.0" y="1736" width="414" height="100"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoQ-WT-XqA">
                                                         <rect key="frame" x="10" y="30" width="40" height="40"/>
@@ -3242,7 +3242,7 @@
                                                             <constraint firstAttribute="height" constant="1" id="pD6-Tp-SIb"/>
                                                         </constraints>
                                                     </view>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q7H-wc-5Vo">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="Q7H-wc-5Vo">
                                                         <rect key="frame" x="10" y="48" width="30" height="30"/>
                                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -3308,7 +3308,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQl-it-b7a">
-                                                <rect key="frame" x="0.0" y="728" width="414" height="80"/>
+                                                <rect key="frame" x="0.0" y="923.5" width="414" height="80"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCd-5P-htq">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
@@ -3433,12 +3433,13 @@
                         <outlet property="profileNameLabel" destination="zTw-1F-5Sj" id="AUy-in-Dgl"/>
                         <outlet property="profileReviewLabel" destination="BJ3-Jj-yUf" id="iGw-sL-cg1"/>
                         <outlet property="reviewCountLabel" destination="zAw-l7-7wz" id="jR2-Lv-kbv"/>
+                        <outlet property="reviewProfileImageView" destination="Q7H-wc-5Vo" id="2eb-BQ-NH5"/>
                         <outlet property="saleCountLabel" destination="PEp-kc-ZmB" id="HUc-Zs-fEK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qz2-Sb-HMg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="959" y="2340"/>
+            <point key="canvasLocation" x="957.97101449275374" y="2339.7321428571427"/>
         </scene>
         <!--Review Status Change View-->
         <scene sceneID="932-rs-uqV">
@@ -3732,6 +3733,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1" width="46" height="48"/>
+        <image name="2" width="40" height="48"/>
+        <image name="3" width="46" height="42"/>
+        <image name="4" width="44" height="50"/>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="bell" catalog="system" width="128" height="124"/>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
@@ -3741,7 +3746,6 @@
         <image name="circle" catalog="system" width="128" height="121"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
         <image name="circle.inset.filled" catalog="system" width="128" height="121"/>
-        <image name="doc" catalog="system" width="115" height="128"/>
         <image name="event06_01" width="1500" height="636"/>
         <image name="event06_02" width="1500" height="532"/>
         <image name="event06_03" width="1500" height="532"/>

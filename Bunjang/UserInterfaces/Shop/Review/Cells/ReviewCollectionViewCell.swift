@@ -18,6 +18,7 @@ class ReviewCollectionViewCell: UICollectionViewCell {
     
     weak var delegate: ReviewCollectionViewCellDelegate?
     
+    @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
@@ -27,6 +28,7 @@ class ReviewCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.profileImageView.layer.cornerRadius = 20
     }
     
     func updateUI(_ data: ReviewListResult) {

@@ -30,6 +30,8 @@ class ShopInfoView: UIViewController {
     
     @IBOutlet weak var followButton: UIButton!
     
+    @IBOutlet weak var reviewProfileImageView: UIImageView!
+    
     var storeId: Int?
     
     var productList: [ShopProductsResult] = []
@@ -82,6 +84,7 @@ private extension ShopInfoView {
         followButton.setTitle("팔로잉", for: .selected)
         
         profileImageView.layer.cornerRadius = 35
+        reviewProfileImageView.layer.cornerRadius = 15
     }
     
     // MARK: 상점 정보 데이터 가져오기
