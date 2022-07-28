@@ -83,12 +83,30 @@
         }
       },
       {
+        "package": "SnapKit",
+        "repositoryURL": "https://github.com/SnapKit/SnapKit.git",
+        "state": {
+          "branch": "develop",
+          "revision": "07c5d1f6044701d97e94dc11157259e8811977be",
+          "version": null
+        }
+      },
+      {
         "package": "Tabman",
         "repositoryURL": "https://github.com/uias/Tabman",
         "state": {
           "branch": null,
           "revision": "a9f10cb862a32e6a22549836af013abd6b0692d3",
           "version": "2.12.0"
+        }
+      },
+      {
+        "package": "Then",
+        "repositoryURL": "https://github.com/devxoul/Then",
+        "state": {
+          "branch": null,
+          "revision": "d41ef523faef0f911369f79c0b96815d9dbb6d7a",
+          "version": "3.0.0"
         }
       }
     ]

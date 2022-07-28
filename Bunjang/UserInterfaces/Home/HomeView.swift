@@ -6,11 +6,16 @@
 //
 
 import UIKit
+import SnapKit
 
 class HomeView: UIViewController {
     @IBOutlet weak var homeScrollView: UIScrollView!
     @IBOutlet weak var imageBannerCollectionView: UICollectionView!
     @IBOutlet weak var imageBannerLabel: UILabel!
+    
+    @IBOutlet weak var categoryScrollView: UIScrollView!
+    
+    private let indicatorView = IndicatorView()
     
     // MARK: 이미지 배너 관련 변수
     var timer: DispatchSourceTimer?
@@ -36,6 +41,7 @@ class HomeView: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         startImageBannerTimer()
+        setupIndicatorView()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -65,6 +71,15 @@ private extension HomeView {
     // MARK: 뷰 설정
     func setupViews() {
         homeScrollView.delegate = self
+        categoryScrollView.delegate = self
+        
+        self.view.addSubview(self.indicatorView)
+        
+        self.indicatorView.snp.makeConstraints {
+            $0.top.equalTo(self.categoryScrollView.snp.bottom).offset(-10)
+            $0.left.right.equalTo(self.categoryScrollView).inset(150)
+            $0.height.equalTo(4)
+        }
     }
     
     // MARK: - 이미지 배너
@@ -103,22 +118,42 @@ private extension HomeView {
         self.timer?.cancel()
         self.timer = nil
     }
+    
+    // MARK: 카테고리 바 구현
+    func setupIndicatorView() {
+        let allWidth = self.categoryScrollView.contentSize.width + self.categoryScrollView.contentInset.left + self.categoryScrollView.contentInset.right
+        let showingWidth = self.categoryScrollView.bounds.width
+        self.indicatorView.widthRatio = showingWidth / allWidth
+        self.indicatorView.layoutIfNeeded()
+    }
 }
 
 // MARK: - UIScrollViewDelegate
 extension HomeView: UIScrollViewDelegate {
     // TODO: 스크롤 했을 때 NavigationBar tint color 바꾸는 방법
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.y > 0 {
-            navigationController?.navigationBar.tintColor = .black
-        } else {
-            navigationController?.navigationBar.tintColor = .white
+        switch scrollView {
+        case homeScrollView:
+            if scrollView.contentOffset.y > 0 {
+                navigationController?.navigationBar.tintColor = .black
+            } else {
+                navigationController?.navigationBar.tintColor = .white
+            }
+        case categoryScrollView:
+            let scroll = scrollView.contentOffset.x + scrollView.contentInset.left
+            let width = scrollView.contentSize.width + scrollView.contentInset.left + scrollView.contentInset.right
+            let scrollRatio = scroll / width
+            self.indicatorView.leftOffsetRatio = scrollRatio
+        default:
+            break
         }
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         switch scrollView {
         case homeScrollView:
+            break
+        case categoryScrollView:
             break
         default:
             let currentPage = Int(ceil(scrollView.contentOffset.x / scrollView.frame.size.width))

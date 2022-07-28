@@ -105,6 +105,9 @@
 		B7E20DF828856CC000C5949F /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = B7E20DF728856CC000C5949F /* GoogleSignIn */; };
 		B7E20DFA28856CC000C5949F /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B7E20DF928856CC000C5949F /* GoogleSignInSwift */; };
 		B7F041C828923FE10057B64E /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F041C728923FE10057B64E /* PaddingLabel.swift */; };
+		B7F041CB289267E30057B64E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B7F041CA289267E30057B64E /* SnapKit */; };
+		B7F041CE289267F00057B64E /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = B7F041CD289267F00057B64E /* Then */; };
+		B7F041D0289269940057B64E /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F041CF289269940057B64E /* IndicatorView.swift */; };
 		B7FEFE8028866719004AEA1A /* ShopProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FEFE7E28866719004AEA1A /* ShopProductCollectionViewCell.swift */; };
 		B7FEFE8128866719004AEA1A /* ShopProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7FEFE7F28866719004AEA1A /* ShopProductCollectionViewCell.xib */; };
 		B7FEFE852886824F004AEA1A /* ShopInfoResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FEFE842886824F004AEA1A /* ShopInfoResultData.swift */; };
@@ -218,6 +221,7 @@
 		B7E20DDD2885441600C5949F /* CertNumberResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertNumberResultData.swift; sourceTree = "<group>"; };
 		B7E20DDF288549C300C5949F /* ShopNameResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopNameResultData.swift; sourceTree = "<group>"; };
 		B7F041C728923FE10057B64E /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		B7F041CF289269940057B64E /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
 		B7FEFE7E28866719004AEA1A /* ShopProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		B7FEFE7F28866719004AEA1A /* ShopProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		B7FEFE842886824F004AEA1A /* ShopInfoResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopInfoResultData.swift; sourceTree = "<group>"; };
@@ -231,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7CC8686288300BB000F46F1 /* Tabman in Frameworks */,
+				B7F041CE289267F00057B64E /* Then in Frameworks */,
 				B7E20DED28855B4700C5949F /* KakaoSDKShare in Frameworks */,
 				B7E20DEF28855B4700C5949F /* KakaoSDKStory in Frameworks */,
 				B7E20DF828856CC000C5949F /* GoogleSignIn in Frameworks */,
@@ -241,6 +246,7 @@
 				B7E20DEB28855B4700C5949F /* KakaoSDKNavi in Frameworks */,
 				B7FEFE8B28868515004AEA1A /* Kingfisher in Frameworks */,
 				B7D00002288D7E200067DA77 /* Cosmos in Frameworks */,
+				B7F041CB289267E30057B64E /* SnapKit in Frameworks */,
 				B7E20DFA28856CC000C5949F /* GoogleSignInSwift in Frameworks */,
 				B7E20DF528855B4700C5949F /* KakaoSDKUser in Frameworks */,
 				B7E20DF128855B4700C5949F /* KakaoSDKTalk in Frameworks */,
@@ -537,6 +543,7 @@
 				B7CC86722882A8FE000F46F1 /* Extensions */,
 				B7DFA54828844FD200E5BB51 /* CollectionViewLeftAlignFlowLayout.swift */,
 				B7F041C728923FE10057B64E /* PaddingLabel.swift */,
+				B7F041CF289269940057B64E /* IndicatorView.swift */,
 				B7E20DDB28853D1500C5949F /* Helper.swift */,
 			);
 			path = Helpers;
@@ -765,6 +772,8 @@
 				B7E20DF928856CC000C5949F /* GoogleSignInSwift */,
 				B7FEFE8A28868515004AEA1A /* Kingfisher */,
 				B7D00001288D7E200067DA77 /* Cosmos */,
+				B7F041CA289267E30057B64E /* SnapKit */,
+				B7F041CD289267F00057B64E /* Then */,
 			);
 			productName = Bunjang;
 			productReference = B7CC863128828EAC000F46F1 /* Bunjang.app */;
@@ -845,6 +854,8 @@
 				B7E20DF628856CC000C5949F /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				B7FEFE8928868515004AEA1A /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				B7D00000288D7E200067DA77 /* XCRemoteSwiftPackageReference "Cosmos" */,
+				B7F041C9289267E30057B64E /* XCRemoteSwiftPackageReference "SnapKit" */,
+				B7F041CC289267F00057B64E /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			productRefGroup = B7CC863228828EAC000F46F1 /* Products */;
 			projectDirPath = "";
@@ -942,6 +953,7 @@
 				B7556388288D8A0C00C79DB8 /* ReviewListResultData.swift in Sources */,
 				B7D51269288C1384006C25CF /* AddressSingleResultData.swift in Sources */,
 				B7556393288E61EE00C79DB8 /* PaymentSelectView.swift in Sources */,
+				B7F041D0289269940057B64E /* IndicatorView.swift in Sources */,
 				B7C0AFE4288841450001A489 /* HomeService.swift in Sources */,
 				B7D0FFF8288D732D0067DA77 /* ReviewView.swift in Sources */,
 				B7D0FFFE288D744B0067DA77 /* ReviewCollectionViewCell.swift in Sources */,
@@ -1344,6 +1356,22 @@
 				minimumVersion = 6.0.0;
 			};
 		};
+		B7F041C9289267E30057B64E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		B7F041CC289267F00057B64E /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		B7FEFE8928868515004AEA1A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
@@ -1429,6 +1457,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B7E20DF628856CC000C5949F /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
+		};
+		B7F041CA289267E30057B64E /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7F041C9289267E30057B64E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		B7F041CD289267F00057B64E /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7F041CC289267F00057B64E /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
 		};
 		B7FEFE8A28868515004AEA1A /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;

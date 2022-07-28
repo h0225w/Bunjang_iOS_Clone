@@ -713,7 +713,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pi0-Mi-l3J">
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pi0-Mi-l3J">
                                                 <rect key="frame" x="0.0" y="300" width="414" height="150"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uRc-q9-yvT">
@@ -939,6 +939,7 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="categoryScrollView" destination="pi0-Mi-l3J" id="151-Ea-fWw"/>
                         <outlet property="homeScrollView" destination="ugg-q5-27L" id="6in-Vh-ir4"/>
                         <outlet property="imageBannerCollectionView" destination="M7N-Pq-ZV0" id="Alu-Td-3z3"/>
                         <outlet property="imageBannerLabel" destination="ndI-I0-nYP" id="NYI-a9-h28"/>
