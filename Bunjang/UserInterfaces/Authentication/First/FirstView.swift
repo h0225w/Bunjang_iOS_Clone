@@ -43,6 +43,8 @@ class FirstView: UIViewController {
     @IBAction func didTapLoginButton(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "LoginView") as! LoginView
         
+        print(vc)
+        print(navigationController)
         navigationController?.pushViewController(vc, animated: true)
     }
 }

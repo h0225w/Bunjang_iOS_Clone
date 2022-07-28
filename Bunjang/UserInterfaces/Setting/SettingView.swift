@@ -27,7 +27,7 @@ class SettingView: UITableViewController {
                         self.navigationController?.popToRootViewController(animated: false)
                         
                         let storyboard = UIStoryboard.init(name: "Authentication", bundle: nil)
-                        let vc = storyboard.instantiateViewController(withIdentifier: "FirstView") as! FirstView
+                        let vc = storyboard.instantiateViewController(withIdentifier: "AuthNavigationController") as! UINavigationController
                         self.view.window?.windowScene?.keyWindow?.rootViewController = vc
                     }
                     
@@ -44,8 +44,9 @@ class SettingView: UITableViewController {
                 
                 // TODO: 로그아웃하고 로그인 화면으로 이동 시 "다른 방법으로 로그인" 버튼 눌렀을 때 아무 반응 없는 문제 해결 필요
                 let storyboard = UIStoryboard.init(name: "Authentication", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "FirstView") as! FirstView
-                self.view.window?.windowScene?.keyWindow?.rootViewController = vc
+                let vc = storyboard.instantiateViewController(withIdentifier: "AuthNavigationController") as! UINavigationController
+                let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as! SceneDelegate
+                sceneDelegate.window?.rootViewController = vc
             }
         }
     }
