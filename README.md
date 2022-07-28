@@ -112,3 +112,11 @@
 - 상품 등록 > 탭 클릭 시 탭 이동 안되게 처리
 
 </details>
+
+<details>
+<summary>07 / 28 (목)</summary>
+
+- 홈 화면 > 이미지 배너 > 하단 현재 페이지 표시
+- 홈 화면 > 카테고리 > 커스텀 IndicatorView 구현
+
+</details>
