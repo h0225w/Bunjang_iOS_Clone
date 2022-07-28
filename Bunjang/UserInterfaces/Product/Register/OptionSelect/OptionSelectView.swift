@@ -27,6 +27,11 @@ class OptionSelectView: UIViewController {
         setupViews()
     }
     
+    // MARK: 화면 터치 시 키보드 내리기
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     // MARK: - Actions
     @IBAction func didTapCompleteButton(_ sender: Any) {
         if let countText = countTextField.text, countText != "" {

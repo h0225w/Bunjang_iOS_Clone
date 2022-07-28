@@ -42,6 +42,11 @@ class PaymentView: UIViewController {
         setupViews()
     }
     
+    // MARK: 화면 터치 시 키보드 내리기
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     // MARK: 배송지 주소 선택 버튼 눌렀을 때
     @IBAction func didTapAddressSelectButton(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: AddressSelectView.identifier) as! AddressSelectView
