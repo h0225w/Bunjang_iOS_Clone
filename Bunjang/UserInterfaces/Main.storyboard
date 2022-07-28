@@ -1277,7 +1277,6 @@
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="bell" catalog="system" id="9Ai-0P-3w5"/>
-                            <barButtonItem image="circle.inset.filled" catalog="system" id="ZbS-el-tY5"/>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
