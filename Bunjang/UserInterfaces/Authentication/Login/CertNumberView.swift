@@ -57,6 +57,6 @@ private extension CertNumberView {
         let certNumber = UserDefaults.standard.string(forKey: "certNumber")
         
         certNumberTextField.addBottomBorder()
-        certNumberTextField.text = certNumber
+//        certNumberTextField.text = certNumber
     }
 }
