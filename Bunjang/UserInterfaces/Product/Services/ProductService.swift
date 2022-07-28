@@ -13,7 +13,7 @@ class ProductService {
     static func register(_ product: Product, completion: @escaping (ProductRegisterResultData) -> Void) {
         guard let storeId = UserDefaults.standard.string(forKey: "storeId"), let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
         
-        let url = URL(string: "https://dev.idha-etu.shop/api/products")!
+        let url = URL(string: "https://idha-etu.shop/api/products")!
         
         let params = [
             "name": product.name,
@@ -50,7 +50,7 @@ class ProductService {
     static func getProductDetail(_ productId: Int, completion: @escaping (ProductDetailResultData) -> Void) {
         guard let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
         
-        let url = URL(string: "https://dev.idha-etu.shop/api/products/\(productId)")!
+        let url = URL(string: "https://idha-etu.shop/api/products/\(productId)")!
         
         let headers: HTTPHeaders = [
             "X-ACCESS-TOKEN": token,
@@ -73,7 +73,7 @@ class ProductService {
     static func dib(productId: Int, completion: @escaping (DibResultData) -> Void) {
         guard let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
         
-        let url = URL(string: "https://dev.idha-etu.shop/api/dibs")!
+        let url = URL(string: "https://idha-etu.shop/api/dibs")!
         
         let params = [
             "productId": productId

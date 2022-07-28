@@ -13,7 +13,7 @@ class HomeService {
     static func getProducts(completion: @escaping (HomeProductsResultData) -> Void) {
         guard let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
         
-        let url = URL(string: "https://dev.idha-etu.shop/api/products/home")!
+        let url = URL(string: "https://idha-etu.shop/api/products/home")!
         
         let headers: HTTPHeaders = [
             "X-ACCESS-TOKEN": token,

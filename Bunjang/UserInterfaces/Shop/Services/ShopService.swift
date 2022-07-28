@@ -13,7 +13,7 @@ class ShopService {
     static func getShopInfo(storeId: Int, completion: @escaping (ShopInfoResultData) -> Void) {
         guard let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
         
-        let url = URL(string: "https://dev.idha-etu.shop/api/stores/\(storeId)")!
+        let url = URL(string: "https://idha-etu.shop/api/stores/\(storeId)")!
         
         let headers: HTTPHeaders = [
             "X-ACCESS-TOKEN": token,
@@ -36,7 +36,7 @@ class ShopService {
     static func getProducts(storeId: Int, completion: @escaping (ShopProductsResultData) -> Void) {
         guard let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
         
-        let url = URL(string: "https://dev.idha-etu.shop/api/stores/\(storeId)/products")!
+        let url = URL(string: "https://idha-etu.shop/api/stores/\(storeId)/products")!
         
         let headers: HTTPHeaders = [
             "X-ACCESS-TOKEN": token,
@@ -59,7 +59,7 @@ class ShopService {
     static func follow(followeeId: Int, completion: @escaping (FollowResultData) -> Void) {
         guard let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
         
-        let url = URL(string: "https://dev.idha-etu.shop/api/follows")!
+        let url = URL(string: "https://idha-etu.shop/api/follows")!
         
         let params = [
             "followeeId": followeeId

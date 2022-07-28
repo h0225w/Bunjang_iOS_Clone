@@ -13,7 +13,7 @@ class PaymentService {
     static func register(_ payment: Payment, completion: @escaping (PaymentResultData) -> Void) {
         guard let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
         
-        let url = URL(string: "https://dev.idha-etu.shop/api/payments")!
+        let url = URL(string: "https://idha-etu.shop/api/payments")!
         
         let params = [
             "productId": payment.productId,
@@ -45,7 +45,7 @@ class PaymentService {
     static func getPayments(_ type: String = "all", completion: @escaping (PaymentListResultData) -> Void) {
         guard let storeId = UserDefaults.standard.string(forKey: "storeId"), let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
         
-        let url = URL(string: "https://dev.idha-etu.shop/api/stores/\(storeId)/payments?type=\(type)")!
+        let url = URL(string: "https://idha-etu.shop/api/stores/\(storeId)/payments?type=\(type)")!
         
         
         let headers: HTTPHeaders = [

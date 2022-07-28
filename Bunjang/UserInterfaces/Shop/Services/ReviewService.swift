@@ -13,7 +13,7 @@ class ReviewService {
     static func register(_ review: Review, completion: @escaping (ReviewFormResultData) -> Void) {
         guard let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
         
-        let url = URL(string: "https://dev.idha-etu.shop/api/reviews")!
+        let url = URL(string: "https://idha-etu.shop/api/reviews")!
         
         let params = [
             "paymentId": review.paymentId,
@@ -42,7 +42,7 @@ class ReviewService {
     static func edit(_ review: Review, reviewId: Int, completion: @escaping (ReviewFormResultData) -> Void) {
         guard let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
         
-        let url = URL(string: "https://dev.idha-etu.shop/api/reviews/\(reviewId)")!
+        let url = URL(string: "https://idha-etu.shop/api/reviews/\(reviewId)")!
         
         let params = [
             "rating": review.rating,
@@ -70,7 +70,7 @@ class ReviewService {
     static func delete(reviewId: Int, completion: @escaping (ReviewFormResultData) -> Void) {
         guard let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
         
-        let url = URL(string: "https://dev.idha-etu.shop/api/reviews/\(reviewId)/status")!
+        let url = URL(string: "https://idha-etu.shop/api/reviews/\(reviewId)/status")!
         
         let headers: HTTPHeaders = [
             "X-ACCESS-TOKEN": token,
@@ -93,7 +93,7 @@ class ReviewService {
     static func getReviews(storeId: Int, completion: @escaping (ReviewListResultData) -> Void) {
         guard let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
         
-        let url = URL(string: "https://dev.idha-etu.shop/api/stores/\(storeId)/reviews")!
+        let url = URL(string: "https://idha-etu.shop/api/stores/\(storeId)/reviews")!
         
         let headers: HTTPHeaders = [
             "X-ACCESS-TOKEN": token,
@@ -116,7 +116,7 @@ class ReviewService {
     static func getReviewSingle(reviewId: Int, completion: @escaping (ReviewSingleResultData) -> Void) {
         guard let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
         
-        let url = URL(string: "https://dev.idha-etu.shop/api/reviews/\(reviewId)")!
+        let url = URL(string: "https://idha-etu.shop/api/reviews/\(reviewId)")!
         
         let headers: HTTPHeaders = [
             "X-ACCESS-TOKEN": token,

@@ -13,7 +13,7 @@ class AddressService {
     static func register(_ address: Address, completion: @escaping (AddressFormResultData) -> Void) {
         guard let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
         
-        let url = URL(string: "https://dev.idha-etu.shop/api/address")!
+        let url = URL(string: "https://idha-etu.shop/api/address")!
         
         let params = [
             "name": address.name,
@@ -44,7 +44,7 @@ class AddressService {
     static func edit(_ address: Address, addressId: Int, completion: @escaping (AddressFormResultData) -> Void) {
         guard let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
         
-        let url = URL(string: "https://dev.idha-etu.shop/api/address/\(addressId)")!
+        let url = URL(string: "https://idha-etu.shop/api/address/\(addressId)")!
         
         let params = [
             "name": address.name,
@@ -75,7 +75,7 @@ class AddressService {
     static func delete(addressId: Int, completion: @escaping (AddressFormResultData) -> Void) {
         guard let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
         
-        let url = URL(string: "https://dev.idha-etu.shop/api/address/\(addressId)/status")!
+        let url = URL(string: "https://idha-etu.shop/api/address/\(addressId)/status")!
         
         let headers: HTTPHeaders = [
             "X-ACCESS-TOKEN": token,
@@ -98,7 +98,7 @@ class AddressService {
     static func getAddressList(completion: @escaping (AddressListResultData) -> Void) {
         guard let storeId = UserDefaults.standard.string(forKey: "storeId"), let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
         
-        let url = URL(string: "https://dev.idha-etu.shop/api/stores/\(storeId)/address")!
+        let url = URL(string: "https://idha-etu.shop/api/stores/\(storeId)/address")!
         
         let headers: HTTPHeaders = [
             "X-ACCESS-TOKEN": token,
@@ -121,7 +121,7 @@ class AddressService {
     static func getAddress(addressId: Int, completion: @escaping (AddressSingleResultData) -> Void) {
         guard let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
         
-        let url = URL(string: "https://dev.idha-etu.shop/api/address/\(addressId)")!
+        let url = URL(string: "https://idha-etu.shop/api/address/\(addressId)")!
         
         let headers: HTTPHeaders = [
             "X-ACCESS-TOKEN": token,

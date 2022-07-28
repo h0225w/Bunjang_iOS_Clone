@@ -17,7 +17,7 @@ class LoginService {
     
     // MARK: 회원가입 / 로그인
     static func login(name: String, phone: String, birthDate: String, completion: @escaping (LoginResultData) -> Void) {
-        let url = URL(string: "https://dev.idha-etu.shop/api/stores")!
+        let url = URL(string: "https://idha-etu.shop/api/stores")!
         
         let params = [
             "name": name,
@@ -52,7 +52,7 @@ class LoginService {
     
     // MARK: 인증번호 확인
     static func checkCertNumber(code: String, completion: @escaping (CertNumberResultData) -> Void) {
-        let url = URL(string: "https://dev.idha-etu.shop/api/stores/code")!
+        let url = URL(string: "https://idha-etu.shop/api/stores/code")!
         
         let params = [
             "code": code
@@ -78,7 +78,7 @@ class LoginService {
     static func setShopName(storeName: String, completion: @escaping (ShopNameResultData) -> Void) {
         guard let storeId = UserDefaults.standard.string(forKey: "storeId"), let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
         
-        let url = URL(string: "https://dev.idha-etu.shop/api/stores/\(storeId)/name")!
+        let url = URL(string: "https://idha-etu.shop/api/stores/\(storeId)/name")!
         
         let params = [
             "storeName": storeName
@@ -105,7 +105,7 @@ class LoginService {
     static func delete(completion: @escaping (ShopDeleteResultData) -> Void) {
         guard let storeId = UserDefaults.standard.string(forKey: "storeId"), let token = UserDefaults.standard.string(forKey: "jwtToken") else { return }
         
-        let url = URL(string: "https://dev.idha-etu.shop/api/stores/\(storeId)/status")!
+        let url = URL(string: "https://idha-etu.shop/api/stores/\(storeId)/status")!
         
         let headers: HTTPHeaders = [
             "X-ACCESS-TOKEN": token,
