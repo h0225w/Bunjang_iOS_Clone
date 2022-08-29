@@ -58,7 +58,7 @@
 
 - 결제 화면 구현
 
-</detail>
+</details>
 
 <details>
 <summary>07 / 22 (금)</summary>
