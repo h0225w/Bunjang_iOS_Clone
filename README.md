@@ -1,3 +1,17 @@
+# 번개장터 iOS 클론 코딩
+2022.07.16 ~ 2022.07.28 (총 2주)
+## Skill
+- Swift
+- SnapKit
+- Then
+- Storyboard
+- Alamofire
+- Kingfisher
+- Tabman
+## Test Video
+https://drive.google.com/file/d/1OPt5NizDyz1RMQbAVDBn-E0XbmAftQI1/view?usp=sharing
+
+## 개발일지
 <details>
 <summary>07 / 16 (토)</summary>
 
